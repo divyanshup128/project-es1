@@ -133,10 +133,9 @@ tr.gap td{border:0;padding:10px 0 2px;font-weight:800;font-size:.85rem;color:var
 
 /* details */
 .details{padding:8px 0 72px}
-.seg{display:inline-flex;border:1.5px solid var(--ink);border-radius:999px;padding:3px;background:var(--sheet)}
-.seg button{border:0;background:transparent;font-weight:600;padding:8px 16px;border-radius:999px;cursor:pointer;min-height:40px;color:var(--ink)}
-.seg button[data-def="old"][aria-pressed="true"]{background:var(--old);color:var(--on-old)}
-.seg button[data-def="new"][aria-pressed="true"]{background:var(--new);color:var(--on-new)}
+.page{display:block}
+.page[hidden]{display:none}
+.top nav a[aria-current="page"]{background:var(--old-soft);color:var(--old)}
 .tabs{display:flex;gap:4px;overflow-x:auto;border-bottom:2px solid var(--ink);scrollbar-width:thin}
 .tab{border:0;background:transparent;padding:11px 16px;font-weight:600;color:var(--muted);cursor:pointer;border-radius:6px 6px 0 0;white-space:nowrap}
 .tab[aria-selected="true"]{background:var(--ink);color:var(--paper)}
@@ -286,36 +285,38 @@ tr.gap td{border:0;padding:10px 0 2px;font-weight:800;font-size:.85rem;color:var
 </style>
 </head>
 <body>
-<a class="skip" href="#calculate">Skip to the calculator</a>
+<a class="skip" href="#/pay">Skip to the calculator</a>
 
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="#top" aria-label="Employee Solutions home">
+    <a class="brand" href="#/home" aria-label="Employee Solutions home">
       <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
         <circle cx="16" cy="16" r="14"/><circle cx="16" cy="16" r="10" stroke-dasharray="2 3"/><path d="M10.6 16.6l3.7 3.6 7.2-8.2"/>
       </svg>
       <span>Employee Solutions</span>
     </a>
     <nav aria-label="Main">
-      <a href="#calculate">Calculator</a>
-      <a href="#details">Breakdown</a>
-      <a href="#search">Find my issue</a>
-      <a href="#learn">Learn</a>
-      <a href="#case">File a case</a>
-      <a href="#advisor">Problem solver</a>
+      <a href="#/home" data-page="home">Home</a>
+      <a href="#/pay" data-page="pay">Pay Calculator</a>
+      <a href="#/services" data-page="services">Services &amp; PF</a>
+      <a href="#/search" data-page="search">Find My Issue</a>
+      <a href="#/learn" data-page="learn">Learn</a>
+      <a href="#/case" data-page="case">File a Case</a>
+      <a href="#/advisor" data-page="advisor">Problem Solver</a>
     </nav>
   </div>
 </header>
 
 <main id="top">
+<div class="page" id="page-home" data-page="home">
 <section class="hero">
   <div class="wrap">
     <div>
       <h1>Your rights, your compensation, simplified.</h1>
-      <p class="lede">Enter your salary once. See what the old labour Acts and the 2020 Labour Codes each mean for your tax, PF, gratuity and take-home. Then get a clear plan for the workplace problem in front of you. Everything runs in your browser and nothing you type is sent anywhere.</p>
+      <p class="lede">Enter your salary once and see what the 2020 Labour Codes mean for your tax, PF, gratuity and take-home, with a cross-check against what your payslip actually shows. Then get a clear plan for the workplace problem in front of you. Everything runs in your browser and nothing you type is sent anywhere.</p>
       <div class="hero-actions">
-        <a class="btn primary" href="#calculate">Calculate my pay</a>
-        <a class="btn" href="#advisor">Solve a workplace problem</a>
+        <a class="btn primary" href="#/pay">Calculate my pay</a>
+        <a class="btn" href="#/advisor">Solve a workplace problem</a>
       </div>
     </div>
     <aside class="stamp" aria-label="Rule change applied in the calculator">
@@ -326,7 +327,9 @@ tr.gap td{border:0;padding:10px 0 2px;font-weight:800;font-size:.85rem;color:var
     </aside>
   </div>
 </section>
+</div>
 
+<div class="page" id="page-search" data-page="search">
 <section id="search" class="psearch">
   <div class="wrap">
     <div class="sec-head"><div>
@@ -341,7 +344,9 @@ tr.gap td{border:0;padding:10px 0 2px;font-weight:800;font-size:.85rem;color:var
     <div id="presults"></div>
   </div>
 </section>
+</div>
 
+<div class="page" id="page-learn" data-page="learn">
 <section id="learn" class="learn">
   <div class="wrap">
     <div class="sec-head"><div>
@@ -361,13 +366,15 @@ tr.gap td{border:0;padding:10px 0 2px;font-weight:800;font-size:.85rem;color:var
     <div id="lresults"></div>
   </div>
 </section>
+</div>
 
+<div class="page" id="page-pay" data-page="pay">
 <section id="calculate" class="bench">
   <div class="wrap">
     <div class="sec-head">
       <div>
         <h2>Start with your payslip</h2>
-        <p>Fill in what you know. The payslip on the right updates as you type and shows both wage definitions side by side. Sample figures are loaded so you can see how it works.</p>
+        <p>Fill in what you know. The payslip on the right updates as you type, using the 2020 Labour Codes' wage definition. Sample figures are loaded so you can see how it works. Add what you actually received to run a fair-pay cross-check.</p>
       </div>
       <div class="bench-actions">
         <button type="button" class="btn small primary" id="btnCalc2">Calculate</button>
@@ -439,6 +446,19 @@ tr.gap td{border:0;padding:10px 0 2px;font-weight:800;font-size:.85rem;color:var
         </fieldset>
 
         <fieldset>
+          <legend>What you actually received <em>optional &mdash; fair-pay cross-check</em></legend>
+          <div class="fg">
+            <label class="f"><span>Actual basic paid <em>per month, from payslip</em></span><input id="actBasic" type="text" inputmode="decimal"></label>
+            <label class="f"><span>Actual gross paid <em>per month, from payslip</em></span><input id="actGross" type="text" inputmode="decimal"></label>
+            <label class="f"><span>Actual net pay received <em>per month, from payslip</em></span><input id="actNet" type="text" inputmode="decimal"></label>
+            <label class="f"><span>Actual employee PF deducted <em>per month, from payslip</em></span><input id="actPFee" type="text" inputmode="decimal"></label>
+            <label class="f"><span>Actual employer PF contributed <em>per month, if known</em></span><input id="actPFer" type="text" inputmode="decimal"></label>
+            <label class="f"><span>Actual gratuity paid <em>on separation, if applicable</em></span><input id="actGrat" type="text" inputmode="decimal"></label>
+          </div>
+          <p class="note">Fill these in from your real, latest payslip (or final settlement) to check whether what you actually got matches what the law says you are owed. Leave blank to skip the cross-check.</p>
+        </fieldset>
+
+        <fieldset>
           <legend>Tax details</legend>
           <div class="fg">
             <label class="f"><span>Rent you pay <em>per month</em></span><input id="rent" type="text" inputmode="decimal"></label>
@@ -458,7 +478,11 @@ tr.gap td{border:0;padding:10px 0 2px;font-weight:800;font-size:.85rem;color:var
             <label class="f"><span>PF is deducted on</span>
               <select id="pfMode"><option value="actual">Full wage</option><option value="ceiling">Statutory ceiling only (₹25,000)</option></select></label>
             <label class="f"><span>State minimum wage <em>per month, optional</em></span><input id="minWage" type="text" inputmode="decimal"></label>
+            <label class="f check"><input id="pfAbove" type="checkbox"><span>My employer contributes PF irrespective of the wage ceiling</span></label>
+            <label class="f" id="pfAboveAmtWrap" hidden><span>How much does your employer contribute <em>per month</em></span><input id="pfAboveAmt" type="text" inputmode="decimal"></label>
+            <label class="f check" id="pfAboveReflectWrap" hidden><input id="pfAboveReflect" type="checkbox" checked><span>This reflects in my PF account (UAN / passbook)</span></label>
           </div>
+          <div id="pfAboveWarn"></div>
         </fieldset>
 
         <div class="calc-row">
@@ -474,17 +498,15 @@ tr.gap td{border:0;padding:10px 0 2px;font-weight:800;font-size:.85rem;color:var
     </div>
   </div>
 </section>
+</div>
 
+<div class="page" id="page-services" data-page="services">
 <section id="details" class="details">
   <div class="wrap">
     <div class="sec-head">
       <div>
         <h2>Where every rupee goes</h2>
-        <p>Choose which wage definition drives the tax, PF and ESI tabs. Gratuity and the wage audit always show both.</p>
-      </div>
-      <div class="seg" role="group" aria-label="Wage definition">
-        <button type="button" data-def="old" aria-pressed="true">Old Acts</button>
-        <button type="button" data-def="new" aria-pressed="false">New Labour Codes</button>
+        <p>A full breakdown of your tax, PF, gratuity, ESI and wage compliance, using the 2020 Labour Codes' wage definition.</p>
       </div>
     </div>
     <div class="tabs" role="tablist" aria-label="Calculation modules">
@@ -497,7 +519,9 @@ tr.gap td{border:0;padding:10px 0 2px;font-weight:800;font-size:.85rem;color:var
     <div id="tabPanel" class="panel" role="tabpanel" aria-live="polite"></div>
   </div>
 </section>
+</div>
 
+<div class="page" id="page-case" data-page="case">
 <section id="case" class="case">
   <div class="wrap">
     <div class="sec-head">
@@ -540,7 +564,9 @@ tr.gap td{border:0;padding:10px 0 2px;font-weight:800;font-size:.85rem;color:var
     </div>
   </div>
 </section>
+</div>
 
+<div class="page" id="page-advisor" data-page="advisor">
 <section id="advisor" class="advisor">
   <div class="wrap">
     <div class="sec-head">
@@ -555,6 +581,7 @@ tr.gap td{border:0;padding:10px 0 2px;font-weight:800;font-size:.85rem;color:var
     </div>
   </div>
 </section>
+</div>
 </main>
 
 <footer class="foot">
@@ -603,8 +630,10 @@ function ptAnnual(st,g){
 }
 
 /* ---------- inputs ---------- */
-var SAMPLE={name:'',age:32,company:'',industry:'it',exp:8,emp:250,state:'KA',empType:'permanent',ctc:2000000,basic:60000,da:0,ra:0,incl:'',hra:30000,gross:155000,net:132000,rent:35000,metro:true,oth80c:50000,othDed:25000,svcY:6,svcM:3,days240:290,pfMode:'actual',minWage:0};
-var BLANK={name:'',age:'',company:'',industry:'it',exp:'',emp:'',state:'NONE',empType:'permanent',ctc:'',basic:'',da:'',ra:'',incl:'',hra:'',gross:'',net:'',rent:'',metro:false,oth80c:'',othDed:'',svcY:'',svcM:'',days240:'',pfMode:'actual',minWage:''};
+var SAMPLE={name:'',age:32,company:'',industry:'it',exp:8,emp:250,state:'KA',empType:'permanent',ctc:2000000,basic:60000,da:0,ra:0,incl:'',hra:30000,gross:155000,net:132000,rent:35000,metro:true,oth80c:50000,othDed:25000,svcY:6,svcM:3,days240:290,pfMode:'actual',minWage:0,
+  actBasic:60000,actGross:155000,actNet:'',actPFee:7200,actPFer:'',actGrat:'',pfAbove:false,pfAboveAmt:'',pfAboveReflect:true};
+var BLANK={name:'',age:'',company:'',industry:'it',exp:'',emp:'',state:'NONE',empType:'permanent',ctc:'',basic:'',da:'',ra:'',incl:'',hra:'',gross:'',net:'',rent:'',metro:false,oth80c:'',othDed:'',svcY:'',svcM:'',days240:'',pfMode:'actual',minWage:'',
+  actBasic:'',actGross:'',actNet:'',actPFee:'',actPFer:'',actGrat:'',pfAbove:false,pfAboveAmt:'',pfAboveReflect:true};
 function fill(o){Object.keys(o).forEach(function(k){var el=$('#'+k);if(!el)return;if(el.type==='checkbox')el.checked=!!o[k];else el.value=o[k];});}
 function num(v){
   v=String(v==null?'':v).toLowerCase().replace(/[,\s\u20B9]/g,'').replace(/^rs\.?/,'');
@@ -620,7 +649,9 @@ function read(){
   return {name:$('#name').value.trim(),age:n('age')||30,company:$('#company').value.trim(),industry:$('#industry').value,exp:n('exp'),
     emp:n('emp'),state:$('#state').value,empType:$('#empType').value,ctc:n('ctc'),basic:n('basic'),da:n('da'),ra:n('ra'),incl:n('incl'),hra:n('hra'),
     gross:n('gross'),net:n('net'),rent:n('rent'),metro:$('#metro').checked,oth80c:n('oth80c'),othDed:n('othDed'),
-    svcY:Math.floor(n('svcY')),svcM:Math.min(11,Math.floor(n('svcM'))),days240:n('days240'),pfMode:$('#pfMode').value,minWage:n('minWage')};
+    svcY:Math.floor(n('svcY')),svcM:Math.min(11,Math.floor(n('svcM'))),days240:n('days240'),pfMode:$('#pfMode').value,minWage:n('minWage'),
+    actBasic:n('actBasic'),actGross:n('actGross'),actNet:n('actNet'),actPFee:n('actPFee'),actPFer:n('actPFer'),actGrat:n('actGrat'),
+    pfAbove:$('#pfAbove').checked,pfAboveAmt:n('pfAboveAmt'),pfAboveReflect:$('#pfAboveReflect').checked};
 }
 
 /* ---------- calculation engine ---------- */
@@ -636,10 +667,8 @@ function esiCalc(base,s){
   var applies=s.emp>=10&&base>0&&base<=R.esiCeiling;
   return {applies:applies,base:base,ee:applies?base*R.esiEE:0,er:applies?base*R.esiER:0};
 }
-/* Wage sets. Old Acts: PF on basic+DA+retaining allowance, gratuity and bonus on basic+DA, ESI on gross pay.
-   New Codes: one uniform wage for PF, gratuity, ESI and bonus. */
-function wagesFor(s,def,G,W){
-  if(def==='old')return {pf:s.basic+s.da+s.ra,g:s.basic+s.da,e:G,b:s.basic+s.da};
+/* Wage set under the 2020 Labour Codes: one uniform wage for PF, gratuity, ESI and bonus. */
+function wagesFor(W){
   return {pf:W,g:W,e:W,b:W};
 }
 function employerCosts(s,ws){
@@ -673,19 +702,15 @@ function taxBoth(G,pfEeM,ptA,s){
   t.old={gross:gA,std:50000,hra:hra,c80:c80,oth:s.othDed,pt:ptA,taxable:oTaxable,base:oBase,rebate:oBase-oAfter,sur:oS.sur,cess:oS.total*0.04,total:oS.total*1.04};
   return t;
 }
-function scenario(s,def){
-  var core=s.basic+s.da+s.ra+s.incl,G=s.gross,W=0,i;
-  var base=employerCosts(s,wagesFor(s,'old',s.gross,0)).total;
-  if(def==='new'){
-    W=Math.max(core,0.5*G);
-    for(i=0;i<60;i++){var ec0=employerCosts(s,wagesFor(s,'new',G,W)).total;G=Math.max(0,s.gross-(ec0-base));W=Math.max(core,0.5*G);}
-  }
-  var ws=wagesFor(s,def,G,W),ec=employerCosts(s,ws),ptA=ptAnnual(s.state,G),pt=ptA/12;
+function scenario(s){
+  var core=s.basic+s.da+s.ra+s.incl,G=s.gross;
+  var W=Math.max(core,0.5*G);
+  var ws=wagesFor(W),ec=employerCosts(s,ws),ptA=ptAnnual(s.state,G),pt=ptA/12;
   var t=taxBoth(G,ec.pf.ee,ptA,s);
   var best=t.old.total<t.nw.total?'old':'nw';
   var taxA=Math.min(t.old.total,t.nw.total);
   var take=G-ec.pf.ee-ec.esi.ee-pt-taxA/12;
-  return {def:def,G:G,W:ws.pf,ws:ws,core:core,pf:ec.pf,esi:ec.esi,grat:ec.grat,pt:pt,ptA:ptA,tax:t,best:best,taxA:taxA,take:take,save:ec.pf.ee+ec.pf.er+ec.grat};
+  return {G:G,W:ws.pf,ws:ws,core:core,pf:ec.pf,esi:ec.esi,grat:ec.grat,pt:pt,ptA:ptA,tax:t,best:best,taxA:taxA,take:take,save:ec.pf.ee+ec.pf.er+ec.grat};
 }
 function gratuityCalc(W,s){
   var total=s.svcY+s.svcM/12,fixed=s.empType==='fixed',thr=fixed?1:5;
@@ -700,7 +725,7 @@ function gratuityCalc(W,s){
 }
 
 /* ---------- state ---------- */
-var S={def:'old',tab:'tax',s:null,sc:null,ready:false};
+var S={tab:'tax',s:null,sc:null,ready:false};
 function compute(){
   var s=read(),notes=[];
   if(!s.basic&&s.ctc>0){s.basic=Math.round(s.ctc/12*0.4);notes.push('Basic pay was blank, so 40% of monthly CTC ('+inr(s.basic)+') is assumed.');}
@@ -713,62 +738,79 @@ function compute(){
   if(notes.length)notes.push('Enter your actual figures for exact results.');
   S.s=s;S.notes=notes;
   S.ready=s.basic>0&&s.gross>0;
-  S.sc=S.ready?{old:scenario(s,'old'),nw:scenario(s,'new')}:null;
-  if(S.sc)S.sc['new']=S.sc.nw;
+  S.sc=S.ready?scenario(s):null;
+}
+
+/* ---------- fair-pay cross-check ---------- */
+function crossCheckHtml(s,sc){
+  var pairs=[
+    ['Basic salary',s.basic,s.actBasic],
+    ['Gross pay',sc.G,s.actGross],
+    ['Employee PF contribution',sc.pf.ee,s.actPFee],
+    ['Employer PF contribution',sc.pf.er,s.actPFer],
+    ['Estimated take-home / net pay',sc.take,s.actNet]
+  ];
+  var ga=gratuityCalc(sc.ws.g,s),gratShown=(ga.status==='eligible'||ga.status==='likely'||ga.status==='check');
+  if(s.actGrat)pairs.push(['Gratuity paid',gratShown?ga.amount:ga.projected,s.actGrat]);
+  var rows=pairs.filter(function(p){return p[2];});
+  if(!rows.length)return '';
+  var mismatches=0,trs='';
+  rows.forEach(function(p){
+    var legal=p[1],actual=p[2],diff=legal-actual,tol=Math.max(10,legal*0.01),ok=diff<=tol;
+    if(!ok)mismatches++;
+    trs+='<tr><td>'+p[0]+'</td><td class="v">'+inr(legal)+'</td><td class="v">'+inr(actual)+'</td><td class="v">'+(ok?'\u2014':inr(diff))+'</td></tr>';
+  });
+  var h='<div class="tool" style="margin-top:18px"><h4>Fair-pay cross-check</h4>';
+  if(mismatches===0){
+    h+='<div class="verdict ok"><p><strong>Matches what you\u2019re legally owed.</strong> What you entered as actually received lines up with what the law and your declared pay terms require.</p></div>';
+  }else{
+    h+='<div class="verdict no"><p><strong>Possible shortfall \u2014 you may be getting underpaid.</strong> '+mismatches+' line'+(mismatches>1?'s':'')+' below '+(mismatches>1?'show':'shows')+' less than what the law requires on your declared terms.</p></div>';
+  }
+  h+='<table class="tbl"><thead><tr><th>Item</th><th class="v">Legally owed</th><th class="v">You actually got</th><th class="v">Shortfall</th></tr></thead><tbody>'+trs+'</tbody></table>';
+  h+='<p class="fine">This compares the legal payslip computed from the pay terms you entered above (CTC, basic, DA, HRA, allowances) against the figures you entered as actually paid. A small rounding gap is ignored. If a shortfall shows, raise it with HR in writing, then see the <a href="#/advisor" data-topic="pfesic">Problem Solver</a> or <a href="#/case" data-case="pfesic">File a Case</a> for the next steps.</p></div>';
+  return h;
 }
 
 /* ---------- payslip ---------- */
 function renderSlip(){
   var el=$('#slip'),mini=$('#miniBar'),s=S.s;
   if(!S.ready){
-    el.innerHTML='<div class="empty">Enter your monthly basic and gross pay, or just your yearly CTC, to see your payslip under both wage definitions.</div>';
+    el.innerHTML='<div class="empty">Enter your monthly basic and gross pay, or just your yearly CTC, to see your payslip.</div>';
     mini.textContent='Enter your pay details to see your payslip';
     return;
   }
-  var a=S.sc.old,b=S.sc.nw;
-  function row(l,x,y,cls){return '<tr class="'+(cls||'')+'"><td>'+l+'</td><td class="v">'+inr(x)+'</td><td class="v">'+inr(y)+'</td></tr>';}
-  var reg=function(sc){return sc.best==='old'?'old regime':'new regime';};
+  var a=S.sc;
+  function row(l,x,cls){return '<tr class="'+(cls||'')+'"><td>'+l+'</td><td class="v">'+inr(x)+'</td></tr>';}
+  var reg=a.best==='old'?'old regime':'new regime';
   var h='<h3>'+esc(s.company||'Your company')+'</h3><p class="who">'+esc(s.name||'Your name')+', monthly payslip, all figures per month</p>';
-  h+='<table><thead><tr><th></th><th class="o">Old Acts</th><th class="n">New Codes</th></tr></thead><tbody>';
-  h+=row('Wage for PF',a.ws.pf,b.ws.pf);
-  h+=row('Wage for gratuity',a.ws.g,b.ws.g);
-  h+=row('Wage for ESI',a.ws.e,b.ws.e);
-  h+=row('Gross pay',a.G,b.G);
-  h+=row('Employee PF',-a.pf.ee,-b.pf.ee);
-  h+=row('Employee ESI',-a.esi.ee,-b.esi.ee);
-  h+=row('Professional tax',-a.pt,-b.pt);
-  h+=row('Income tax ('+reg(a)+')',-a.taxA/12,-b.taxA/12);
-  h+=row('Estimated take-home',a.take,b.take,'total');
-  h+='<tr class="gap"><td colspan="3">Also set aside for you</td></tr>';
-  h+=row('PF and pension, yours and employer\u2019s',a.pf.ee+a.pf.er,b.pf.ee+b.pf.er,'sub');
-  h+=row('Gratuity set aside',a.grat,b.grat,'sub');
+  h+='<table><thead><tr><th></th><th>Amount</th></tr></thead><tbody>';
+  h+=row('Wage for PF, gratuity and ESI',a.ws.pf);
+  h+=row('Gross pay',a.G);
+  h+=row('Employee PF',-a.pf.ee);
+  h+=row('Employee ESI',-a.esi.ee);
+  h+=row('Professional tax',-a.pt);
+  h+=row('Income tax ('+reg+')',-a.taxA/12);
+  h+=row('Estimated take-home',a.take,'total');
+  h+='<tr class="gap"><td colspan="2">Also set aside for you</td></tr>';
+  h+=row('PF and pension, yours and employer\u2019s',a.pf.ee+a.pf.er,'sub');
+  h+=row('Gratuity set aside',a.grat,'sub');
   h+='</tbody></table>';
-  var dT=b.take-a.take,dS=b.save-a.save;
-  h+='<div class="delta">';
-  if(Math.abs(dT)<1&&Math.abs(dS)<1){
-    h+='<p class="flat">Your pay structure already meets the 50% wage rule, so both columns match.</p>';
-  }else{
-    h+='<p class="warn">Under the Codes your take-home '+(dT<0?'falls':'rises')+' by <strong>'+inr(Math.abs(dT))+'</strong> a month.</p>';
-    h+='<p>Your PF, pension and gratuity set-aside '+(dS>=0?'grows':'shrinks')+' by <strong>'+inr(Math.abs(dS))+'</strong> a month.</p>';
-  }
-  if(b.esi.applies&&!a.esi.applies&&S.s.emp>=10)h+='<p class="flat">ESI: under the old ESI Act the wage test uses your gross pay ('+inr(a.ws.e)+'), which is above the \u20B921,000 ceiling, so ESI does not apply. Under the Codes your wage is '+inr(b.ws.e)+', inside the ceiling, so ESI applies.</p>';
-  h+='</div>';
   if(S.notes.length)h+='<p class="assume">'+esc(S.notes.join(' '))+'</p>';
   if(s.net>0)h+='<p class="fine" style="margin-top:12px">Your payslip shows net pay of '+inr(s.net)+'. The estimate above differs if your employer withholds tax differently or has other deductions.</p>';
   if(s.gross<s.basic+s.da+s.ra)h+='<p class="warnbox">Gross pay is lower than basic, DA and retaining allowance added together. Check those figures.</p>';
   if(!s.emp)h+='<p class="warnbox">Employees in the company is blank, so PF (20+ employees), ESI and gratuity (10+) are shown as zero. Enter the company size to include them.</p>';
+  h+=crossCheckHtml(s,a);
   el.innerHTML=h;
-  mini.textContent='Take-home: Old Acts '+inr(a.take)+', Codes '+inr(b.take)+'. See payslip';
+  mini.textContent='Take-home: '+inr(a.take)+'. See payslip';
 }
 
 /* ---------- detail tabs ---------- */
 function tr3(l,x,y,cls){return '<tr class="'+(cls||'')+'"><td>'+l+'</td><td class="v">'+x+'</td><td class="v">'+y+'</td></tr>';}
 function lead(l,v,cls){return '<tr class="'+(cls||'')+'"><td>'+l+'</td><td class="v">'+v+'</td></tr>';}
-function defPill(){return S.def==='old'?'<span class="pill">Old Acts wage</span>':'<span class="pill new">New Codes wage</span>';}
 
 function tabTax(){
-  var sc=S.sc[S.def],t=sc.tax,o=t.old,w=t.nw,d=function(x){return x?inr(-x):'\u2014';};
-  var h='<h3>Income tax and professional tax '+defPill()+'</h3>';
+  var sc=S.sc,t=sc.tax,o=t.old,w=t.nw,d=function(x){return x?inr(-x):'\u2014';};
+  var h='<h3>Income tax and professional tax</h3>';
   h+='<p class="fine">Yearly and monthly tax on gross pay of '+inr(sc.G)+' a month, under both regimes.</p>';
   h+='<table class="tbl"><thead><tr><th></th><th class="o">Old regime</th><th class="n">New regime</th></tr></thead><tbody>';
   h+=tr3('Gross salary for the year',inr(o.gross),inr(w.gross));
@@ -792,13 +834,13 @@ function tabTax(){
   return h;
 }
 function tabPF(){
-  var sc=S.sc[S.def],p=sc.pf,s=S.s;
-  var h='<h3>EPF and EPS '+defPill()+'</h3>';
+  var sc=S.sc,p=sc.pf,s=S.s;
+  var h='<h3>EPF and EPS</h3>';
   if(!p.applies){
     return h+'<div class="verdict mid"><p>PF is mandatory for establishments with 20 or more employees. Enter your company size (currently '+(s.emp||'blank')+') to see contributions.</p></div>';
   }
   h+='<table class="tbl"><tbody>';
-  h+=lead(S.def==='old'?'Wage taken for PF (basic + DA + retaining allowance)':'Wage taken for PF (Code wage)',inr(sc.ws.pf));
+  h+=lead('Wage taken for PF (Code wage)',inr(sc.ws.pf));
   h+=lead(s.pfMode==='ceiling'?'PF base after the \u20B925,000 ceiling':'PF base (full wage)',inr(p.base));
   h+=lead('Your contribution, 12%',inr(p.ee),'total');
   h+=lead('Employer 12%, into your PF account (3.67%)',inr(p.erEpf));
@@ -807,6 +849,14 @@ function tabPF(){
   h+=lead('Added to your PF account each year',inr((p.ee+p.erEpf)*12));
   h+=lead('Pension (EPS) credit each year',inr(p.eps*12));
   h+='</tbody></table>';
+  if(s.pfAbove&&s.pfAboveAmt){
+    h+='<h4>PF above the wage ceiling</h4>';
+    if(!s.pfAboveReflect){
+      h+='<div class="verdict no"><p>You said your employer contributes '+inr(s.pfAboveAmt)+' a month irrespective of the wage ceiling, but it does not reflect in your UAN/PF passbook. This is a red flag \u2014 see the warning and next steps in the Service and PF section of the calculator, or go straight to <a href="#/advisor" data-topic="pfesic">Problem Solver</a> or <a href="#/case" data-case="pfesic">File a Case</a>.</p></div>';
+    }else{
+      h+='<div class="verdict ok"><p>Your employer\u2019s above-ceiling contribution of '+inr(s.pfAboveAmt)+' a month is reflected in your PF account. Keep checking your passbook periodically to confirm it continues.</p></div>';
+    }
+  }
   var before=Math.min(Math.min(p.base,15000)*R.epsRate,R.epsMax),after=p.eps;
   h+='<h4>What the new ceiling changed</h4>';
   h+='<p>Before 17 September 2026 the employer\u2019s pension share stopped at 8.33% of \u20B915,000, about '+inr(before)+' a month for you. With the \u20B925,000 ceiling it is '+inr(after)+' a month'+(after-before>1?', which is '+inr(after-before)+' more going into your pension pool rather than your PF balance.':'.')+'</p>';
@@ -814,7 +864,7 @@ function tabPF(){
   return h;
 }
 function tabGrat(){
-  var s=S.s,a=S.sc.old,b=S.sc.nw,ga=gratuityCalc(a.ws.g,s),gb=gratuityCalc(b.ws.g,s);
+  var s=S.s,a=S.sc,ga=gratuityCalc(a.ws.g,s);
   var h='<h3>Gratuity</h3><p class="fine">Formula: last drawn wage \u00D7 15 \u00F7 26 \u00D7 years of service. A part-year above six months counts as a full year, and the payout is capped at \u20B920 lakh.</p>';
   var msgs={
     eligible:['ok','You meet the service rule and the 240-day check. Gratuity is payable when you leave, retire, or on death or disablement.'],
@@ -825,22 +875,20 @@ function tabGrat(){
   };
   var m=msgs[ga.status];
   h+='<div class="verdict '+m[0]+'"><p>'+m[1]+'</p></div>';
-  h+='<table class="tbl"><thead><tr><th></th><th class="o">Old Acts</th><th class="n">New Codes</th></tr></thead><tbody>';
-  h+=tr3('Wage used per month',inr(a.ws.g),inr(b.ws.g));
-  h+=tr3('Years counted',ga.counted,gb.counted);
+  h+='<table class="tbl"><tbody>';
+  h+=lead('Wage used per month',inr(a.ws.g));
+  h+=lead('Years counted',ga.counted);
   var show=(ga.status==='eligible'||ga.status==='likely'||ga.status==='check');
-  h+=tr3(show?'Gratuity today':'Gratuity at the '+ga.thr+'-year mark',inr(show?ga.amount:ga.projected),inr(show?gb.amount:gb.projected),'total');
-  var dd=(show?gb.amount-ga.amount:gb.projected-ga.projected);
+  h+=lead(show?'Gratuity today':'Gratuity at the '+ga.thr+'-year mark',inr(show?ga.amount:ga.projected),'total');
   h+='</tbody></table>';
-  if(Math.abs(dd)>=1)h+='<p style="margin-top:14px">The Codes wage definition '+(dd>0?'adds':'removes')+' <strong>'+inr(Math.abs(dd))+'</strong> to your gratuity because a bigger share of your pay counts as wages.</p>';
-  h+='<p class="fine">Old Acts wage for gratuity is basic plus DA only: the Payment of Gratuity Act leaves out HRA, bonus, overtime and other allowances. The Codes use the uniform wage definition instead.</p>';
+  h+='<p class="fine">Gratuity wage uses the Code on Social Security\u2019s uniform wage definition: basic, DA, retaining allowance, and any other pay that counts as wages under the 50% rule.</p>';
   h+='<p class="fine">Fixed-term employees become eligible after one year under the Code on Social Security, with the same formula applied to the years served.</p>';
   return h;
 }
 function tabESI(){
-  var sc=S.sc[S.def],s=S.s,e=sc.esi,old=S.def==='old';
-  var lbl=old?'Gross pay (the old ESI Act counts all your wages)':'Wage under the Codes';
-  var h='<h3>ESI and bonus '+defPill()+'</h3><h4>Employees\u2019 State Insurance</h4>';
+  var sc=S.sc,s=S.s,e=sc.esi;
+  var lbl='Wage under the Code';
+  var h='<h3>ESI and bonus</h3><h4>Employees\u2019 State Insurance</h4>';
   if(e.applies){
     h+='<div class="verdict ok"><p>You are covered. '+lbl+' of '+inr(sc.ws.e)+' is within the \u20B921,000 ceiling.</p></div>';
     h+='<table class="tbl"><tbody>'+lead('Wage used for ESI',inr(e.base))+lead('Your contribution, 0.75%',inr(e.ee))+lead('Employer contribution, 3.25%',inr(e.er))+'</tbody></table>';
@@ -852,7 +900,7 @@ function tabESI(){
   h+='<h4>Statutory bonus</h4>';
   var wage=sc.ws.b,ceil=Math.max(R.bonusFloor,s.minWage),calc=Math.min(wage,ceil);
   if(s.emp<20){h+='<div class="verdict"><p>The Bonus Act applies to establishments with 20 or more employees.</p></div>';}
-  else if(wage>R.bonusElig){h+='<div class="verdict"><p>'+(old?'Your basic plus DA':'Your Code wage')+' of '+inr(wage)+' is above the \u20B921,000 a month limit, so statutory bonus does not apply. Any bonus you get is by contract or policy.</p></div>';}
+  else if(wage>R.bonusElig){h+='<div class="verdict"><p>Your Code wage of '+inr(wage)+' is above the \u20B921,000 a month limit, so statutory bonus does not apply. Any bonus you get is by contract or policy.</p></div>';}
   else{
     h+='<div class="verdict ok"><p>You are eligible if you worked at least 30 days in the year.</p></div>';
     h+='<table class="tbl"><tbody>'+lead('Wage used for bonus (ceiling \u20B9'+ceil.toLocaleString('en-IN')+')',inr(calc))+lead('Minimum bonus, 8.33% for the year',inr(calc*12*0.0833))+lead('Maximum bonus, 20% for the year',inr(calc*12*0.20),'total')+'</tbody></table>';
@@ -860,24 +908,24 @@ function tabESI(){
   return h;
 }
 function tabAudit(){
-  var s=S.s,a=S.sc.old,b=S.sc.nw,G=s.gross,core=a.core,share=G>0?core/G*100:0,ok=core>=0.5*G;
+  var s=S.s,a=S.sc,G=s.gross,core=a.core,share=G>0?core/G*100:0,ok=core>=0.5*G;
   var h='<h3>Wage audit against the 50% rule</h3>';
-  h+='<p>The Codes count basic, DA and retaining allowance as wages, and if allowances are more than half of total remuneration the excess is treated as wages as well.</p>';
+  h+='<p>The Code on Wages counts basic, DA and retaining allowance as wages, and if allowances are more than half of total remuneration the excess is treated as wages as well.</p>';
   h+='<div class="bar" role="img" aria-label="Basic, DA and retaining allowance are '+Math.round(share)+' percent of gross pay"><span class="core" style="width:'+Math.min(100,share)+'%">Basic, DA, retaining '+Math.round(share)+'%</span><span class="allow" style="width:'+Math.max(0,100-share)+'%">Allowances '+Math.round(100-share)+'%</span><i></i></div>';
-  if(ok)h+='<div class="verdict ok"><p>Your basic, DA and retaining allowance are already '+Math.round(share)+'% of gross. Your structure meets the rule and the two definitions give the same result.</p></div>';
-  else h+='<div class="verdict mid"><p>Only '+Math.round(share)+'% of your gross is basic, DA and retaining allowance. About <strong>'+inr(b.ws.pf-core)+'</strong> of your allowances is treated as wages under the Codes, so your PF and gratuity wage moves from '+inr(a.ws.pf)+' to '+inr(b.ws.pf)+' a month.</p></div>';
-  h+='<table class="tbl"><thead><tr><th></th><th class="o">Old Acts</th><th class="n">New Codes</th></tr></thead><tbody>';
-  h+=tr3('Wage for PF per month',inr(a.ws.pf),inr(b.ws.pf));
-  h+=tr3('Wage for gratuity per month',inr(a.ws.g),inr(b.ws.g));
-  h+=tr3('Wage for ESI per month',inr(a.ws.e),inr(b.ws.e));
-  h+=tr3('Gross pay per month',inr(a.G),inr(b.G));
-  h+=tr3('Your PF per month',inr(a.pf.ee),inr(b.pf.ee));
-  h+=tr3('Employer PF and EPS per month',inr(a.pf.er),inr(b.pf.er));
-  h+=tr3('Gratuity set aside per year',inr(a.grat*12),inr(b.grat*12));
-  h+=tr3('Estimated take-home per month',inr(a.take),inr(b.take),'total');
-  h+=tr3('PF, pension and gratuity per year',inr(a.save*12),inr(b.save*12),'total');
+  if(ok)h+='<div class="verdict ok"><p>Your basic, DA and retaining allowance are already '+Math.round(share)+'% of gross. Your pay structure already meets the 50% wage rule.</p></div>';
+  else h+='<div class="verdict mid"><p>Only '+Math.round(share)+'% of your gross is basic, DA and retaining allowance. About <strong>'+inr(a.ws.pf-core)+'</strong> of your allowances is treated as wages under the Code, so your PF and gratuity wage is '+inr(a.ws.pf)+' a month rather than '+inr(core)+'.</p></div>';
+  h+='<table class="tbl"><tbody>';
+  h+=lead('Wage for PF per month',inr(a.ws.pf));
+  h+=lead('Wage for gratuity per month',inr(a.ws.g));
+  h+=lead('Wage for ESI per month',inr(a.ws.e));
+  h+=lead('Gross pay per month',inr(a.G));
+  h+=lead('Your PF per month',inr(a.pf.ee));
+  h+=lead('Employer PF and EPS per month',inr(a.pf.er));
+  h+=lead('Gratuity set aside per year',inr(a.grat*12));
+  h+=lead('Estimated take-home per month',inr(a.take),'total');
+  h+=lead('PF, pension and gratuity per year',inr(a.save*12),'total');
   h+='</tbody></table>';
-  h+='<p class="fine">Old Acts: PF on basic + DA + retaining allowance, gratuity and bonus on basic + DA, ESI on gross pay. Codes: one wage for all. The comparison treats every pay component other than basic, DA, retaining allowance and the wage-counting field as an excludable allowance, and keeps your yearly CTC fixed: the extra employer PF, ESI and gratuity cost under the Codes is taken out of gross pay, which is why take-home falls while your long-term savings grow. Employers may restructure differently. HRA exemption still follows your entered basic pay.</p>';
+  h+='<p class="fine">This treats every pay component other than basic, DA, retaining allowance and the wage-counting field as an excludable allowance. If less than half of your gross is basic, DA and retaining allowance, the Code treats the difference as wages anyway, which raises your PF, gratuity and ESI wage base. HRA exemption still follows your entered basic pay.</p>';
   return h;
 }
 var TABS={tax:tabTax,pf:tabPF,grat:tabGrat,esi:tabESI,audit:tabAudit};
@@ -887,18 +935,28 @@ function renderTab(){
   p.setAttribute('aria-labelledby','tab-'+S.tab);
   p.innerHTML=S.ready?TABS[S.tab]():'<div class="empty">Enter your monthly basic and gross pay, or your yearly CTC, above to see this breakdown.</div>';
 }
+function updatePFAboveUI(){
+  var on=$('#pfAbove').checked,amtWrap=$('#pfAboveAmtWrap'),reflWrap=$('#pfAboveReflectWrap'),w=$('#pfAboveWarn');
+  amtWrap.hidden=!on;reflWrap.hidden=!on;
+  var amt=n('pfAboveAmt'),refl=$('#pfAboveReflect').checked;
+  if(!on||!amt){w.innerHTML='';return;}
+  if(!refl){
+    w.innerHTML='<div class="verdict no" style="margin-top:10px"><p><strong>Red flag.</strong> Your employer says it contributes '+inr(amt)+' a month to PF irrespective of the ₹25,000 wage ceiling, but you said it is not showing up in your UAN/PF passbook. An employer that deducts or commits to a PF contribution and does not deposit it is a Section 7A / 14B matter under the EPF Act. Check your passbook on the EPFO member portal first to confirm, then go to <a href="#/advisor" data-topic="pfesic">Problem Solver</a> or <a href="#/case" data-case="pfesic">File a Case</a> for the next steps.</p></div>';
+  }else{
+    w.innerHTML='<div class="verdict ok" style="margin-top:10px"><p>Good — the above-ceiling contribution of '+inr(amt)+' a month is reflecting in your PF account. Keep checking your passbook periodically to confirm it continues.</p></div>';
+  }
+}
 function refresh(){
-  try{compute();renderSlip();renderTab();updateCaseEx();}
+  try{compute();updatePFAboveUI();renderSlip();renderTab();updateCaseEx();}
   catch(err){$('#slip').innerHTML='<p class="warnbox">Something went wrong while calculating ('+esc(err&&err.message)+'). Check that the pay fields contain only numbers, then press Calculate again.</p>';}
 }
 function calculate(){
   refresh();
   var st=$('#calcStatus');
   if(!S.ready){st.textContent='Add your monthly basic and gross pay, or your yearly CTC, to calculate.';return;}
-  st.textContent='Results updated. Your payslip and the tax, PF, gratuity and ESI tabs are ready.';
-  var mobile=window.matchMedia('(max-width:980px)').matches;
-  var target=mobile?$('#slip'):$('#details');
-  if(target&&target.scrollIntoView)target.scrollIntoView({behavior:'smooth',block:mobile?'center':'start'});
+  st.textContent='Results updated. Your payslip is ready, and the Services & PF page has the tax, PF, gratuity and ESI breakdown.';
+  var target=$('#slip');
+  if(target&&target.scrollIntoView)target.scrollIntoView({behavior:'smooth',block:'center'});
 }
 
 /* ---------- helpers for the advisor ---------- */
@@ -940,7 +998,7 @@ function tRetrench(P){
     ['Watch for re-hiring.','If the employer takes on new staff soon after, retrenched workers are entitled to be offered re-employment first.']
   ])+
   '<div class="tool"><h4>Work out what you are owed</h4><div class="fg">'+
-    fld('rt_wage','Monthly wage <em>basic + DA, average of last 3 months</em>','number',Math.round(P.sc?P.sc.old.ws.g:0),'min="0"')+
+    fld('rt_wage','Monthly wage <em>basic + DA, average of last 3 months</em>','number',Math.round(P.sc?P.sc.ws.g:0),'min="0"')+
     fld('rt_y','Years of service','number',s.svcY,'min="0"')+
     fld('rt_m','Extra months','number',s.svcM,'min="0" max="11"')+
     sel('rt_type','Establishment',[['factory','Factory, mine or plantation'],['other','Other establishment']],factory?'factory':'other')+
@@ -1002,7 +1060,7 @@ function tPFESIC(P){
 }
 
 function tGratuity(P){
-  var s=P.s,amt=P.sc?Math.round(gratuityCalc(P.sc.old.ws.g,s).amount):0;
+  var s=P.s,amt=P.sc?Math.round(gratuityCalc(P.sc.ws.g,s).amount):0;
   var html='<h3>Gratuity problems</h3><p class="lede">Gratuity has to be settled within 30 days of the date it becomes payable. If it is late or refused, you have a paper trail to follow.</p>'+
   '<h4>Your steps</h4>'+steps([
     ['Check you qualify.','Five years of continuous service for permanent employees, or one year for fixed-term employees under the Code on Social Security. On death or disablement the service rule does not apply.'],
@@ -1034,7 +1092,7 @@ function tGratuity(P){
 }
 
 function tInjury(P){
-  var covered=P.sc?P.sc.old.esi.applies:false;
+  var covered=P.sc?P.sc.esi.applies:false;
   var html='<h3>Injury or death at work</h3><p class="lede">Act on the same day if you can. Medical care, a written record of the accident and a timely claim all protect the worker or the family. Which route applies depends on whether ESIC covers the worker.</p>'+
   subBar([['esic','Covered by ESIC'],['ec','Not covered by ESIC']])+
   '<div data-subpanel="esic"><h4>Your steps</h4>'+steps([
@@ -1090,7 +1148,7 @@ function tFnF(P){
 }
 
 function tLeave(P){
-  var s=P.s,w=P.sc?P.sc.old.ws.g:0,edd=addDays(isoToday(),120);
+  var s=P.s,w=P.sc?P.sc.ws.g:0,edd=addDays(isoToday(),120);
   var html='<h3>Medical, maternity and leave problems</h3><p class="lede">Leave is protected by the Factories Act, 1948 for factories and by your state\u2019s Shops and Establishments Act for offices and shops. Maternity leave is a right under the Maternity Benefit Act, 1961.</p>'+
   subBar([['leave','Leave balance'],['mat','Maternity']])+
   '<div data-subpanel="leave"><h4>Your steps</h4>'+steps([
@@ -1113,7 +1171,7 @@ function tLeave(P){
   '<div class="tool"><h4>Leave window and pay</h4><div class="fg">'+
     fld('m_edd','Expected delivery date','date',edd)+
     sel('m_kids','Living children now',[['0','None'],['1','One'],['2','Two or more']],'0')+
-    fld('m_gross','Monthly gross pay','number',Math.round(P.sc?P.sc.old.G:0),'min="0"')+
+    fld('m_gross','Monthly gross pay','number',Math.round(P.sc?P.sc.G:0),'min="0"')+
     fld('m_days','Days worked in last 12 months','number',s.days240||300,'min="0"')+
   '</div><div id="m_out" class="out"></div></div></div>'+DISCLAIM;
   function bind(root){
@@ -1227,7 +1285,7 @@ var CASES=[
  expect:'Conciliation can settle within weeks or drag on for months. A Labour Court or Tribunal case often takes one to three years, and longer in some states. Most states charge no court fee for a workman\u2019s claim, but confirm with the registry.',
  relief:'Declare my retrenchment illegal and set it aside; reinstate me with continuity of service and full back wages; in the alternative, pay notice pay, retrenchment compensation and all other dues with interest.',
  grounds:['No notice, or pay in lieu, and no retrenchment compensation was tendered at the time of retrenchment.','The principle of last in, first out was not followed within my category of workers.','Where the establishment is covered, the prior permission of the government was not obtained.','The termination was without any valid reason and violates the principles of natural justice.'],
- ex:function(P){if(!P.sc)return NOEX;var s=P.s,wg=P.sc.old.ws.g,cnt=s.svcY+(s.svcM>6?1:0),c=wg/30*15*cnt;
+ ex:function(P){if(!P.sc)return NOEX;var s=P.s,wg=P.sc.ws.g,cnt=s.svcY+(s.svcM>6?1:0),c=wg/30*15*cnt;
    return 'Say your monthly wage (basic plus DA) is '+inr(wg)+' and you have '+cnt+' counted year'+(cnt===1?'':'s')+' of service. One month\u2019s notice pay is '+inr(wg)+' and retrenchment compensation is '+inr(c)+', so your money claim starts at '+inr(wg+c)+'. If the retrenchment was illegal you also ask for reinstatement with back wages.';}},
 
 {id:'pfesic',t:'PF and ESIC dues',d:'iGMS, Section 7A, EI Court',
@@ -1253,8 +1311,8 @@ var CASES=[
  expect:'An iGMS grievance usually gets a response from the Regional Office within weeks. A Section 7A inquiry can take months. Interest and damages are charged to the employer, not to you.',
  relief:'Direct the respondent to deposit all provident fund and pension contributions for the months in dispute with interest and damages, credit them to my UAN, and take action against the establishment for non-compliance.',
  grounds:['The respondent deducted my share of contributions from my wages and did not deposit it.','The respondent did not pay its own share for the same period.','The default has deprived me of benefits that the law guarantees.'],
- ex:function(P){if(!P.sc)return NOEX;var pf=P.sc.old.pf;if(!pf.applies)return 'PF applies to employers with 20 or more employees. Enter your company size above to see an example.';
-   var gap=(pf.ee+pf.er)*4;return 'Say your employer deducted '+inr(pf.ee)+' a month from your pay but deposited nothing for 4 months. About '+inr(gap)+' is missing from your account (your share plus the employer\u2019s '+inr(pf.er)+' a month), and the employer also owes interest and damages on it. On your figures ESI '+(P.sc.old.esi.applies?'applies, so missing ESIC contributions would put your medical and cash benefits at risk and you would also complain to the ESIC branch office.':'does not apply, so the ESIC route is not part of your case.');}},
+ ex:function(P){if(!P.sc)return NOEX;var pf=P.sc.pf;if(!pf.applies)return 'PF applies to employers with 20 or more employees. Enter your company size above to see an example.';
+   var gap=(pf.ee+pf.er)*4;return 'Say your employer deducted '+inr(pf.ee)+' a month from your pay but deposited nothing for 4 months. About '+inr(gap)+' is missing from your account (your share plus the employer\u2019s '+inr(pf.er)+' a month), and the employer also owes interest and damages on it. On your figures ESI '+(P.sc.esi.applies?'applies, so missing ESIC contributions would put your medical and cash benefits at risk and you would also complain to the ESIC branch office.':'does not apply, so the ESIC route is not part of your case.');}},
 
 {id:'gratuity',t:'Gratuity',d:'Form I, Controlling Authority',
  title:'Filing a case for unpaid gratuity',
@@ -1280,8 +1338,8 @@ var CASES=[
  expect:'Notice and hearings usually take a few months. Interest keeps running while you wait, so the delay is the employer\u2019s cost.',
  relief:'Direct the respondent to pay gratuity of \u20B9[amount] under the Payment of Gratuity Act, 1972 with simple interest from the date it became payable until payment.',
  grounds:['I completed the qualifying period of continuous service.','Gratuity became payable on my last working day and was due within 30 days.','I applied to the employer in Form I and the employer has not paid.'],
- ex:function(P){if(!P.sc)return NOEX;var ga=gratuityCalc(P.sc.old.ws.g,P.s),ok=ga.status==='eligible'||ga.status==='likely'||ga.status==='check',amt=ok?ga.amount:ga.projected,intr=amt*0.10*90/365;
-   return 'On your figures'+(ok?'':', once you reach '+ga.thr+' years,')+' gratuity is about '+inr(amt)+' (wage '+inr(P.sc.old.ws.g)+' \u00D7 15 \u00F7 26 \u00D7 years). If it is paid 90 days late, simple interest at 10% adds about '+inr(intr)+', so the claim before the Authority would be about '+inr(amt+intr)+'.';}},
+ ex:function(P){if(!P.sc)return NOEX;var ga=gratuityCalc(P.sc.ws.g,P.s),ok=ga.status==='eligible'||ga.status==='likely'||ga.status==='check',amt=ok?ga.amount:ga.projected,intr=amt*0.10*90/365;
+   return 'On your figures'+(ok?'':', once you reach '+ga.thr+' years,')+' gratuity is about '+inr(amt)+' (wage '+inr(P.sc.ws.g)+' \u00D7 15 \u00F7 26 \u00D7 years). If it is paid 90 days late, simple interest at 10% adds about '+inr(intr)+', so the claim before the Authority would be about '+inr(amt+intr)+'.';}},
 
 {id:'injury',t:'Injury or death at work',d:'ESIC or Compensation Commissioner',
  title:'Filing a claim for injury or death at work',
@@ -1307,7 +1365,7 @@ var CASES=[
  expect:'ESIC claims are usually processed within weeks to months. A contested compensation case before the Commissioner can take a year or more.',
  relief:'Direct the respondent to pay compensation of \u20B9[amount] for [death / permanent / temporary disablement] arising out of and in the course of employment, with interest at 12% a year and penalty for delay.',
  grounds:['The accident arose out of and in the course of my employment.','The employer was given notice of the accident.','The compensation has not been paid and the delay has no justification.'],
- ex:function(P){if(!P.sc)return NOEX;var ap=P.sc.old.esi.applies;
+ ex:function(P){if(!P.sc)return NOEX;var ap=P.sc.esi.applies;
    return 'On your figures ESI '+(ap?'applies, so you would begin at the ESIC branch office and claim injury benefits there.':'does not apply, so you would begin with a claim before the Commissioner for Employees\u2019 Compensation.')+' Compensation is calculated from the worker\u2019s wages and the percentage of disability, so bring at least three payslips.';}},
 
 {id:'fnf',t:'Unpaid dues and FnF',d:'Conciliation, wage claims, civil suit',
@@ -1335,7 +1393,7 @@ var CASES=[
  expect:'Wages Authorities often decide within a few months. Labour Court or civil cases can take one to three years or more.',
  relief:'Direct the respondent to pay \u20B9[amount] as full and final settlement dues with interest and compensation as allowed by law, and issue my relieving and experience letters.',
  grounds:['My last working day was [date] and all dues were payable within two working days.','The respondent has not paid the dues despite my grievance and demand notice.','The withholding of my wages is unlawful and has caused me loss.'],
- ex:function(P){if(!P.sc)return NOEX;var s=P.s,g=P.sc.old.G,wg=P.sc.old.ws.g,lv=10*wg/26,ga=gratuityCalc(wg,s),gr=(ga.status==='eligible'||ga.status==='likely')?ga.amount:0;
+ ex:function(P){if(!P.sc)return NOEX;var s=P.s,g=P.sc.G,wg=P.sc.ws.g,lv=10*wg/26,ga=gratuityCalc(wg,s),gr=(ga.status==='eligible'||ga.status==='likely')?ga.amount:0;
    return 'Say you left and were paid nothing. Last month\u2019s pay of '+inr(g)+' plus 10 days\u2019 leave encashment of '+inr(lv)+(gr?' plus gratuity of '+inr(gr):'')+' comes to '+inr(g+lv+gr)+'. That total goes in your dues sheet, your demand notice and your claim.';}},
 
 {id:'leave',t:'Maternity and leave',d:'Inspector complaint, ESIC',
@@ -1363,7 +1421,7 @@ var CASES=[
  expect:'Inspectors usually respond within weeks because the leave period is fixed. Appeals take longer, so ask for interim protection if you have been dismissed.',
  relief:'Direct the respondent to sanction maternity leave of [26 / 12] weeks with maternity benefit at my average daily wage, medical bonus as applicable, and to reinstate me if I have been dismissed in violation of the Act.',
  grounds:['I worked for at least 80 days in the 12 months before my expected delivery date.','I gave written notice as the Act requires.','The employer refused or delayed maternity benefit, or took action against me because of my pregnancy.'],
- ex:function(P){if(!P.sc)return NOEX;var g=P.sc.old.G;
+ ex:function(P){if(!P.sc)return NOEX;var g=P.sc.G;
    return 'For 26 weeks of leave your maternity benefit works out to about '+inr(g*6)+' (six months of gross pay of '+inr(g)+'). If the employer refuses it, that is the amount you put in your complaint to the Inspector, together with the leave dates.';}},
 
 {id:'posh',t:'Sexual harassment',d:'ICC, Local Committee, police',
@@ -1476,15 +1534,45 @@ function renderCase(scroll){
   listen(['cd_forum','cd_city','cd_res','cd_addr','cd_role','cd_doj','cd_cause','cd_prior','cd_facts','cd_relief'],mk);mk();
   if(scroll&&window.matchMedia('(max-width:860px)').matches)p.scrollIntoView({behavior:'smooth',block:'start'});
 }
+function nonWorkerGuide(sph){
+  var auth=sph==='central'?'the Central Government\u2019s Claims Authority appointed under the Code on Wages (usually a Central Labour Commissioner officer)':'the State Government\u2019s Claims Authority appointed under the Code on Wages (usually an Assistant or Deputy Labour Commissioner)';
+  return '<div class="tool" style="margin-top:12px"><h4>You are not a \u201Cworker\u201D \u2014 here is what to do instead</h4>'
+    +'<p>The Industrial Disputes Act\u2019s conciliation-to-Tribunal route and the Industrial Relations Code\u2019s worker route are closed to you. You still have two ways to recover unpaid wages, bonus, or other dues. Pick the wage-claim route first \u2014 it is faster and free.</p>'
+    +'<h4 style="margin-top:16px">Route 1: wage claim under the Code on Wages, 2019 (recommended first)</h4>'
+    +'<ol class="steps">'
+    +'<li>Any employee, regardless of designation or wage, can bring a claim for unpaid or underpaid wages, bonus, or unauthorised deductions under this route \u2014 the \u201Cworkman\u201D test does not apply here.</li>'
+    +'<li>Send a written demand to your employer first and keep a copy; it strengthens the claim and often resolves it without filing.</li>'
+    +'<li>If unresolved, apply in the prescribed form to '+auth+', stating the amount claimed and the period it covers.</li>'
+    +'<li>File within <strong>3 years</strong> of the amount falling due \u2014 the Code\u2019s limitation period.</li>'
+    +'<li>Attach payslips, the appointment letter, bank statements, and your written demand as proof.</li>'
+    +'<li>The Authority can award the unpaid amount plus compensation up to 10 times the claim, after hearing both sides.</li>'
+    +'<li>Either side can appeal to the Appellate Authority within <strong>90 days</strong> of the order.</li>'
+    +'</ol>'
+    +'<h4 style="margin-top:16px">Route 2: civil suit for recovery (if the claim is more complex, e.g. breach of contract, not just unpaid wages)</h4>'
+    +'<ol class="steps">'
+    +'<li>File a money suit under the Code of Civil Procedure in the civil court with jurisdiction over your workplace or where the employer can be sued, for the amount owed under your contract.</li>'
+    +'<li>File within <strong>3 years</strong> of the due date under the Limitation Act, 1963.</li>'
+    +'<li>You will need an advocate, and pay court fees scaled to the amount claimed (usually a small percentage, state-specific).</li>'
+    +'<li>The employer files a written statement, both sides lead evidence, and the court passes a decree, which can then be executed against the employer\u2019s assets if unpaid.</li>'
+    +'<li>This route takes longer than the wage-claim route, so use it mainly when the wage-claim Authority cannot grant the relief you need (e.g. disputed terms of a contract, not a simple non-payment).</li>'
+    +'</ol>'
+    +'<p class="fine">See \u201CUnpaid dues and FnF\u201D in the case list below for the demand-notice draft and document checklist \u2014 the same preparation applies to both routes.</p></div>';
+}
 function renderRoute(){
   var role=$('#rc_role').value,w=num($('#rc_wage').value),sph=$('#rc_sphere').value,o=$('#rc_out');
   function wm(cap){return role==='work'||(role==='sup'&&w>0&&w<=cap);}
   var ida=wm(10000),irc=wm(18000);
   var h='';
-  if(role==='mgr')h+=verdict('no','A managerial or administrative role is not a workman under the 1947 Act or a worker under the Code. Use the wage-claim route under the Code on Wages or a civil suit. See \u201CUnpaid dues and FnF\u201D below.');
-  else if(role==='sup'&&!w)h+=verdict('mid','Enter your monthly wages. A supervisor counts as a workman only up to \u20B910,000 a month under the 1947 Act and \u20B918,000 a month under the Code.');
-  else h+=verdict(ida||irc?'ok':'no',(ida?'You count as a <strong>workman</strong> under the Industrial Disputes Act, 1947. ':'You do not count as a workman under the 1947 Act (supervisor limit \u20B910,000 a month). ')+(irc?'You count as a <strong>worker</strong> under the Industrial Relations Code, 2020.':'You do not count as a worker under the Code (supervisor limit \u20B918,000 a month).')+(ida||irc?' Conciliation and the Labour Court or Tribunal are open to you.':' Use the wage-claim route or a civil suit.'));
-  h+='<p class="fine">'+(sph==='central'?'Central sphere: your dispute goes to the Central Government\u2019s labour officers (Assistant or Regional Labour Commissioner, Central) and the CGIT-cum-Labour Court.':'State sphere: your dispute goes to the State labour department (Assistant or Deputy Labour Commissioner) and the State Labour Court or Industrial Tribunal.')+'</p>';
+  if(role==='mgr'){
+    h+=verdict('no','A managerial or administrative role is not a workman under the 1947 Act or a worker under the Code.');
+    h+=nonWorkerGuide(sph);
+    o.innerHTML=h;return;
+  }
+  if(role==='sup'&&!w){h+=verdict('mid','Enter your monthly wages. A supervisor counts as a workman only up to \u20B910,000 a month under the 1947 Act and \u20B918,000 a month under the Code.');o.innerHTML=h;return;}
+  var isWorker=ida||irc;
+  h+=verdict(isWorker?'ok':'no',(ida?'You count as a <strong>workman</strong> under the Industrial Disputes Act, 1947. ':'You do not count as a workman under the 1947 Act (supervisor limit \u20B910,000 a month). ')+(irc?'You count as a <strong>worker</strong> under the Industrial Relations Code, 2020.':'You do not count as a worker under the Code (supervisor limit \u20B918,000 a month).')+(isWorker?' Conciliation and the Labour Court or Tribunal are open to you.':''));
+  if(isWorker)h+='<p class="fine">'+(sph==='central'?'Central sphere: your dispute goes to the Central Government\u2019s labour officers (Assistant or Regional Labour Commissioner, Central) and the CGIT-cum-Labour Court.':'State sphere: your dispute goes to the State labour department (Assistant or Deputy Labour Commissioner) and the State Labour Court or Industrial Tribunal.')+'</p>';
+  else h+=nonWorkerGuide(sph);
   o.innerHTML=h;
 }
 
@@ -1908,7 +1996,28 @@ function renderLex(){
   $$('#lex .pex').forEach(function(b){b.addEventListener('click',function(){$('#lq').value=b.textContent;doLawSearch();});});
 }
 
+/* ---------- page router ---------- */
+var PAGES=['home','pay','services','search','learn','case','advisor'];
+function pageFromHash(){
+  var h=location.hash.replace(/^#\/?/,'').split('?')[0].split('&')[0];
+  return PAGES.indexOf(h)!==-1?h:'home';
+}
+function showPage(id){
+  $$('.page').forEach(function(p){p.hidden=p.dataset.page!==id;});
+  $$('.top nav a').forEach(function(a){a.setAttribute('aria-current',a.dataset.page===id?'page':'false');});
+  document.title=(id==='home'?'Employee Solutions: Your Rights, Your Compensation, Simplified':'Employee Solutions — '+($('.top nav a[data-page="'+id+'"]')||{}).textContent);
+}
+function route(){
+  showPage(pageFromHash());
+  window.scrollTo(0,0);
+}
+window.addEventListener('hashchange',route);
+
 /* ---------- events ---------- */
+document.addEventListener('click',function(e){
+  var tl=e.target.closest('[data-topic]');
+  if(tl){topicId=tl.dataset.topic;renderTopic(true);}
+});
 document.addEventListener('click',function(e){
   var c=e.target.closest('[data-copy]');
   if(c){
@@ -1928,7 +2037,6 @@ $$('.seg button').forEach(function(b){b.addEventListener('click',function(){
   S.def=b.dataset.def;$$('.seg button').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false');});renderTab();
 });});
 $$('.tab').forEach(function(b){b.addEventListener('click',function(){S.tab=b.dataset.tab;renderTab();});});
-$('#topicList').addEventListener('click',function(e){var b=e.target.closest('[data-topic]');if(!b)return;topicId=b.dataset.topic;renderTopic(true);});
 $('#miniBar').addEventListener('click',function(){$('#slip').scrollIntoView({behavior:'smooth',block:'center'});});
 if('IntersectionObserver' in window){
   var io=new IntersectionObserver(function(en){
@@ -1956,6 +2064,7 @@ $('#lq').addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDef
 $('#pq').addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();doSearch();}});
 $('#caseList').addEventListener('click',function(e){var b=e.target.closest('[data-ctopic]');if(!b)return;caseId=b.dataset.ctopic;renderCase(true);});
 document.addEventListener('click',function(e){var a=e.target.closest('[data-case]');if(!a)return;caseId=a.dataset.case;renderCase(false);});
+route();
 })();
 </script>
 </body>
