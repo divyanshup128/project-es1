@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Employee Solutions: Your Rights, Your Compensation, Simplified</title>
+<title>Employee Matters: Your Rights, Your Compensation, Simplified</title>
 <meta name="description" content="Compare your tax, PF, gratuity and take-home under the old labour Acts and the 2020 Labour Codes, then get a step-by-step plan for workplace problems.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -529,17 +529,29 @@ tr.total td{font-size:1.02rem}
 .pm-sold{margin-top:16px;padding:12px 16px;border-left:4px solid var(--old);background:var(--old-soft);border-radius:0 12px 12px 0;font-weight:600}
 .pm-note{font-size:.85rem;color:var(--muted);margin-top:14px}
 </style>
+<style id="clx-css">
+.clx-list{display:grid;gap:8px;margin:10px 0}
+.clx{border:1px solid var(--line);border-radius:14px;background:var(--sheet)}
+.clx summary{cursor:pointer;list-style:none;padding:12px 14px;display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;min-height:48px}
+.clx summary::-webkit-details-marker{display:none}
+.clx summary::before{content:"+";font-weight:800;color:var(--old);width:18px;flex:none}
+.clx[open] summary::before{content:"\2212"}
+.clx-t{font-weight:700;flex:1 1 220px}
+.clx-c{font-family:var(--mono);font-size:.8rem;color:var(--muted)}
+.clx>.facts,.clx>.casebox{margin:0 14px 14px}
+.clx>.facts{padding-top:2px}
+</style>
 </head>
 <body>
 <a class="skip" href="#/pay">Skip to the calculator</a>
 
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="#/home" aria-label="Employee Solutions home">
+    <a class="brand" href="#/home" aria-label="Employee Matters home">
       <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
         <circle cx="16" cy="16" r="14"/><circle cx="16" cy="16" r="10" stroke-dasharray="2 3"/><path d="M10.6 16.6l3.7 3.6 7.2-8.2"/>
       </svg>
-      <span>Employee Solutions</span>
+      <span>Employee Matters</span>
     </a>
     <nav aria-label="Main">
       <a href="#/home" data-page="home">Home</a>
@@ -587,7 +599,7 @@ tr.total td{font-size:1.02rem}
 <a class="lp-card" href="#/pay"><div class="lp-ico">₹</div><b>Pay Calculator</b><span>See tax, PF, gratuity and take-home from your own payslip.</span></a>
 <a class="lp-card" href="#/search"><div class="lp-ico">?</div><b>Find My Issue</b><span>Describe your problem in your own words and learn what the law says.</span></a>
 <a class="lp-card" href="#/case"><div class="lp-ico">§</div><b>File a Case</b><span>Where to file, by when, and what papers to bring.</span></a>
-<a class="lp-card" href="#/advisor"><div class="lp-ico">✓</div><b>Problem Solver</b><span>Steps and ready-to-copy letters for pay, PF, leave and more.</span></a>
+<a class="lp-card" href="#/advisor"><div class="lp-ico">✓</div><b>Problem Solver</b><span>Pick your problem, get steps and ready letters, backed by wage case law.</span></a>
 <a class="lp-card" href="#/services"><div class="lp-ico">%</div><b>Services &amp; PF</b><span>A full breakdown of income tax, EPF, gratuity and ESI.</span></a>
 <a class="lp-card" href="#/premium"><div class="lp-ico">★</div><b>Premium · ₹800</b><span>Unlock PDF reports, ready letters and expert help.</span></a>
 <a class="lp-card" href="#/learn"><div class="lp-ico">i</div><b>Learn</b><span>Labour law in India, from the first Factories Act to the new Codes.</span></a>
@@ -611,7 +623,7 @@ tr.total td{font-size:1.02rem}
  <div class="pm-plan"><h3>Free</h3><div class="pm-price">₹0</div>
   <ul><li>Pay Calculator and payslip check</li><li>Find My Issue and Learn</li><li>Steps for common problems</li><li>7 languages</li></ul></div>
  <div class="pm-plan pro"><h3>Premium</h3><div class="pm-price">₹800 <small>/ month</small></div>
-  <ul><li>Download your payslip comparison as a PDF</li><li>Ready-to-send legal letters in Word and PDF</li><li>Case tracker with deadline reminders</li><li>Ask a labour-law expert, reply within 2 working days</li><li>Save and compare unlimited calculations</li></ul>
+  <ul><li>Download your payslip comparison as a PDF</li><li>Ready-to-send legal letters in Word and PDF</li><li>Case-backed wage solutions: pick your problem and get a plan built from 90+ landmark judgments</li><li>Case tracker with deadline reminders</li><li>Ask a labour-law expert, reply within 2 working days</li><li>Save and compare unlimited calculations</li></ul>
   <button type="button" class="btn primary" id="pmBuy">Buy Premium</button></div>
 </div>
 
@@ -847,7 +859,7 @@ tr.total td{font-size:1.02rem}
     <div class="sec-head">
       <div>
         <h2>File a case: the procedure</h2>
-        <p>Pick the kind of problem to see where to file, by when, what to bring and what happens next. The examples use the same situations as the calculators and problem solver.</p>
+        <p>Pick the kind of problem to see where to file, by when, what to bring and what happens next. The examples use the same situations as the calculators and Problem Solver.</p>
       </div>
     </div>
     <ol class="flow" aria-label="The path of a labour case">
@@ -891,7 +903,7 @@ tr.total td{font-size:1.02rem}
   <div class="wrap">
     <div class="sec-head">
       <div>
-        <h2>Problem solver <span class="badge">Premium</span></h2>
+        <h2>Problem Solver <span class="badge">Premium</span></h2>
         <p>Pick what is happening at work. You get the law that applies, the steps to take in order, the papers to keep ready, and drafts you can copy.</p>
       </div>
     </div>
@@ -906,7 +918,7 @@ tr.total td{font-size:1.02rem}
 
 <footer class="foot">
   <div class="wrap">
-    <p><strong>Employee Solutions</strong> gives general information and estimates based on rules as understood in September 2026. It is not legal, tax or financial advice. Rates, ceilings and professional tax slabs change and vary by state, so confirm against the latest notifications or with a qualified professional before you act. Income tax uses assumed FY 2026-27 slabs and leaves out surcharge.</p>
+    <p><strong>Employee Matters</strong> gives general information and estimates based on rules as understood in September 2026. It is not legal, tax or financial advice. Rates, ceilings and professional tax slabs change and vary by state, so confirm against the latest notifications or with a qualified professional before you act. Income tax uses assumed FY 2026-27 slabs and leaves out surcharge.</p>
   </div>
 </footer>
 
@@ -1304,6 +1316,7 @@ var DISCLAIM='<p class="fine" style="margin-top:22px">This is general guidance, 
 
 /* ---------- advisor topics ---------- */
 function tRetrench(P){
+  var RTP=makePicker(P,'ir',IBM,{title:'What is your problem?',lede:'Pick the problem you face. You get what the courts have decided, what to do step by step, where to go for justice and a demand letter. Covers retrenchment, closure, lay-off, dismissal, strikes, settlements and who counts as a workman.',ph:'e.g. terminated without notice after 2 years'});
   var s=P.s,factory=['mfg','mining','plantation'].indexOf(s.industry)>-1;
   var html='<h3>Retrenchment and layoff</h3><p class="lede">Retrenchment means your employer ends your service for a reason other than punishment, usually because there is too much staff. A layoff is a temporary inability to give you work. Which rules apply depends on the kind of establishment and how many workers it has.</p>'+
   '<h4>Your steps</h4>'+steps([
@@ -1322,8 +1335,10 @@ function tRetrench(P){
     sel('rt_type','Establishment',[['factory','Factory, mine or plantation'],['other','Other establishment']],factory?'factory':'other')+
     fld('rt_workers','Workers employed','number',s.emp||'','min="0"')+
     sel('rt_law','Law to apply',[['ida','Industrial Disputes Act (100+ workers)'],['irc','Industrial Relations Code (300+ workers)']],'ida')+
-  '</div><div id="rt_out" class="out"></div></div>'+DISCLAIM;
+  '</div><div id="rt_out" class="out"></div></div>'+
+   '<div class="pickerblock" style="margin-top:26px">'+RTP.html+'</div>'+DISCLAIM;
   function bind(){
+    RTP.bind();
     function calc(){
       var w=nv('rt_wage'),y=nv('rt_y'),m=nv('rt_m'),wk=nv('rt_workers'),law=$('#rt_law').value;
       var thr=law==='ida'?100:300,vb=$('#rt_type').value==='factory'&&wk>=thr,mon=vb?3:1,cnt=Math.floor(y)+(m>6?1:0);
@@ -1554,7 +1569,1080 @@ function tHarass(P){
   return {html:html,bind:bind};
 }
 
+/* ---------- wage case-law library (reference data for wage problems) ---------- */
+var CASELAW=[
+{n:1,p:1,side:'for',name:"Bijoy Cotton Mills Ltd. v. State of Ajmer",cite:"AIR 1955 SC 33",themes:["Minimum wage"],
+ forum:"Supreme Court of India. Direct writ petition under Article 32, along with civil appeals from the Judicial Commissioner, Ajmer.",
+ dispute:"Textile mill owners said they could not pay the statutory minimum wages fixed by the State and argued the Minimum Wages Act, 1948 violated freedom of trade under Art. 19(1)(g), even when workers agreed to work for less.",
+ held:"Upheld the constitutional validity of the Minimum Wages Act, 1948. Securing decent living conditions is in the public interest under Art. 19(6), and an employer's financial incapacity is irrelevant to the minimum wage.",
+ after:"The mill had to reopen paying the notified rates. Labour Departments barred private below-minimum-wage contracts as void from the start under Sec. 25 of the Minimum Wages Act.",
+ use:"Cite when an employer says it cannot afford the notified minimum wage, or that you agreed to work for less."},
+{n:2,p:1,side:'mixed',name:"Express Newspapers (P) Ltd. v. Union of India",cite:"AIR 1958 SC 578",themes:["Minimum wage","Fair and living wage"],
+ forum:"Supreme Court. Writ petitions under Article 32 challenging a Wage Board decision under the Working Journalists Act, 1955.",
+ dispute:"Newspaper establishments challenged the Wage Board's national wage structure, saying it was fixed without checking each unit's capacity to pay.",
+ held:"Set out the three levels: Minimum Wage (payable regardless of profit), Fair Wage (depends on industry-cum-region capacity) and Living Wage (the constitutional ideal). Struck down the Wage Board decision for ignoring capacity to pay when fixing fair wages.",
+ after:"Parliament amended the Working Journalists Act to require an assessment of financial capacity, and a fresh statutory Wage Board re-fixed journalist pay scales.",
+ use:"Cite for the minimum / fair / living wage vocabulary. Note the flip side: a fair wage, unlike the minimum wage, must take capacity to pay into account."},
+{n:3,p:1,side:'for',name:"Crown Aluminium Works v. Their Workmen",cite:"AIR 1958 SC 30",themes:["Minimum wage"],
+ forum:"Fifth Industrial Tribunal, West Bengal, then Labour Appellate Tribunal, then Supreme Court. Reference under Sec. 10, ID Act, then SLP under Article 136.",
+ dispute:"Facing losses in the post-war recession, the company cut facility payments and special allowances, reducing the existing wage packet of workmen.",
+ held:"No industry has a right to exist unless it can pay its workmen at least a bare minimum wage. Higher fair wages can be revised downward on proven losses, but the minimum wage floor can never be breached.",
+ after:"The company had to restore the reduced minimum wage components and pay arrears. The case became the standard test for Industrial Tribunals in wage-cut references.",
+ use:"Cite when an employer cuts allowances or pay citing losses and the result takes you below the minimum wage."},
+{n:4,p:1,side:'for',name:"Standard Vacuum Refining Co. of India v. Its Workmen",cite:"AIR 1961 SC 895",themes:["Fair and living wage"],
+ forum:"Industrial Tribunal, Bombay, then Supreme Court. Reference under Sec. 10(1)(d), ID Act, then appeal under Article 136.",
+ dispute:"Workmen of a very profitable oil refinery demanded a living wage and higher scales, saying wages fell short of living standards despite large profits.",
+ held:"Examined the 15th Indian Labour Conference (1957) five-norm formula for need-based minimum wages. Even prosperous companies in India were paying fair wages, not true living wages. The Tribunal's upward revision was upheld.",
+ after:"The employer implemented revised wage scales and dearness allowance slabs. The 15th ILC food, clothing and housing norms became the benchmark for wage tribunals.",
+ use:"Cite in a wage-revision reference against a profitable employer, to anchor the demand in the 15th ILC need-based norms."},
+{n:5,p:1,side:'for',name:"Unichoyi v. State of Kerala",cite:"AIR 1962 SC 12",themes:["Minimum wage"],
+ forum:"Supreme Court. Direct writ petition under Article 32 against the Kerala minimum wage notification for the tile industry.",
+ dispute:"Tile factory owners in Malabar said the notification went beyond bare subsistence and hurt their regional competitiveness.",
+ held:"A Constitution Bench held the statutory minimum wage is more than physical subsistence. It must provide for preserving efficiency, education and medical needs, regardless of employer hardship.",
+ after:"Kerala's Labour Commissioner enforced the notification across all districts. Stay orders were vacated and arrears recovered from defaulting factories.",
+ use:"Cite when a state minimum wage notification is attacked as too high, or when an employer argues minimum wage is only bare subsistence."},
+{n:6,p:1,side:'mixed',name:"Bidi, Bidi Leaves & Tobacco Merchants Assn. v. State of Bombay",cite:"AIR 1962 SC 486",themes:["Minimum wage"],
+ forum:"Bombay High Court, then Supreme Court. Writ petition under Article 226, then certificate appeal.",
+ dispute:"Bidi manufacturers challenged a notification that revised piece-rate minimum wages for bidi rollers and also regulated the 'chhat' (rejection of sub-standard bidis) rules.",
+ held:"The State has full power under Secs. 3 and 5 of the Minimum Wages Act to fix minimum piece rates. It cannot rewrite collateral terms of service, or settle industrial disputes, through a wage notification where the Act gives no such power.",
+ after:"Clauses 3 to 7 on rejection disputes were severed and struck down. The revised wage rates in Clauses 1 and 2 were enforced.",
+ use:"Useful for piece-rate workers: the rate itself is enforceable, but disputes about rejection or other terms go through the normal dispute route."},
+{n:7,p:1,side:'for',name:"Kamani Metals & Alloys Ltd. v. Their Workmen",cite:"AIR 1967 SC 1175",themes:["Fair and living wage","Dearness allowance"],
+ forum:"Industrial Tribunal, Maharashtra, then Supreme Court. Reference under Sec. 10, ID Act after 9 years of wage stagnation, then SLP under Article 136.",
+ dispute:"Workmen sought revision of wages and Dearness Allowance, pointing to rising living costs and comparable engineering units in Bombay.",
+ held:"Formulated the Industry-cum-Region principle for fixing fair wages: compare units of similar standing in the same region, and link DA to the Consumer Price Index.",
+ after:"Revised scales and CPI-linked DA were applied from the date of the reference. The case became the working manual for Wage Boards and Tribunals.",
+ use:"Cite when pay has stagnated for years: compare with similar units in your region and ask for CPI-linked DA."},
+{n:8,p:1,side:'for',name:"Hydro (Engineers) Pvt. Ltd. v. The Workmen",cite:"AIR 1969 SC 182",themes:["Minimum wage","Dearness allowance"],
+ forum:"Industrial Tribunal, Maharashtra, then Supreme Court. Reference under Sec. 10, ID Act, then special leave under Article 136.",
+ dispute:"The employer challenged an award that linked minimum wage scales to the cost-of-living index and shortened the time to reach maximum pay.",
+ held:"Upheld the award. Statutory or tribunal-fixed minimum wages must stay insulated from inflation by linking them to the cost-of-living index, and employer losses cannot defeat that linkage.",
+ after:"The company paid retrospective arrears linked to the Bombay Working Class Consumer Price Index. The case paved the way for statutory Variable Dearness Allowance (VDA) notifications.",
+ use:"Cite when your wage is fixed in rupees with no inflation link and the real value has eroded."},
+{n:9,p:1,side:'for',name:"People's Union for Democratic Rights (PUDR) v. Union of India (Asiad Workers case)",cite:"AIR 1982 SC 1473",themes:["Minimum wage","Forced labour","Contract and casual labour"],
+ forum:"Supreme Court. Public interest litigation started by a letter petition, treated as a writ under Article 32.",
+ dispute:"Contractors on Asian Games construction for the Delhi Administration and DDA deducted Rs 1 a day as jamadar commission from workers' Rs 9.25 daily minimum wage, and also breached the Equal Remuneration Act.",
+ held:"Payment below the statutory minimum wage is forced labour (begar) under Article 23. Economic compulsion makes workers accept sub-minimum wages, which is unconstitutional.",
+ after:"The Court appointed three Ombudsmen to inspect sites weekly. Principal employers (DDA, CPWD) had to pay the wage differences directly and prosecute the jamadars and contractors.",
+ use:"Cite when a contractor, jamadar or agent takes a cut that leaves you below the minimum wage, and to hold the principal employer responsible."},
+{n:10,p:1,side:'for',name:"Sanjit Roy v. State of Rajasthan",cite:"AIR 1983 SC 328",themes:["Minimum wage","Forced labour"],
+ forum:"Supreme Court. PIL writ petition under Article 32 filed by a social work organisation (SWRC, Tilonia).",
+ dispute:"Rajasthan PWD paid famine-relief road workers Rs 7 a day (or less through gang-grouping) against the notified Rs 9 minimum, relying on the Rajasthan Famine Relief Works Employees (Exemption from Labour Laws) Act, 1964.",
+ held:"Struck down the Exemption Act as unconstitutional under Articles 14 and 23. Even in State-run famine relief, taking labour below the statutory minimum wage is forced labour.",
+ after:"Rajasthan PWD was directed to repay the shortfall to all famine relief workers. State governments were barred from paying below-minimum wages in public relief schemes.",
+ use:"Cite when a government scheme, relief work or public project pays less than the notified minimum wage."},
+{n:11,p:2,side:'for',name:"Workmen v. Management of Reptakos Brett & Co. Ltd.",cite:"AIR 1992 SC 504",themes:["Fair and living wage","Dearness allowance"],
+ forum:"Industrial Tribunal, Tamil Nadu, then Madras High Court, then Supreme Court. Reference under Sec. 10, ID Act, then writ (Art. 226), writ appeal and SLP (Art. 136).",
+ dispute:"A pharmaceutical company tried to scrap its long-standing slab system of DA (linked to both cost of living and basic pay) and replace it with a lower flat rate.",
+ held:"Added a sixth component to the 15th ILC need-based minimum wage formula: 25% of the total minimum wage to cover children's education, medical needs, minimum recreation, and provision for old age and marriage.",
+ after:"The DA restructuring was quashed and the double-linked DA restored with arrears. The 25% component was later reflected in the central minimum wage rules and the Code on Wages, 2019.",
+ use:"Cite when an employer replaces a DA slab with a flat amount, or when computing a need-based minimum wage."},
+{n:12,p:2,side:'limits',name:"Airfreight Ltd. v. State of Karnataka",cite:"(1999) 6 SCC 567",themes:["Minimum wage","Dearness allowance"],
+ forum:"Labour Officer (Minimum Wages Authority), then Karnataka High Court, then Supreme Court. Inspection direction under the MWA, then writ (Art. 226) and SLP (Art. 136).",
+ dispute:"The company paid consolidated wages well above the State-notified basic minimum plus VDA and argued it need not pay a separate VDA on top.",
+ held:"Under Sec. 4 of the Minimum Wages Act, if the consolidated wage already equals or exceeds the notified basic minimum wage plus VDA, the employer need not split it up or pay extra VDA.",
+ after:"Recovery notices against the company were quashed. Payroll compliance was clarified for private establishments paying above-minimum consolidated pay.",
+ use:"Employer-side authority. Check that your consolidated wage really is at least the notified basic plus VDA for your category before claiming a separate VDA."},
+{n:13,p:2,side:'for',name:"Randhir Singh v. Union of India",cite:"AIR 1982 SC 879",themes:["Equal pay"],
+ forum:"Supreme Court. Direct writ petition under Article 32.",
+ dispute:"A Driver-Constable in the Delhi Police asked for the same pay scale (Rs 260-400) given to other drivers in the Delhi Administration and the Railway Protection Force, instead of Rs 210-270.",
+ held:"Raised 'equal pay for equal work' from a non-enforceable Directive Principle (Art. 39(d)) to an enforceable right by reading it into Articles 14 and 16.",
+ after:"The Union was directed to fix the petitioner's scale on par with Delhi Administration drivers from 1 January 1973, which led to thousands of pay-parity petitions in public services.",
+ use:"The starting authority for any equal-pay claim in government or public employment."},
+{n:14,p:2,side:'for',name:"Mackinnon Mackenzie & Co. Ltd. v. Audrey D'Costa",cite:"(1987) 2 SCC 469",themes:["Equal pay","Gender pay gap"],
+ forum:"Authority under the Equal Remuneration Act, then Appellate Authority, then Bombay High Court, then Supreme Court. Complaint under Sec. 7, ERA 1976, then writ and SLP.",
+ dispute:"Confidential lady stenographers were paid on a lower scale than male stenographers doing identical typing and dictation. The employer relied on a union settlement and financial losses.",
+ held:"Under Sec. 4 of the Equal Remuneration Act, 1976, neither a collective settlement nor financial incapacity justifies gender-based pay discrimination for the same work or work of a similar nature.",
+ after:"The company had to pay the exact difference in basic pay, DA and provident fund contributions. The case set strict liability for gender pay audits.",
+ use:"Cite for gender pay gap claims. A union settlement or the employer's finances is no defence. Now read with Section 3 of the Code on Wages, 2019."},
+{n:15,p:2,side:'for',name:"Dhirendra Chamoli v. State of U.P.",cite:"(1986) 1 SCC 637",themes:["Equal pay","Contract and casual labour"],
+ forum:"Supreme Court. Writ petition under Article 32.",
+ dispute:"Casual daily-wage Class IV workers at Nehru Yuvak Kendras did the same work as regular Class IV staff for years but were denied the regular scale because there were no sanctioned posts.",
+ held:"The Central Government cannot exploit casual workers by paying daily wages for the same work as regular staff. Regular salary and allowances were ordered from the date of first engagement.",
+ after:"Arrears were released to all the Kendra daily wagers and a formal regularisation scheme for sanctioned posts followed.",
+ use:"Cite when a long-serving daily wager or casual worker does the same job as regular staff in a public body."},
+{n:16,p:2,side:'for',name:"Daily Rated Casual Labour (P&T Dept.) v. Union of India",cite:"(1988) 1 SCC 122",themes:["Equal pay","Contract and casual labour"],
+ forum:"Supreme Court. Writ petition under Article 32 for about 1,00,000 casual telecom workers.",
+ dispute:"Casual labourers in the Posts and Telegraphs Department, working up to 10 years, got fixed daily wages far below the minimum of the regular scale, with no increments or allowances.",
+ held:"The State must act as a model employer. Wages at the minimum of the regular pay scale (plus DA) for Class IV employees, without increments, and a regularisation scheme.",
+ after:"The department issued the Casual Labourers (Grant of Temporary Status and Regularisation) Scheme, 1989 and paid revised wages across India.",
+ use:"Cite for casual or daily-rated workers in government departments seeking minimum of scale and regularisation."},
+{n:17,p:2,side:'limits',name:"Federation of All India Customs & Central Excise Stenographers v. Union of India",cite:"(1988) 3 SCC 91",themes:["Equal pay"],
+ forum:"Supreme Court. Writ petition under Article 32.",
+ dispute:"Grade I stenographers attached to field officers in Customs and Excise wanted parity with stenographers in the Central Secretariat, saying their typing speed and qualifications were the same.",
+ held:"Equal pay depends not only on volume or qualification but on real differences in responsibility, reliability, confidentiality and functional need. The Pay Commission's differentiation was upheld.",
+ after:"The writ was dismissed. Courts will not interfere with expert Pay Commission evaluations unless hostile discrimination is shown.",
+ use:"Employer-side authority. It shows why an equal-pay claim needs evidence of identical duties and responsibilities, not just the same job title."},
+{n:18,p:2,side:'limits',name:"Mewa Ram Kanojia v. All India Institute of Medical Sciences (AIIMS)",cite:"(1989) 2 SCC 235",themes:["Equal pay"],
+ forum:"Supreme Court. Writ petition under Article 32.",
+ dispute:"A Hearing Therapist at AIIMS wanted the higher scale given to Audiologists and Speech Pathologists, saying their duties were similar.",
+ held:"Educational qualifications and technical training are valid grounds to classify employees into different pay scales even if their clinical duties overlap.",
+ after:"Petition dismissed. AIIMS kept separate recruitment rules and pay scales based on qualification levels.",
+ use:"Employer-side authority. A genuine difference in qualification can justify different pay for overlapping work."},
+{n:19,p:2,side:'mixed',name:"Grih Kalyan Kendra Workers' Union v. Union of India",cite:"(1991) 1 SCC 619",themes:["Equal pay","Contract and casual labour"],
+ forum:"Supreme Court. Writ petition under Article 32.",
+ dispute:"Employees of Grih Kalyan Kendra, a welfare society under the Department of Personnel running training and creches, sought pay parity with regular Central Government employees.",
+ held:"Equal pay is not an automatic right where the body runs as an auxiliary welfare project and not a regular government department, but the pay given was still unconscionably low.",
+ after:"Fourth Pay Commission scales were not applied automatically. The Union was directed to raise honorariums and absorb eligible workers into regular vacancies.",
+ use:"Cite for workers of welfare societies or projects: parity may be refused, but extremely low pay can still be corrected."},
+{n:20,p:2,side:'mixed',name:"Hindustan Steel Works Construction Ltd. v. Commissioner of Labour",cite:"(1996) 10 SCC 599",themes:["Equal pay","Contract and casual labour"],
+ forum:"Commissioner of Labour, Andhra Pradesh, then AP High Court, then Supreme Court. Inquiry under Rule 25(2)(v)(a), CLRA Rules, then writ (Art. 226) and SLP (Art. 136).",
+ dispute:"A contractor did not pay contract workers the same wages as the principal employer's regular workmen doing identical work. The principal employer disputed liability to pay the differential under Sec. 21(4) of the Contract Labour Act.",
+ held:"Rule 25(2)(v)(a) is a condition of the contractor's licence, while Sec. 21(4) of the Act refers to agreed or statutory contractual rates. The Labour Commissioner's finding of parity binds the contractor's licence conditions.",
+ after:"Labour Commissioners enforced Rule 25(2)(v)(a) strictly, revoking contractor licences for non-payment of parity wages, and principal employers added indemnity clauses to contracts.",
+ use:"Cite when contract workers do the same work as the principal employer's regular staff. The pressure point is the contractor's licence, so complain to the Licensing Officer or Labour Commissioner."},
+{n:21,p:2,side:'limits',name:"State of Haryana v. Charanjit Singh",cite:"(2006) 9 SCC 321",themes:["Equal pay","Contract and casual labour"],
+ forum:"Civil courts and Industrial Tribunals, then Punjab and Haryana High Court, then a 3-judge Supreme Court bench. Civil suits and writs (Art. 226), then batch SLPs (Art. 136).",
+ dispute:"Daily-wage ledger clerks, tubewell operators and drivers, appointed without following recruitment rules, claimed full regular scales on equal pay for equal work.",
+ held:"Narrowed earlier rulings. Mode of recruitment and entry qualification matter. Back-door or informal appointees cannot automatically claim regular scales and are assured only statutory minimum wages, unless identity of work is proved by an expert body.",
+ after:"High Court orders granting automatic regular scales were set aside and matters sent back to examine contractual terms and recruitment parity.",
+ use:"Employer-side authority and a warning: how you were recruited, and your qualifications, affect an equal-pay claim. Later narrowed by Jagjit Singh (2017)."},
+{n:22,p:2,side:'for',name:"State of Punjab v. Jagjit Singh",cite:"(2017) 1 SCC 148",themes:["Equal pay","Contract and casual labour"],
+ forum:"Punjab and Haryana High Court, then Supreme Court. Writ petitions under Article 226, then batch civil appeals under Article 136.",
+ dispute:"Temporary, ad-hoc, work-charged and daily-wage employees (pump operators, teachers, drivers) in Punjab departments sought the minimum of the regular scale paid to regular counterparts.",
+ held:"A synthesis of about 40 years of case law: temporary and daily-wage employees doing the same duties and carrying the same responsibilities as regular employees are entitled to the minimum of the regular pay scale (basic pay, without allowances or increments).",
+ after:"State governments issued Finance Department circulars aligning daily-wage and contract pay to the minimum of the regular pay matrix (entry pay under the 7th CPC) for equivalent posts.",
+ use:"The leading modern authority for temporary and daily-wage staff in government service claiming minimum of the regular scale. Prove identical duties and responsibilities."},
+{n:23,p:3,side:'limits',name:"Muir Mills Co. Ltd. v. Suti Mills Mazdoor Union",cite:"AIR 1955 SC 170",themes:["Bonus"],
+ forum:"Industrial Court (Textiles), UP, then Labour Appellate Tribunal, then Supreme Court. Adjudication reference, LAT appeal, SLP under Article 136.",
+ dispute:"A textile mill made trading losses for the year, yet workmen demanded bonus out of past reserves, arguing bonus is an unconditional deferred wage.",
+ held:"The classic two-fold test: bonus is neither a gift nor an unconditional deferred wage. It can be claimed only when (1) actual wages fall short of the living wage and (2) the industry makes available surplus profit in that accounting year.",
+ after:"The LAT award giving bonus out of reserves was set aside. This led to the LAT Full Bench Formula and then to the Payment of Bonus Act, 1965, which sets a minimum 8.33% bonus.",
+ use:"Mostly historical. Today bonus claims run on the Payment of Bonus Act, 1965 (now in the Code on Wages), not on this test. Use the ESI and bonus tab to check your entitlement."},
+{n:24,p:3,side:'limits',name:"Bridge & Roof Co. (India) Ltd. v. Union of India",cite:"AIR 1963 SC 1474",themes:["PF wage base"],
+ forum:"Central Government (Sec. 19A, EPF Act), then Supreme Court. Order under Sec. 19A, EPF Act, 1952, then direct writ under Article 32.",
+ dispute:"The Central Government told the company to include production bonus in 'basic wages' under Sec. 2(b) of the EPF Act, 1952 when computing PF contributions.",
+ held:"The Universality test: only emoluments earned by all employees universally, ordinarily and necessarily across all concerns are 'basic wages'. Production bonus is variable and incentive-based and falls within the exclusion in Sec. 2(b)(ii).",
+ after:"The order was quashed. Employers separated variable incentive and production bonuses from PF-attracting basic wages in their payroll structures.",
+ use:"Explains why employers keep variable pay out of the PF base. Later decisions have refined this test, and the Codes now define wages with the 50% rule that this site's calculator applies, so check the Wage audit tab."},
+{n:25,p:3,side:'for',name:"Gestetner Duplicators Pvt. Ltd. v. CIT",cite:"(1979) 2 SCC 354",themes:["PF wage base"],
+ forum:"Income Tax Officer, then Appellate Assistant Commissioner, then ITAT, then Calcutta High Court, then Supreme Court. Tax reference under Sec. 256(1), Income Tax Act, then civil appeal.",
+ dispute:"Salesmen were paid a fixed monthly basic salary plus a fixed percentage commission on turnover under their employment contract. The employer paid PF on the commission and the tax authorities disallowed it as not being salary or basic wage.",
+ held:"When commission is not an ad-hoc bounty but a fixed, determinable part of the employment contract paid regularly for services rendered, it forms part of basic salary or wages for Provident Fund purposes.",
+ after:"The tax disallowance was overturned. EPFO and the Income Tax authorities recognised fixed contractual sales commission as part of PF-eligible salary.",
+ use:"Cite when fixed contractual commission or a regular pay component is left out of the PF wage."},
+{n:26,p:3,side:'for',name:"Harihar Polyfibres v. Regional Director, ESIC",cite:"(1984) 4 SCC 324",themes:["ESI wage base"],
+ forum:"Employees' Insurance Court, Bangalore, then Karnataka High Court, then Supreme Court. Application under Sec. 75, ESI Act, 1948, then appeal under Sec. 82, then SLP (Art. 136).",
+ dispute:"ESIC demanded contributions on House Rent Allowance, Night Shift Allowance, Heat/Gas/Dust Allowance and Incentive Allowance, saying they were 'wages' under Sec. 2(22) of the ESI Act.",
+ held:"The third clause of Sec. 2(22) ('other additional remuneration, if any, paid at intervals not exceeding two months') is wider than the first clause on contractual remuneration. HRA, night-shift and incentive allowances paid monthly or bi-monthly are wages for ESI.",
+ after:"The employer's appeal was dismissed. ESIC issued recovery notices nationwide requiring regular monthly allowances, including HRA, to be counted for ESI contributions.",
+ use:"Cite when an employer leaves regular allowances out of the ESI wage."},
+{n:27,p:3,side:'limits',name:"Regional Director, ESIC v. Bata Shoe Co. (P) Ltd.",cite:"(1985) 4 SCC 560",themes:["ESI wage base","Bonus"],
+ forum:"Employees' Insurance Court, then Patna High Court, then Supreme Court. Application under Sec. 75, ESI Act, then appeal under Sec. 82, then civil appeal.",
+ dispute:"Bata paid a quarterly goodwill or ex-gratia bonus under a union settlement that said it would not count for PF, ESI or gratuity. ESIC demanded contribution on it as wages.",
+ held:"A bona fide ex-gratia bonus under a goodwill settlement, which is neither part of the original contract of employment nor payable as remuneration for specific work, falls outside Sec. 2(22) of the ESI Act.",
+ after:"The ESIC demand notice was quashed. The case marks the boundary between genuine ex-gratia goodwill payments and regular remuneration under the ESI Act.",
+ use:"Employer-side authority. A genuine one-off goodwill payment can be left out of ESI wages, so check whether yours is truly ex gratia or regular pay."},
+{n:28,p:3,side:'for',name:"Wellman (India) Pvt. Ltd. v. ESIC",cite:"(1994) 1 SCC 219",themes:["ESI wage base","Bonus"],
+ forum:"Employees' Insurance Court, Thane, then Bombay High Court, then Supreme Court. Application under Sec. 75, ESI Act, then appeal to the High Court, then SLP under Article 136.",
+ dispute:"Under a conciliation settlement before the Labour Officer the company agreed to pay a quarterly Attendance Bonus to workers with full attendance. ESIC demanded ESI contribution on it.",
+ held:"Distinguished Bata Shoe. Because the attendance bonus was payable as a legal right under a binding conciliation settlement (Secs. 18 and 19, ID Act), it was 'other additional remuneration' under Sec. 2(22) and part of wages.",
+ after:"The company had to pay ESI contributions plus statutory interest on all attendance bonus paid. The ruling closed the loophole of routing regular pay through settlements to avoid ESI.",
+ use:"Cite when a bonus or allowance that is payable as of right under a settlement or award is left out of the ESI wage."},
+{n:29,p:3,side:'limits',name:"Manipal Academy of Higher Education v. Provident Fund Commissioner",cite:"(2008) 5 SCC 428",themes:["PF wage base"],
+ forum:"RPFC, Mangalore, then EPF Appellate Tribunal, then Karnataka High Court, then Supreme Court. Inquiry under Sec. 7A, EPF Act, then appeal to EPFAT, then writ (Art. 226) and SLP (Art. 136).",
+ dispute:"The Regional PF Commissioner demanded PF on Leave Encashment paid to employees, treating it as part of basic wages under Sec. 2(b).",
+ held:"Applying the Bridge & Roof universality test, leave encashment depends on an employee choosing not to take leave. It is not earned universally and ordinarily by every employee, so it is not part of basic wages under the EPF Act.",
+ after:"EPFO issued a circular stopping PF deductions on leave encashment nationwide and dropped pending Sec. 7A recovery proceedings on encashed leave.",
+ use:"Employer-side authority: leave encashment can lawfully stay out of the PF wage."},
+{n:30,p:3,side:'for',name:"RPFC (II) West Bengal v. Vivekananda Vidyamandir (Surya Roshni batch)",cite:"(2019) 17 SCC 642",themes:["PF wage base"],
+ forum:"RPFC (Sec. 7A), then EPFAT, then the High Courts (Calcutta, MP, Madras, Punjab and Haryana), then Supreme Court. Sec. 7A assessment orders, statutory appeals, High Court writs, then consolidated civil appeals.",
+ dispute:"Employers split pay packages so that basic wage was only 30 to 40 percent, while 60 to 70 percent was labelled special allowance, conveyance, canteen or management allowance, paid to all employees, to reduce PF liability.",
+ held:"Special allowances paid universally, necessarily and ordinarily to all employees across the board, and not linked to extra output, overtime or a specific contingency, are camouflaged basic wages and must be included for PF.",
+ after:"Employers across India restructured payroll. The ruling is reinforced by the 50% rule in Section 2(y) of the Code on Wages, 2019.",
+ use:"Cite when most of your pay is a fixed allowance paid to everyone and PF is deducted only on a small basic."},
+{n:31,p:4,side:'limits',name:"A.V. D'Costa v. B.C. Patel",cite:"AIR 1955 SC 412",themes:["Forum and jurisdiction"],
+ forum:"Authority under the Payment of Wages Act, Bombay, then Bombay High Court, then Supreme Court. Application under Sec. 15, PW Act, then certiorari writ (Art. 226), then appeal.",
+ dispute:"A daily-rated casual railway carpenter said he did the work of a monthly-rated permanent carpenter and claimed the higher monthly pay under Sec. 15 of the Payment of Wages Act.",
+ held:"A Constitution Bench held that the Authority under Sec. 15 has limited summary jurisdiction. It can enforce actual wages payable under an existing contract, not decide potential wages or reclassify or promote an employee.",
+ after:"The Authority's and High Court's orders were set aside. Grade and upgradation disputes must go to an Industrial Tribunal under Sec. 10 of the ID Act.",
+ use:"Use it to choose the forum: a claim for a higher grade or scale is an industrial dispute, not a wage-Authority claim."},
+{n:32,p:4,side:'limits',name:"Divisional Engineer, G.I.P. Railway v. Mahadeo Raghoo",cite:"AIR 1955 SC 295",themes:["Deductions"],
+ forum:"Authority under the Payment of Wages Act, then Supreme Court. Claim under Sec. 15(2), PW Act for unlawful deduction, then SLP under Article 136.",
+ dispute:"A railway gangman got compensatory House Rent Allowance, which was stopped when the Railway offered him government quarters that he refused to occupy. He called it an illegal deduction under Sec. 7.",
+ held:"Under Sec. 2(vi) of the Payment of Wages Act, HRA is not part of wages unless it is unconditionally payable under the contract. Stopping HRA on offer of official quarters under service rules is not an illegal deduction.",
+ after:"The Authority's order to refund the HRA was quashed. The case clarified the exclusion of conditional housing allowances.",
+ use:"Employer-side authority: a conditional allowance can be withdrawn when its condition ends. Check the terms of yours."},
+{n:33,p:4,side:'for',name:"Dharangadhra Chemical Works Ltd. v. State of Saurashtra",cite:"AIR 1957 SC 264",themes:["Piece rate","Who is a workman"],
+ forum:"Industrial Tribunal, Saurashtra, then Saurashtra High Court, then Supreme Court. Reference under Sec. 10, ID Act, then writ (Art. 226/227) and certificate appeal.",
+ dispute:"Traditional salt-pan workers (agarias) paid piece-rate per maund of salt raised a wage dispute. The company said they were independent contractors and not 'workmen'.",
+ held:"The supervision and control test: even if paid by piece rate and allowed to bring family helpers, where the employer exercises control and supervision over the manner of work, the workers are 'workmen' under Sec. 2(s) of the ID Act.",
+ after:"The Industrial Tribunal went on to fix piece-rate wages and seasonal minimum guarantees for the agarias, bringing piece-rate workers firmly under statutory wage protection.",
+ use:"Cite when an employer says you are an independent contractor but controls how you work."},
+{n:34,p:4,side:'for',name:"Bala Subrahmanya Rajaram v. B.C. Patil",cite:"AIR 1958 SC 518",themes:["Bonus","Forum and jurisdiction"],
+ forum:"Authority under the Payment of Wages Act, Bombay, then Bombay High Court, then Supreme Court. Claim under Sec. 15, PW Act, then writ (Art. 226) and appeal.",
+ dispute:"An Industrial Court awarded textile operatives a bonus of 4.5 months' basic wages. When the mill manager did not pay, workers filed a summary claim under Sec. 15. The employer said bonus is not wages.",
+ held:"Once a bonus is quantified and made legally payable under a binding Industrial Court award, it falls within 'wages' under Section 2(vi) of the Payment of Wages Act, 1936.",
+ after:"The Authority recovered the awarded bonus with compensation through land-revenue recovery certificates against the mill.",
+ use:"Cite when a bonus has already been awarded or settled and the employer will not pay it: it can be claimed as wages."},
+{n:35,p:4,side:'for',name:"Hotel Imperial, New Delhi v. Hotel Workers' Union",cite:"AIR 1959 SC 1342",themes:["Suspension"],
+ forum:"Industrial Tribunal, Delhi, then Supreme Court. Reference under Sec. 10, ID Act with an interim relief application, then appeal under Article 136.",
+ dispute:"Management suspended 25 workmen pending a domestic inquiry and applied under Sec. 33 of the ID Act for permission to dismiss them, while stopping their wages entirely during suspension. There were no Standing Orders.",
+ held:"Under general contract law an employer cannot suspend without full pay unless a statute or Standing Orders allow it. Where Sec. 33 bars immediate dismissal, the employer has an implied power to suspend, but must pay reasonable subsistence wages as the Tribunal decides.",
+ after:"The Tribunal's interim order for subsistence wages was modified and enforced. It was later codified in Section 10A of the Industrial Employment (Standing Orders) Act, 1946: 50% for the first 90 days and 75% after.",
+ use:"Cite when you are suspended and paid nothing while an inquiry is pending."},
+{n:36,p:4,side:'limits',name:"Payment of Wages Inspector, Ujjain v. Surajmal Mehta",cite:"AIR 1969 SC 590",themes:["Forum and jurisdiction"],
+ forum:"Authority under the Payment of Wages Act, Ujjain, then Madhya Pradesh High Court, then Supreme Court. Application by the PW Inspector under Sec. 15(2), then writ (Art. 226/227) and appeal.",
+ dispute:"After an electric company's licence was revoked and its undertaking transferred to the MP Electricity Board, the PW Inspector claimed retrenchment or transfer compensation under Sec. 25FF of the ID Act through Sec. 15 of the PW Act.",
+ held:"The Payment of Wages Authority cannot decide Sec. 25FF claims when the employer raises complicated defences about whether a transfer happened and who is liable. Such disputes go to a Labour Court under Sec. 33C(2) of the ID Act.",
+ after:"The PW Authority's proceedings were quashed and the workmen were directed to pursue computation and recovery before the Labour Court.",
+ use:"Use it to choose the forum: compensation on a business transfer or closure is not a simple wage-Authority claim."},
+{n:37,p:4,side:'limits',name:"Dilbagh Rai Jarry v. Union of India",cite:"(1974) 3 SCC 554",themes:["Deductions","Back wages"],
+ forum:"Authority under the Payment of Wages Act, then Appellate Authority (District Judge), then High Court, then Supreme Court. Claim under Sec. 15(2), PW Act, then appeal under Sec. 17, revision and SLP.",
+ dispute:"A Railway Guard whose dismissal was set aside by a civil court claimed back wages including 'Running Allowance' (paid per mileage on moving trains) before the Payment of Wages Authority.",
+ held:"Running Allowance is in the nature of a travelling allowance, which is expressly excluded from 'wages' under Sec. 2(vi)(b) of the Payment of Wages Act, and is earned only on actual travel on duty.",
+ after:"The claim for running allowance for the period out of service was rejected, while basic pay and dearness allowance arrears were paid.",
+ use:"Employer-side authority: travel-type allowances earned only by actual duty may not be claimable as back wages."},
+{n:38,p:4,side:'limits',name:"Bank of India v. T.S. Kelawala",cite:"(1990) 4 SCC 744",themes:["Strike wages","Deductions"],
+ forum:"Bombay High Court (and an Industrial Tribunal in a batch appeal), then Supreme Court. Writ under Article 226 against the circular, then civil appeal under Article 136.",
+ dispute:"Bank employees held a 4-hour token strike during peak hours and resumed work for the rest of the day. The Bank deducted a full day's wages under 'no work, no pay'. Employees called it an illegal deduction.",
+ held:"When employees contract to work a whole day, deliberate abstention for a few hours breaches the indivisible daily contract. The employer may deduct the full day's wages without a disciplinary inquiry, even if the strike is legal.",
+ after:"The full-day deductions were upheld. The Indian Banks' Association and PSUs adopted standard 'no work, no pay' payroll protocols for token strikes and go-slow agitations.",
+ use:"Employer-side authority: expect a full day's deduction even for a short strike."},
+{n:39,p:4,side:'limits',name:"Modi Industries Ltd. v. State of U.P.",cite:"(1994) 1 SCC 159",themes:["Strike wages","Forum and jurisdiction"],
+ forum:"Labour Commissioner, UP, then Allahabad High Court, then Supreme Court. Recovery certificate under Sec. 3, UP Industrial Peace (Timely Payment of Wages) Act, 1978, then writ (Art. 226) and SLP.",
+ dispute:"The Labour Commissioner issued a recovery certificate for Rs 28.69 lakh as unpaid wages for a month in which workers were allegedly on strike or lockout, and management disputed whether any work was done.",
+ held:"The Labour Commissioner's summary power applies only when the employer defaults on admitted or undisputed wages. Where liability itself is genuinely disputed because of a strike or lockout, the Commissioner cannot decide it summarily.",
+ after:"The recovery certificate was quashed and the strike or lockout wage dispute went for formal adjudication to the Industrial Tribunal.",
+ use:"Use it to choose the forum: a wage dispute tied to a strike or lockout goes to the Tribunal, not summary recovery."},
+{n:40,p:4,side:'limits',name:"Syndicate Bank v. K. Umesh Nayak",cite:"(1994) 5 SCC 572",themes:["Strike wages"],
+ forum:"Madras High Court (and conflicting decisions in other High Courts), then a 5-judge Constitution Bench of the Supreme Court. Writ under Article 226, then reference under Article 145(3).",
+ dispute:"Bank employees struck work over delayed implementation of a settlement while conciliation was pending (making the strike technically illegal under Secs. 22 and 24, ID Act) and asked for wages for the strike days.",
+ held:"To be entitled to wages for a strike period, the strike must be both legal under the ID Act and justified on its facts. Courts cannot decide legality or justification in writ jurisdiction. An Industrial Tribunal must.",
+ after:"The High Court order granting strike wages was reversed and the matter went to the CGIT to record evidence on legality and justification.",
+ use:"The authoritative rule on strike wages: show the strike was legal and justified, and expect the Tribunal to decide it."},
+{n:41,p:5,side:'for',name:"Central Bank of India Ltd. v. P.S. Rajagopalan",cite:"AIR 1964 SC 743",themes:["Forum and jurisdiction","Dues recovery"],
+ forum:"Central Government Labour Court, Delhi, then a 5-judge Constitution Bench of the Supreme Court. Application under Sec. 33C(2), ID Act, then appeal by special leave under Article 136.",
+ dispute:"Bank clerks operating Adding Machines claimed a Rs 10 a month special allowance under the Sastry Award by an application under Sec. 33C(2). The Bank objected that Sec. 33C(2) cannot be used when the employer disputes whether the clerks fall within the award.",
+ held:"Sec. 33C(2) is an execution proceeding, but the Labour Court can interpret the existing award or settlement on which the claim rests and decide whether the claimant meets its criteria.",
+ after:"The matter went back to the Labour Court, which inspected the machine operations and awarded the special allowance arrears to eligible clerks.",
+ use:"Cite when money is due under an existing award or settlement and the employer disputes whether you are covered by it."},
+{n:42,p:5,side:'for',name:"Jalan Trading Co. Pvt. Ltd. v. Mill Mazdoor Sabha",cite:"AIR 1967 SC 691",themes:["Bonus"],
+ forum:"Industrial Court, Bombay (pending reference) and direct writs, then a 5-judge Constitution Bench of the Supreme Court. Industrial reference and writ petitions under Article 32 challenging the Payment of Bonus Act, 1965.",
+ dispute:"Employers challenged Section 10 of the Payment of Bonus Act, 1965, which required every establishment to pay a minimum bonus even in years of heavy loss.",
+ held:"Section 10 is constitutionally valid under Articles 14 and 19(1)(g). Statutory minimum bonus is a measure for industrial peace that makes bonus a statutory floor, independent of profit or loss. The retrospective and discriminatory Secs. 33, 34(2) and 37 were struck down.",
+ after:"Compulsory minimum bonus was enforced across India. Section 10 was later amended to the 8.33% minimum and preserved in Section 26 of the Code on Wages, 2019.",
+ use:"Cite when an employer says it will not pay the minimum bonus because it made a loss."},
+{n:43,p:5,side:'for',name:"Gammon India Ltd. v. Union of India",cite:"(1974) 1 SCC 596",themes:["Contract and casual labour"],
+ forum:"Supreme Court, 5-judge Constitution Bench. Batch writ petitions under Article 32 challenging the Contract Labour (Regulation and Abolition) Act, 1970.",
+ dispute:"Construction contractors and principal employers challenged Section 21 of the CLRA Act, which requires the principal employer's representative to witness wage payment and makes the principal employer liable to pay unpaid wages if the contractor defaults.",
+ held:"The Act and Section 21 are valid. Making the principal employer liable for unpaid contract-worker wages, with a right to recover from the contractor's bills or security deposit, is a reasonable restriction under Art. 19(6) to prevent exploitation.",
+ after:"Principal employers across India introduced mandatory wage-register certification and retained contractor security deposits before releasing running bills.",
+ use:"Cite when a contractor does not pay you: the principal employer is liable to pay and then recover from the contractor."},
+{n:44,p:5,side:'mixed',name:"Hindustan Tin Works Pvt. Ltd. v. Its Employees",cite:"(1979) 2 SCC 80",themes:["Back wages"],
+ forum:"Labour Court, UP, then Supreme Court. Reference under Sec. 4K, UP Industrial Disputes Act, then SLP under Article 136 limited to the amount of back wages.",
+ dispute:"The retrenchment of 56 workmen was held illegal and mala fide and the Labour Court ordered reinstatement with full back wages. The company pleaded financial losses to avoid paying all of it.",
+ held:"Where termination is illegal, reinstatement with full back wages is the normal rule. Because of the company's proven severe financial crisis, the Court used equitable discretion to award 75% back wages in two instalments.",
+ after:"The company paid 75% back wages in two instalments. The case became the leading authority on the presumption of full back wages after illegal retrenchment.",
+ use:"Cite for the rule of full back wages, and be ready for an employer's plea of losses to reduce it."},
+{n:45,p:5,side:'for',name:"Bandhua Mukti Morcha v. Union of India",cite:"AIR 1984 SC 802",themes:["Forced labour","Minimum wage","Deductions"],
+ forum:"Supreme Court. Epistolary PIL treated as a writ petition under Article 32, with socio-legal investigation Commissioners appointed by the Court.",
+ dispute:"Stone-quarry and stone-crusher workers in Faridabad were trapped in debt bondage, denied minimum wages, subjected to jamadar deductions and made to pay for the explosives used in quarrying.",
+ held:"Where a labourer is shown to be working for less than the minimum wage, the law presumes forced or bonded labour unless the employer rebuts it. Deducting the cost of explosives from piece-rate wages is illegal.",
+ after:"The Court issued 21 directions to the Haryana Government and Central Labour Ministry: no middlemen wage distribution, direct wage payment in the presence of officials, and rehabilitation of freed workers.",
+ use:"Cite when pay is below the minimum, a middleman takes a cut, or you are made to pay for tools or materials."},
+{n:46,p:5,side:'limits',name:"Municipal Corporation of Delhi v. Ganesh Razak",cite:"(1995) 1 SCC 235",themes:["Forum and jurisdiction","Equal pay"],
+ forum:"Central Government Labour Court, Delhi, then Delhi High Court, then Supreme Court. Applications under Sec. 33C(2), ID Act, then writ (Art. 226) and SLP under Article 136.",
+ dispute:"Daily-rated casual muster-roll workers of the MCD skipped the Industrial Tribunal and filed execution petitions under Sec. 33C(2) claiming equal pay for equal work with regular employees.",
+ held:"Where the basis of the claim (such as entitlement to equal pay for equal work) is itself disputed and has not been adjudicated or accepted by the employer, the Labour Court under Sec. 33C(2) cannot decide entitlement in the first place.",
+ after:"The Labour Court awards were set aside and the workers had to raise a substantive industrial dispute under Sec. 10 before seeking execution under Sec. 33C(2).",
+ use:"Use it to choose the forum: a disputed right such as equal pay must first be decided by a Tribunal, not claimed as execution."},
+{n:47,p:5,side:'mixed',name:"Dena Bank v. Kirtikumar T. Patel",cite:"(1999) 2 SCC 106",themes:["Back wages"],
+ forum:"CGIT, then Gujarat High Court, then Supreme Court. Interim application under Sec. 17B, ID Act inside the employer's writ petition (Art. 226), then appeal under Article 136.",
+ dispute:"When an employer challenges a Labour Court reinstatement award in the High Court, Sec. 17B requires it to pay the workman 'full wages last drawn' while the case is pending. Workmen said this meant the revised wages payable had they been reinstated.",
+ held:"'Full wages last drawn' means the actual wages the workman drew when his service ended, not the revised or incremented wages payable today, although High Courts keep discretion under Art. 226 to direct higher deposits.",
+ after:"Interim wage payment calculations were standardised across High Courts while employer writ petitions against Labour Court awards are pending.",
+ use:"Cite to claim wages last drawn during the employer's appeal. Do not expect revised wages as of right."},
+{n:48,p:5,side:'limits',name:"Steel Authority of India Ltd. (SAIL) v. National Union Waterfront Workers",cite:"(2001) 7 SCC 1",themes:["Contract and casual labour"],
+ forum:"High Courts, then a 5-judge Constitution Bench of the Supreme Court. Reference under Article 145(3), overruling Air India Statutory Corp. v. United Labour Union (1997).",
+ dispute:"Unions argued that once the Government prohibits contract labour in an establishment under Sec. 10(1) of the CLRA Act, the contract workers automatically become regular employees entitled to regular wages.",
+ held:"A prohibition notification under Sec. 10(1) does not lead to automatic absorption or wage parity. If an Industrial Tribunal finds that the contract is a sham and camouflage, it can direct absorption and regular wages from the start.",
+ after:"Contract-labour absorption and wage-parity disputes moved from writ courts to Industrial Tribunals, which examine whether the contract is genuine or a sham.",
+ use:"Employer-side authority. To claim regular status you must prove at a Tribunal that the contract arrangement is a sham."},
+{n:49,p:5,side:'for',name:"Deepali Gundu Surwase v. Kranti Junior Adhyapak Mahavidyalaya",cite:"(2013) 10 SCC 324",themes:["Back wages"],
+ forum:"School Tribunal, Maharashtra, then Bombay High Court (Aurangabad Bench), then Supreme Court. Statutory appeal under Sec. 9, MEPS Act, then writ (Art. 226/227) and SLP under Article 136.",
+ dispute:"A primary school teacher's termination was set aside as illegal and mala fide with 100% back wages, but the High Court cut the back wages because she had not proved she was unemployed in the meantime.",
+ held:"Restored the full back wages principle with seven propositions: in wrongful termination, reinstatement with continuity of service and full back wages is the normal rule. The employee only needs to plead that she was not gainfully employed, and the burden then shifts to the employer.",
+ after:"The employer was directed to pay full back wages within four months with 9% interest, reversing a trend of denying back wages as a matter of course.",
+ use:"Cite for full back wages after an illegal termination. File an affidavit that you were not gainfully employed."},
+{n:50,p:5,side:'mixed',name:"Ficus Pax Private Ltd. v. Union of India",cite:"(2020) 4 SCC 810",themes:["Lockdown wages"],
+ forum:"Supreme Court. Batch of writ petitions under Article 32 filed by MSMEs and industrial associations.",
+ dispute:"During the March to May 2020 lockdown, a Home Ministry order under the Disaster Management Act, 2005 told private employers to pay full wages during closure, under threat of prosecution.",
+ held:"A blanket duty to pay 100% wages when factories were shut by law, without looking at capacity to pay, needs balancing. The Court barred coercive action against employers for the lockdown period and told employers and workers to settle wages by negotiation or before Labour Authorities under the ID Act.",
+ after:"State Labour Departments withdrew show-cause notices issued under the order, and many establishments settled lockdown wages through conciliation before Assistant Labour Commissioners.",
+ use:"Mostly employer-favourable on the 2020 lockdown. Use it to understand the route: negotiate, then conciliate before the Labour Authority."},
+{n:101,grp:'ir',side:'for',name:"D.N. Banerji v. P.R. Mukherjee (Budge Budge Municipality)",cite:"AIR 1953 SC 58",themes:["Industry"],sits:['notindustry'],
+ forum:"Industrial Tribunal, West Bengal (reference under Sec. 10), then Calcutta High Court (Art. 226/227), then a 5-judge Supreme Court bench.",
+ dispute:"A Head Clerk and a Sanitary Inspector of the Budge Budge Municipality were dismissed and the municipal union raised an industrial dispute. The question was whether a municipality doing statutory sanitary and conservancy work is an 'industry' under Sec. 2(j).",
+ held:"'Industry' is not limited to enterprises run for private profit or capital investment. Public utility services run by statutory municipal bodies are analogous to trade or business where employer and employees cooperate systematically to satisfy human wants.",
+ after:"The Tribunal's reinstatement award for the two municipal employees was upheld, bringing municipal and local body employees across India under the Industrial Disputes Act.",
+ use:"Cite when a municipality or local body says it is not an industry."},
+{n:102,grp:'ir',side:'for',name:"State of Bombay v. Hospital Mazdoor Sabha",cite:"AIR 1960 SC 610",themes:["Industry","Retrenchment"],sits:['notindustry'],
+ forum:"Bombay High Court (writ of mandamus, Art. 226), then a Division Bench, then the Supreme Court on certificate.",
+ dispute:"Two ward attendants at the government-run J.J. Group of Hospitals were retrenched without retrenchment compensation under Sec. 25F. The State argued that a charitable government hospital attached to a medical college is not an industry.",
+ held:"Any systematic activity organised for producing or distributing goods or rendering material services to the community with the help of employees is an industry, even without a profit motive or private management. Only strictly sovereign functions are excluded.",
+ after:"The retrenchment orders were invalidated for breach of Sec. 25F and the State paid retrenchment compensation and arrears to the hospital staff.",
+ use:"Cite when a government hospital, charity or institution says the Industrial Disputes Act does not apply to it."},
+{n:103,grp:'ir',side:'mixed',name:"Corporation of the City of Nagpur v. Its Employees",cite:"AIR 1960 SC 675",themes:["Industry"],sits:['notindustry'],
+ forum:"State Industrial Court, Nagpur, then Bombay High Court (Art. 226), then the Supreme Court (Art. 136).",
+ dispute:"Whether all, or only some, departments of a municipal corporation are an 'industry' under the C.P. and Berar Industrial Disputes Settlement Act and the central Act.",
+ held:"Regal or sovereign functions (legislative power, administration of justice, law and order) are excluded. Municipal departments doing welfare, health, engineering, waterworks, conservancy, education and tax collection are part of an industry. Where a department does both, the predominant function governs.",
+ after:"More than 20 municipal departments of the Nagpur Corporation were brought within the Industrial Court's wage and service-condition award.",
+ use:"Cite for the department-by-department test: it helps if your department does welfare or service work, and not if it does sovereign work."},
+{n:104,grp:'ir',side:'limits',bad:true,name:"University of Delhi v. Ram Nath",cite:"AIR 1963 SC 1873",themes:["Industry"],sits:['notindustry'],
+ forum:"Labour Court, Delhi (application under Sec. 33C(2)), then the Supreme Court by special leave (Art. 136).",
+ dispute:"Two bus drivers employed by Miranda House (University of Delhi) were retrenched when the college stopped running buses because of losses, and claimed retrenchment compensation.",
+ held:"Educational institutions are not industries, because the main activity of teaching is done by teachers, who are not workmen, and the other staff play only an ancillary role. This ruling was later overruled by Bangalore Water Supply (1978).",
+ after:"The award of retrenchment compensation was set aside at the time. The ruling began a 15-year debate that ended in the 7-judge bench of 1978.",
+ use:"No longer good law. It is listed only so you can recognise the argument and answer it with Bangalore Water Supply."},
+{n:105,grp:'ir',side:'limits',bad:true,name:"Management of Safdarjung Hospital v. Kuldip Singh Sethi",cite:"(1970) 1 SCC 735",themes:["Industry"],sits:['notindustry'],
+ forum:"Central Government Labour Court, Delhi (Sec. 33C(2)), then a 6-judge Supreme Court bench (Art. 136).",
+ dispute:"A Lower Division Clerk in Safdarjung Hospital asked for computation of wages on Central Government pay scales. The hospital said it was a government-run charitable institution and not an industry.",
+ held:"A hospital run by Government as part of its sovereign public-health function, and not as an economic trade or business, is not an industry. This was later overruled by Bangalore Water Supply (1978).",
+ after:"The claims of workers of Safdarjung Hospital, the Tuberculosis Hospital and Kurji Holy Family Hospital were dismissed, which led to union representations and the 7-judge bench.",
+ use:"No longer good law. A government hospital cannot now rely on it to say it is not an industry."},
+{n:106,grp:'ir',side:'for',name:"Bangalore Water Supply & Sewerage Board v. A. Rajappa",cite:"(1978) 2 SCC 213",themes:["Industry"],sits:['notindustry'],
+ forum:"Labour Court, Bangalore (Sec. 33C(2)), then Karnataka High Court, then a 7-judge Supreme Court Constitution Bench.",
+ dispute:"A statutory Water Supply Board fined employees for misconduct. The workers went to the Labour Court alleging breach of natural justice, and the Board objected that it was a statutory utility and not an industry.",
+ held:"The binding triple test: an activity is an industry where there is (i) systematic activity, (ii) organised by cooperation between employer and employee, (iii) for the production or distribution of goods and services meant to satisfy human wants and wishes, excluding purely spiritual or religious services. Profit is irrelevant, the dominant nature test applies to mixed establishments, and only strictly sovereign functions are exempt.",
+ after:"Hospitals, universities, clubs, research institutes, charities and statutory boards came under Sec. 2(j). Parliament's 1982 amendment to narrow Sec. 2(j) was never notified, though its modified definition was later adopted in Sec. 2(p) of the Industrial Relations Code, 2020.",
+ use:"The main authority on whether an employer is an industry. Apply the triple test to your employer."},
+{n:107,grp:'ir',side:'limits',name:"Physical Research Laboratory v. K.G. Sharma",cite:"(1997) 4 SCC 257",themes:["Industry"],sits:['notindustry'],
+ forum:"Labour Court, Ahmedabad (reference under Sec. 10), then Gujarat High Court, then the Supreme Court (Art. 136).",
+ dispute:"A contractual photographer at the Physical Research Laboratory, a public trust funded by the Department of Space, challenged his termination and sought regularisation and back wages.",
+ held:"PRL does pure space research for the Government of India and does not produce or distribute services to satisfy general human wants in a market or commercial sense. A body doing pure sovereign-linked research with no commercial output is not an industry.",
+ after:"The Labour Court's reinstatement award was set aside, carving out an exception for pure government research institutions that render no marketable service.",
+ use:"Employer-side authority. Expect it from pure research bodies. It is weaker if the institution sells services or products."},
+{n:108,grp:'ir',side:'mixed',name:"State of U.P. v. Jai Bir Singh",cite:"(2005) 5 SCC 1",themes:["Industry"],sits:['notindustry'],
+ forum:"Labour Courts and High Courts, then a 5-judge Supreme Court Constitution Bench.",
+ dispute:"Whether the Social Forestry Department of a State Government is an industry under Sec. 2(j), given conflicting rulings in Jagannath Maruti Kondhare (1996) and Pratamsingh Narsinh Parmar (2001).",
+ held:"The Bench observed that Bangalore Water Supply (1978) took an overly wide, worker-centred view of Sec. 2(j) and sent it for reconsideration by a larger 9-judge bench.",
+ after:"The reference went to a 9-judge bench. Until it is overruled or the Industrial Relations Code, 2020 replaces it, Bangalore Water Supply remains the binding law.",
+ use:"Shows that the wide definition of industry is contested for government departments. Rely on Bangalore Water Supply but expect this argument."},
+{n:110,grp:'ir',side:'limits',name:"Workmen of Dimakuchi Tea Estate v. Management of Dimakuchi Tea Estate",cite:"AIR 1958 SC 353",themes:["Industrial dispute"],sits:['refuse'],
+ forum:"Industrial Tribunal, Assam (Sec. 10 reference), then Labour Appellate Tribunal, then a 3-judge Supreme Court bench.",
+ dispute:"A tea estate ended the probation of an Assistant Medical Officer, who was not a workman. The workmen's union took up his cause and said Sec. 2(k) allows a dispute about the employment of 'any person'.",
+ held:"The community of interest test: 'any person' in Sec. 2(k) means a person in whose employment, non-employment or conditions of labour the workmen as a class have a direct and substantial interest, such as a fellow workman. It does not cover a medical officer in a different cadre.",
+ after:"The union could not raise an industrial dispute over the medical officer's termination, and the reference was dismissed as incompetent.",
+ use:"Explains when a union can take up someone else's cause: only where workmen as a class share a direct and substantial interest."},
+{n:111,grp:'ir',side:'mixed',name:"Bombay Union of Journalists v. The 'Hindu', Bombay",cite:"AIR 1963 SC 318",themes:["Industrial dispute","Individual dispute"],sits:['refuse'],
+ forum:"Industrial Tribunal, Bombay (Sec. 10 reference), then the Supreme Court by special leave (Art. 136).",
+ dispute:"A full-time correspondent of The Hindu in Bombay, where the paper had only three journalists, was terminated. His case was taken up by an outside general trade union, and not by the paper's own employees.",
+ held:"An individual dispute over termination becomes a collective industrial dispute only if a union of the same establishment, or an appreciable number of its workmen, takes it up as on the date of reference. Support from an unconnected outside union is not enough.",
+ after:"The hardship this caused led Parliament to insert Sec. 2A by the 1965 amendment, making an individual discharge, dismissal, retrenchment or termination an industrial dispute even without union support.",
+ use:"Historical. Today an individual dismissed or retrenched worker can raise the dispute under Sec. 2A without union backing."},
+{n:112,grp:'ir',side:'limits',name:"May and Baker (India) Ltd. v. Their Workmen",cite:"AIR 1967 SC 678",themes:["Workman"],sits:['notworkman'],
+ forum:"Industrial Tribunal, Delhi (Sec. 10 reference), then the Supreme Court (Art. 136).",
+ dispute:"Whether a pharmaceutical Medical Representative, whose main job is to visit doctors and chemists to promote drug sales, is a 'workman' under Sec. 2(s).",
+ held:"Under the unamended Sec. 2(s) the employee's main duty must fall within one of the listed categories (manual, clerical, supervisory or technical). Canvassing for sales is none of these, and writing daily reports is only incidental to it.",
+ after:"The reinstatement order was set aside. Parliament then passed the Sales Promotion Employees (Conditions of Service) Act, 1976 (Sec. 6(2)) to extend the ID Act to sales promotion employees.",
+ use:"Employer-side authority for sales and canvassing staff. Check whether the Sales Promotion Employees Act covers you."},
+{n:113,grp:'ir',side:'mixed',name:"Burmah Shell Oil Storage & Distribution Co. v. Burmah Shell Management Staff Association",cite:"(1970) 3 SCC 378",themes:["Workman"],sits:['notworkman'],
+ forum:"Industrial Tribunal, Maharashtra (Sec. 10 reference), then the Supreme Court (Art. 136).",
+ dispute:"Ten categories of junior management staff (Transport Engineers, District Engineers, Chemists, Sales Engineering Representatives, Foremen and Depot Superintendents) raised a wage charter claiming to be workmen.",
+ held:"The main or substantial duty test: where an employee does mixed technical, clerical, managerial or supervisory duties, status under Sec. 2(s) depends on the primary and substantial duties, not incidental ones that take a small part of the time.",
+ after:"Chemists and Fuelling Superintendents, who did mainly hands-on technical or manual work, were held to be workmen. Transport Engineers, District Engineers and Sales Engineering Representatives, who mainly supervised or canvassed, were excluded.",
+ use:"Cite when you do mixed work: your main duties decide whether you are a workman, not your title."},
+{n:114,grp:'ir',side:'for',name:"Hussainbhai, Calicut v. Alath Factory Thezhilali Union",cite:"(1978) 4 SCC 257",themes:["Workman","Contract and casual labour"],sits:['notworkman','contract'],
+ forum:"Industrial Tribunal, Kerala (Sec. 10 reference), then Kerala High Court (Art. 226), then the Supreme Court (SLP, Art. 136).",
+ dispute:"A rope factory owner refused lock-out or lay-off relief to 29 rope-makers, saying they were hired by independent contractors working inside the factory and had no direct contract with him.",
+ held:"The economic reality test: where workers produce goods or services for another's business and that principal controls the raw materials, premises, equipment and the workers' livelihood, the Court lifts the contractual veil. If the contractor is a mere paper screen, the principal employer is the real employer.",
+ after:"The factory owner's appeal was dismissed and the Tribunal's award reinstating the 29 rope workers with back wages was enforced directly against the principal owner.",
+ use:"Cite when a contractor sits between you and the real employer, but the real employer controls your work and livelihood."},
+{n:115,grp:'ir',side:'limits',name:"Miss A. Sundarambal v. Government of Goa, Daman and Diu",cite:"(1988) 4 SCC 42",themes:["Workman","Industry"],sits:['notworkman','notindustry'],
+ forum:"Conciliation Officer and Goa Government (refusal to refer under Sec. 10/12(5)), then Bombay High Court (Panaji Bench, Art. 226), then the Supreme Court (SLP).",
+ dispute:"A school teacher terminated by a private school asked for a reference under Sec. 10. A school is an industry after Bangalore Water Supply, so the question was whether a teacher is a workman under Sec. 2(s).",
+ held:"An educational institution is an industry, which benefits its clerical, peon and bus-driving staff. Teachers are not workmen, because teaching is an intellectual mission and not manual, skilled, technical, operational, clerical or supervisory work.",
+ after:"The Government's refusal to refer the teacher's dispute was upheld, with a suggestion that States enact School Tribunal laws for teachers.",
+ use:"Teachers cannot use the Industrial Disputes Act. Use the State School Tribunal or service law instead. Non-teaching school staff are covered."},
+{n:116,grp:'ir',side:'limits',name:"S.K. Maini v. M/s Carona Sahu Co. Ltd.",cite:"(1994) 3 SCC 510",themes:["Workman"],sits:['notworkman'],
+ forum:"Labour Court, Jalandhar (Sec. 10 reference), then Punjab and Haryana High Court (Art. 226), then the Supreme Court (Art. 136).",
+ dispute:"A Shop Manager of a retail footwear showroom, whose service was terminated, said he was a workman because he sometimes opened the shop, filled in daily cash forms and attended to customers.",
+ held:"Neither designation nor salary alone decides it. The dominant nature of the duties does. He ran the branch, assessed salesmen, signed statutory forms as employer and managed stock, so his occasional clerical work was incidental to a managerial post.",
+ after:"The High Court's judgment setting aside the Labour Court's reinstatement award for lack of jurisdiction under Sec. 2(s) was affirmed.",
+ use:"Employer-side authority: a manager with real authority to run a branch is not a workman."},
+{n:117,grp:'ir',side:'limits',name:"H.R. Adyanthaya v. Sandoz (India) Ltd.",cite:"(1994) 5 SCC 737",themes:["Workman"],sits:['notworkman'],
+ forum:"Industrial Tribunals and High Courts, then a 5-judge Supreme Court Constitution Bench.",
+ dispute:"Whether an employee who does not fall within the four statutory exceptions (managerial, administrative, supervisory above the wage ceiling, armed forces) automatically becomes a workman. Earlier benches had disagreed (May and Baker, S.K. Verma, Delton Cable).",
+ held:"It is not enough to escape the four exceptions. The person must prove that he is employed to do manual, unskilled, skilled, technical, operational, clerical or supervisory work. Medical Representatives do not do skilled or operational work under Sec. 2(s), though they are protected by the Sales Promotion Employees Act, 1976.",
+ after:"The earlier ruling in the Verma case (1993) was overruled, and the strict two-step test is now applied by all Labour Courts to decide workman status.",
+ use:"The authoritative test: show that your duties are one of the listed kinds of work. The Industrial Relations Code, 2020 (Sec. 2(zr)) raises the supervisory wage ceiling to Rs 18,000 and covers working journalists and sales promotion employees."},
+{n:118,grp:'ir',side:'mixed',name:"State of Madras v. C.P. Sarathy",cite:"AIR 1953 SC 53",themes:["Reference"],sits:['refuse'],
+ forum:"Presidency Magistrate (prosecution under Sec. 29), then Madras High Court (Art. 226), then a 5-judge Supreme Court Constitution Bench.",
+ dispute:"The Madras Government referred a general dispute involving 24 cinema theatres to a Tribunal without item-wise disputes for 'Prabhat Talkies'. When the manager was prosecuted under Sec. 29 for not implementing the award, he challenged the reference.",
+ held:"A reference under Sec. 10(1) is an administrative act, not a judicial or quasi-judicial order. Government may refer whenever a dispute exists or is apprehended, and need not draft it with the precision of civil pleadings. Courts do not closely examine its subjective satisfaction.",
+ after:"The High Court order was reversed and the criminal prosecution under Sec. 29 for non-compliance with the award was restored.",
+ use:"Explains why a reference is hard to challenge once made. Employers often attack the reference, and this case is the answer."},
+{n:119,grp:'ir',side:'for',name:"State of Bombay v. K.P. Krishnan",cite:"AIR 1960 SC 1223",themes:["Reference"],sits:['refuse'],
+ forum:"Bombay High Court (writ of mandamus, Art. 226), then a Division Bench, then a 5-judge Supreme Court Constitution Bench.",
+ dispute:"After a Conciliation Officer's failure report on a bonus claim by Firestone Tyre employees, the Bombay Government refused to refer it under Sec. 12(5) only because the workmen had earlier done a go-slow.",
+ held:"Government has discretion under Sec. 12(5) to decide whether a prima facie case exists, but cannot refuse on extraneous, punitive or irrelevant grounds, such as punishing workers for a go-slow, which is separate from their entitlement to bonus.",
+ after:"The writ of mandamus directing Government to reconsider the reference on relevant statutory grounds was upheld.",
+ use:"Cite when Government refuses to refer your dispute for reasons unrelated to its merits."},
+{n:120,grp:'ir',side:'for',name:"Western India Match Co. Ltd. v. Western India Match Co. Workers Union",cite:"(1970) 1 SCC 225",themes:["Reference"],sits:['refuse'],
+ forum:"Labour Court, Bareilly, then Allahabad High Court (Art. 226), then the Supreme Court (Art. 136).",
+ dispute:"The UP Government first refused to refer a dispute about probation and termination of a workman, then later referred the same dispute without hearing the employer. The company said Government had used up its power.",
+ held:"An order under Sec. 10(1) is purely administrative, so res judicata does not apply. An earlier refusal does not stop Government from later referring the same dispute if it thinks this is expedient for industrial peace.",
+ after:"The company's objection was dismissed and the Labour Court was directed to decide the dispute on its merits.",
+ use:"Cite when Government has refused once: you can ask it to reconsider and refer."},
+{n:121,grp:'ir',side:'for',name:"Telco Convoy Drivers Mazdoor Sangh v. State of Bihar",cite:"(1989) 3 SCC 271",themes:["Reference","Workman"],sits:['refuse','notworkman'],
+ forum:"Patna High Court (Ranchi Bench, Art. 226), then the Supreme Court (Art. 136).",
+ dispute:"Convoy drivers moving Tata trucks from Jamshedpur asked for absorption and equal wages with regular TELCO drivers. The Bihar Government twice refused to refer the dispute, finding that they had not proved an employer-employee relationship with TELCO.",
+ held:"While acting under Secs. 10(1) and 12(5), Government cannot decide the merits of the dispute itself, such as whether the claimants are employees of the principal employer. That is for the Industrial Tribunal alone.",
+ after:"Because of repeated refusals, the Supreme Court itself directed the State of Bihar to refer the dispute to the Industrial Tribunal within one month.",
+ use:"Cite when Government refuses to refer because it thinks you are not an employee: it is not allowed to decide that."},
+{n:122,grp:'ir',side:'mixed',name:"Sirsilk Ltd. v. Government of Andhra Pradesh",cite:"AIR 1964 SC 160",themes:["Settlement"],sits:['settle'],
+ forum:"Andhra Pradesh High Court (writ, Art. 226), then a 4-judge Supreme Court bench.",
+ dispute:"After a Tribunal sent its signed award to Government for publication under Sec. 17(1), the employer and workmen signed a bilateral settlement under Sec. 18(1) and asked Government not to publish the award. Government said 'shall be published' left it no choice.",
+ held:"Sec. 17(1) is mandatory in ordinary cases, but the object of the Act is industrial peace through collective bargaining. Where a bona fide settlement fully resolves the dispute before publication, no dispute survives and the settlement should prevail.",
+ after:"The State was directed not to publish the Tribunal's award, so the Sec. 18(1) settlement governed the parties.",
+ use:"Explains how a full settlement can replace an award that has not yet been published."},
+{n:123,grp:'ir',side:'limits',name:"Herbertsons Ltd. v. The Workmen of Herbertsons Ltd.",cite:"(1976) 4 SCC 736",themes:["Settlement"],sits:['settle'],
+ forum:"Industrial Tribunal, Maharashtra, then the Supreme Court (remand on fairness and final appeal, Art. 136).",
+ dispute:"While the employer's appeal against a Wage Tribunal award was pending, a newly recognised majority union signed a wage settlement under Sec. 18(1). A rival minority union said it was worse on Dearness Allowance than the award.",
+ held:"A settlement by a recognised union representing most workmen is presumed fair and reasonable. It is judged as a package of give and take and not clause by clause, unless fraud, coercion or corruption is proved.",
+ after:"The Tribunal's award was replaced by the terms of the Sec. 18(1) settlement.",
+ use:"Employer-side authority: a majority-union settlement is hard to attack on one clause alone."},
+{n:124,grp:'ir',side:'mixed',name:"Barauni Refinery Pragatisheel Shramik Parishad v. Indian Oil Corporation Ltd.",cite:"(1991) 1 SCC 4",themes:["Settlement"],sits:['settle'],
+ forum:"Certifying Officer, then Appellate Authority (Industrial Tribunal), then Delhi High Court (Art. 226), then the Supreme Court (Art. 136).",
+ dispute:"A conciliation settlement before the Regional Labour Commissioner under Sec. 18(3) set retirement at 58 and said terms creating a financial burden would not be changed during its currency. The union then asked the Certifying Officer to raise the age to 60.",
+ held:"A Sec. 18(3) settlement reached with the Conciliation Officer binds all workmen of the establishment, present and future, including dissenting minority unions, unlike a bipartite Sec. 18(1) settlement that binds only the signatories. Sec. 19(2) bars new demands that add a financial burden while it operates.",
+ after:"The High Court order striking down the change to the Standing Orders during the life of the settlement was upheld.",
+ use:"Check whether a settlement was signed in conciliation (binds everyone) or privately (binds only the parties) before you challenge or rely on it."},
+{n:125,grp:'ir',side:'for',name:"Tata Iron and Steel Co. Ltd. (TISCO) v. The Workmen",cite:"(1972) 2 SCC 383",themes:["Change of conditions"],sits:['change'],
+ forum:"Central Government Industrial Tribunal, Dhanbad (Sec. 10 reference), then the Supreme Court (Art. 136).",
+ dispute:"Because of power shortages, TISCO moved the weekly rest day of employees in allied collieries from Sunday to Wednesday or Thursday without 21 days' notice in Form E under Sec. 9A.",
+ held:"Because Sunday had become a customary day of rest, changing it altered 'hours of work and rest intervals' (Item 4) and withdrew a 'customary concession or privilege' (Item 8) of the Fourth Schedule. A 21-day notice under Sec. 9A is a condition precedent, and a unilateral change without it is illegal.",
+ after:"The award requiring extra allowance of 50% of wages for those called to work on Sundays without a valid Sec. 9A notice was upheld.",
+ use:"Cite when your hours, shift, rest day, grade or a customary benefit is changed without the required notice."},
+{n:126,grp:'ir',side:'limits',name:"Buckingham and Carnatic Co. Ltd. v. Workers of the Buckingham and Carnatic Co. Ltd.",cite:"AIR 1953 SC 47",themes:["Strike"],sits:['strikejob','strike'],
+ forum:"Industrial Tribunal, Madras, then Labour Appellate Tribunal, then the Supreme Court (Art. 136).",
+ dispute:"More than 800 night-shift weavers stopped work together for 4 hours on the afternoon of a solar eclipse after the mill refused a half-day holiday. Management treated it as an illegal strike in a public utility and forfeited their continuity of service for earned holidays.",
+ held:"Duration does not matter for 'strike' under Sec. 2(q). A concerted stoppage for even 2 to 4 hours, by workmen acting together to defy the employer's refusal of leave, is a strike. Without notice in a public utility, it is an illegal strike under Secs. 22 and 24.",
+ after:"The Labour Appellate Tribunal was reversed on the strike issue, confirming that an illegal short strike interrupts continuous service unless it is condoned.",
+ use:"Employer-side authority: a short concerted walkout can count as an illegal strike."},
+{n:127,grp:'ir',side:'limits',name:"Management of Kairbetta Estate, Kotagiri v. Rajamanickam",cite:"AIR 1960 SC 893",themes:["Lay-off","Lockout"],sits:['layoff'],
+ forum:"Labour Court, Coimbatore (Sec. 33C(2)), then the Supreme Court (Art. 136).",
+ dispute:"After workmen assaulted the Estate Manager and threatened staff, the management closed the Lower Division of a tea estate for a month until they promised peaceful conduct. The workers claimed lay-off compensation under Sec. 25C for the closure.",
+ held:"A lay-off is for trade reasons beyond the employer's control (shortage of coal, power or raw material, machinery breakdown) while the business continues, and it attracts compensation under Sec. 25C. A lockout is a coercive or security measure that closes the place of work during an industrial dispute, and Sec. 25C compensation is not automatically payable for it.",
+ after:"The order giving lay-off compensation was set aside. A claim for lockout wages must go through a Sec. 10 reference, which examines whether the lockout was legal and justified.",
+ use:"Decide first whether you were laid off or locked out. Lay-off compensation is automatic. Lockout wages are not."},
+{n:128,grp:'ir',side:'mixed',name:"Crompton Greaves Ltd. v. Its Workmen",cite:"(1978) 3 SCC 155",themes:["Strike"],sits:['strikejob','strike'],
+ forum:"Industrial Tribunal, West Bengal (Sec. 10 reference), then the Supreme Court (Art. 136).",
+ dispute:"After the company decided to retrench 93 workmen in its Calcutta office before bilateral talks ended, the union struck after due notice while no conciliation was pending. The company refused wages for the strike period and alleged violence.",
+ held:"For wages during a strike, the strike must be legal (not in breach of Secs. 22, 23 or 24) and justified (not for unreasonable demands or ulterior motives), and the strikers must not have used force, violence or sabotage.",
+ after:"Full wages for the strike period before the Tribunal reference were upheld because the company could not prove violence in that period.",
+ use:"Cite for strike wages: show that the strike was legal, justified and peaceful."},
+{n:129,grp:'ir',side:'for',name:"Gujarat Steel Tubes Ltd. v. Gujarat Steel Tubes Mazdoor Sabha",cite:"(1980) 2 SCC 593",themes:["Strike","Dismissal"],sits:['strikejob','dismissal'],
+ forum:"Board of Arbitrators under Sec. 10A, then Gujarat High Court (Art. 226/227), then a 3-judge Supreme Court bench (Art. 136).",
+ dispute:"After an illegal strike over bonus and wage implementation, the management issued a press notice and discharged all 853 strikers together without individual inquiries, and hired new workers. The dispute went to voluntary arbitration under Sec. 10A.",
+ held:"Passive participation in an illegal strike does not by itself justify summary termination. An employer cannot dismiss hundreds together without individual inquiries that prove specific acts of violence, intimidation or sabotage. An arbitrator under Sec. 10A is a 'Tribunal' for Sec. 11A and can re-weigh the evidence and order reinstatement with modified back wages.",
+ after:"The High Court's reversal of the arbitrator's award was upheld and the discharged workmen were reinstated with graded back wages.",
+ use:"Cite when you were dismissed only for taking part in a strike, with no individual inquiry or proof of violence."},
+{n:131,grp:'ir',side:'limits',name:"T.K. Rangarajan v. Government of Tamil Nadu",cite:"(2003) 6 SCC 581",themes:["Strike"],sits:['strikejob'],
+ forum:"Madras High Court (Art. 226), then the Supreme Court (direct writ under Art. 32 and SLPs under Art. 136).",
+ dispute:"More than 1.7 lakh Tamil Nadu Government employees and teachers on an indefinite strike over cuts in pension benefits were dismissed together under the Tamil Nadu Essential Services Maintenance Act, 2002 and an Ordinance.",
+ held:"Employees have no fundamental right (under Art. 19(1)(c) or 21), no absolute statutory right and no moral or equitable right to strike in a way that holds society to ransom. The right to strike is only a conditional statutory right regulated by Secs. 22 to 24 of the ID Act.",
+ after:"On equitable grounds, over 1.56 lakh dismissed employees were reinstated after giving unconditional undertakings.",
+ use:"Employer-side authority: there is no constitutional right to strike, only the conditional statutory one."},
+{n:132,grp:'ir',side:'limits',name:"Hariprasad Shivshankar Shukla v. A.D. Divikar (Barsi Light Railway)",cite:"AIR 1957 SC 121",themes:["Retrenchment","Closure"],sits:['closure','retnotice'],
+ forum:"Authority under the Payment of Wages Act, then Bombay High Court (Art. 226), then a 5-judge Supreme Court Constitution Bench.",
+ dispute:"When the Government took over the Barsi Light Railway Company, and when Shri Dinesh Mills closed its whole business because of losses, all workmen were discharged. They claimed retrenchment compensation under Sec. 25F, relying on the words 'for any reason whatsoever' in Sec. 2(oo).",
+ held:"Despite those words, retrenchment means discharge of surplus staff by an employer in a continuing, running industry. It does not include termination of all workmen on a genuine closure of the whole business or on a transfer of ownership.",
+ after:"Parliament quickly passed the Industrial Disputes (Amendment) Act, 1957, inserting Sec. 25FF (compensation on transfer of an undertaking) and Sec. 25FFF (compensation on closure).",
+ use:"Explains why closure and transfer are treated differently from retrenchment. Your claim in those cases lies under Secs. 25FF and 25FFF."},
+{n:133,grp:'ir',side:'for',name:"State Bank of India v. N. Sundara Money",cite:"(1976) 1 SCC 822",themes:["Retrenchment","Fixed term"],sits:['retnotice','fixedterm'],
+ forum:"Madras High Court (writ, Art. 226), then a Division Bench, then a 3-judge Supreme Court bench (Art. 136).",
+ dispute:"A temporary bank cashier was appointed through broken orders totalling 271 days in 12 months. His last order said his employment would end automatically on the 9th day without notice. When it ended, he claimed illegal retrenchment under Sec. 25F.",
+ held:"The words 'termination by the employer of the service of a workman for any reason whatsoever' in Sec. 2(oo) are to be read in their full literal sense. Even where the end of service is written into the appointment order, the termination is the employer's act and is retrenchment attracting Sec. 25F.",
+ after:"The cashier was reinstated with back wages. To protect genuine fixed-term contracts, Parliament later added Sec. 2(oo)(bb) in 1984 (non-renewal of a contract on its expiry).",
+ use:"Cite when your temporary appointment ended on a date written in advance and no notice or compensation was given."},
+{n:134,grp:'ir',side:'for',name:"Santosh Gupta v. State Bank of Patiala",cite:"(1980) 3 SCC 340",themes:["Retrenchment"],sits:['retnotice'],
+ forum:"Central Government Industrial Tribunal (Sec. 10 reference), then the Supreme Court (Art. 136).",
+ dispute:"A female bank clerk who had worked more than 240 days in 12 months was discharged because she failed the bank's internal confirmation test. The Bank said this was not discharge of surplus labour and so not retrenchment.",
+ held:"After Secs. 25FF and 25FFF were added in 1957, the narrow Barsi Light Railway limit no longer applies to individual terminations. Every termination of a workman, including for failing a confirmation test, is retrenchment under Sec. 2(oo) unless it falls within the statutory exceptions (disciplinary punishment, retirement or continued ill-health).",
+ after:"The Tribunal's award was set aside and the clerk was reinstated with full back wages for breach of Sec. 25F.",
+ use:"Cite when you were let go during probation or for failing a test, after working at least 240 days."},
+{n:135,grp:'ir',side:'for',name:"Mohan Lal v. Management of M/s Bharat Electronics Ltd.",cite:"(1981) 3 SCC 225",themes:["Retrenchment","240 days"],sits:['retnotice','count240'],
+ forum:"Labour Court, Meerut (Sec. 10 reference), then the Supreme Court by special leave (Art. 136).",
+ dispute:"A temporary salesman worked 11 months (8 December 1973 to 19 October 1974), over 240 days in all, and was terminated without notice or compensation. The Labour Court said he had not completed one calendar year of service under Sec. 25B(1).",
+ held:"Under Sec. 25B(2) a workman need not be in service for 12 full months. It is enough that, counting back 12 calendar months from termination, he actually worked 240 days (190 days below ground). Breach of the mandatory conditions of Sec. 25F(a) and (b) makes the termination void from the start.",
+ after:"The Labour Court's award was quashed and the workman was declared to be in continuous service with full back wages.",
+ use:"Cite when you were told you had not completed a year: count back 12 months from the date of termination."},
+{n:136,grp:'ir',side:'for',name:"Workmen of American Express International Banking Corporation v. Management",cite:"(1985) 4 SCC 71",themes:["Retrenchment","240 days"],sits:['count240','retnotice'],
+ forum:"Central Government Industrial Tribunal, Delhi (Sec. 10 reference), then the Supreme Court (Art. 136).",
+ dispute:"A temporary typist-clerk worked 220 actual days in a year, not counting paid Sundays and bank holidays. The Bank ended his service without Sec. 25F steps, saying 'actually worked' in Sec. 25B(2) means days of physical presence.",
+ held:"'Actually worked under the employer' in Sec. 25B(2) is not limited to days of physical work. It includes Sundays and other statutory or contractual holidays for which the workman was paid wages.",
+ after:"With paid Sundays and holidays counted, he passed 240 days. The termination was declared illegal under Sec. 25F and he was reinstated with full back wages.",
+ use:"Cite when your count of days falls just short of 240: paid Sundays and holidays count."},
+{n:137,grp:'ir',side:'for',name:"Punjab Land Development and Reclamation Corporation Ltd. v. Presiding Officer, Labour Court, Chandigarh",cite:"(1990) 3 SCC 682",themes:["Retrenchment"],sits:['retnotice','fixedterm'],
+ forum:"Labour Courts and High Courts, then a 5-judge Supreme Court Constitution Bench.",
+ dispute:"A reference to settle three decades of conflict between the narrow view in Barsi Light Railway (surplus labour only) and the wide view in Sundara Money and Santosh Gupta (termination for any reason).",
+ held:"Barsi Light Railway applies only to total closure or transfer of an undertaking (now Secs. 25FF and 25FFF). In a running establishment, retrenchment means termination by the employer for any reason whatsoever, other than as disciplinary punishment, and excludes only voluntary retirement, superannuation, non-renewal of a contract under Sec. 2(oo)(bb), and continued ill-health.",
+ after:"Reinstatement awards in all eight connected appeals were upheld where workmen were ended for unsatisfactory probation, lack of confidence or invalid recruitment without Sec. 25F steps.",
+ use:"The settled definition of retrenchment. Check whether your termination falls within one of the four exceptions. If not, Sec. 25F applies."},
+{n:138,grp:'ir',side:'for',name:"Uptron India Ltd. v. Shammi Bhan",cite:"(1998) 6 SCC 538",themes:["Fixed term","Dismissal"],sits:['fixedterm','dismissal'],
+ forum:"Labour Court, Lucknow, then Allahabad High Court (Art. 226), then the Supreme Court (Art. 136).",
+ dispute:"Clause 17(g) of the certified Standing Orders said a workman's service was liable to automatic termination if he overstayed leave by more than 7 days. On this, the company ended a permanent operator's service without an inquiry or Sec. 25F steps, relying on Sec. 2(oo)(bb).",
+ held:"A clause providing for automatic termination of a permanent employee for overstaying leave, without a hearing and domestic inquiry, breaches natural justice (Art. 14) and is invalid. Sec. 2(oo)(bb) covers only fixed-term or project contracts and cannot be used to end permanent employees through Standing Order clauses.",
+ after:"The setting aside of the automatic termination was upheld. Establishments must issue show-cause notices and hold inquiries for unauthorised absence or abandonment of service.",
+ use:"Cite when you were struck off for overstaying leave, or told your service 'automatically ended', with no inquiry."},
+{n:139,grp:'ir',side:'limits',name:"Excel Wear v. Union of India",cite:"(1978) 4 SCC 224",themes:["Closure"],sits:['closure','permission'],
+ forum:"Supreme Court, a 5-judge Constitution Bench, on writ petitions under Art. 32.",
+ dispute:"Facing militant labour unrest and recurring losses, a garment export factory with about 400 workmen applied to close down under the original Sec. 25-O. The Government refused mechanically, citing 'prejudicial to public interest'.",
+ held:"The original Sec. 25-O and the penal Sec. 25-R were struck down as breach of Art. 19(1)(g), which includes the right to close a losing business. The section required no reasons, no quasi-judicial hearing, allowed refusal even for crippling losses and gave no appeal or review.",
+ after:"Parliament enacted the Industrial Disputes (Amendment) Act, 1982, which redrafted Sec. 25-O with a hearing, recorded reasons, a 60-day deemed-permission rule, a one-year validity and a review or reference to a Tribunal.",
+ use:"Employer-side authority on the right to close, since replaced by the redrafted Sec. 25-O. See Orissa Textile for the current position."},
+{n:140,grp:'ir',side:'for',name:"Workmen of Meenakshi Mills Ltd. v. Meenakshi Mills Ltd.",cite:"(1992) 3 SCC 336",themes:["Retrenchment","Permission"],sits:['permission','retnotice'],
+ forum:"Madras, Karnataka and Allahabad High Courts (Art. 226), then a 5-judge Supreme Court Constitution Bench.",
+ dispute:"Textile mills challenged Sec. 25-N, which needs three months' notice and prior government permission to retrench workmen in large industrial establishments, saying it had the same defects as Sec. 25-O in Excel Wear.",
+ held:"Retrenching part of the surplus staff of a continuing factory is different from closing a business. Sec. 25-N is valid under Arts. 14 and 19(1)(g)/(6). The authority acts quasi-judicially, must hold an inquiry on natural justice lines and must pass a speaking order, subject to judicial review under Art. 226.",
+ after:"Mandatory prior government permission for retrenchment in large Chapter V-B establishments was validated.",
+ use:"Cite when a large establishment retrenched you without prior government permission and three months' notice."},
+{n:141,grp:'ir',side:'for',name:"Papnasam Labour Union v. Madura Coats Ltd.",cite:"(1995) 1 SCC 501",themes:["Lay-off","Permission"],sits:['layoff','permission'],
+ forum:"Madras High Court (Art. 226, declaring Sec. 25-M invalid), then a 3-judge Supreme Court bench following Meenakshi Mills.",
+ dispute:"A textile mill with about 3,000 workmen laid off workers because of an 80% power cut by the Tamil Nadu Electricity Board without prior government permission under Sec. 25-M, and challenged the section as arbitrary.",
+ held:"The High Court was reversed and Sec. 25-M was upheld. Prior government permission for lay-off in Chapter V-B establishments, except for natural calamity such as fire, flood or explosion, with a power to apply within 30 days of a continuing lay-off, is a reasonable restriction because of the 60-day deemed-permission timeline and the quasi-judicial inquiry.",
+ after:"Mandatory prior or post-facto government permission for lay-offs in Chapter V-B establishments was restored across India.",
+ use:"Cite when a large establishment laid you off without the permission that Sec. 25-M requires."},
+{n:142,grp:'ir',side:'mixed',name:"Orissa Textile & Steel Ltd. v. State of Orissa",cite:"(2002) 2 SCC 578",themes:["Closure","Permission"],sits:['closure','permission'],
+ forum:"Orissa and other High Courts, then a 5-judge Supreme Court Constitution Bench.",
+ dispute:"Establishments challenged the new Sec. 25-O (Act 46 of 1982, enacted after Excel Wear), saying even the amended provision breached Arts. 14 and 19(1)(g).",
+ held:"The amended Sec. 25-O is valid. The 1982 amendment cured the defects found in Excel Wear: Government acts quasi-judicially, hears all parties, weighs the genuineness and adequacy of the reasons, and must pass a reasoned written order within 60 days or permission is deemed granted under Sec. 25-O(3). Its order can be reviewed or referred to a Tribunal under Sec. 25-O(5), which must decide within 30 days.",
+ after:"The constitutional validity of Chapter V-B closure rules was settled. The Industrial Relations Code, 2020 keeps them with a 300-worker threshold in Secs. 78 to 80.",
+ use:"Explains the process a large establishment must follow to close: apply, give a hearing and wait for a reasoned order, or for deemed permission after 60 days."},
+{n:143,grp:'ir',side:'limits',name:"Indian Iron and Steel Co. Ltd. v. Their Workmen",cite:"AIR 1958 SC 130",themes:["Dismissal","Domestic inquiry"],sits:['dismissal'],
+ forum:"Fifth Industrial Tribunal, West Bengal (Sec. 10 reference), then Labour Appellate Tribunal, then a 3-judge Supreme Court bench.",
+ dispute:"Several workmen were dismissed after domestic inquiries or after being taken into custody during an agitation, and the Tribunal sat as an appeal court over the management's findings to order reinstatement.",
+ held:"Before Sec. 11A was inserted, a Tribunal was not an appeal court over a domestic inquiry. It could interfere with a dismissal only for (i) want of good faith, (ii) victimisation or unfair labour practice, (iii) a basic error or breach of natural justice, or (iv) a finding with no basis or a perverse finding.",
+ after:"This governed all disciplinary adjudication from 1958 until Sec. 11A in 1971. The four-fold test still applies to punishments short of dismissal or discharge, such as a warning, stopped increment or demotion.",
+ use:"Use it for lesser punishments such as demotion or stopped increments, where Sec. 11A does not apply."},
+{n:144,grp:'ir',side:'mixed',name:"Delhi Cloth and General Mills Co. Ltd. v. Ludh Budh Singh",cite:"(1972) 1 SCC 595",themes:["Dismissal","Domestic inquiry"],sits:['dismissal'],
+ forum:"Industrial Tribunal, Delhi, then the Supreme Court (Art. 136).",
+ dispute:"A workman was dismissed for obstructing the mill gates and destroying property during a strike after an inquiry where the Inquiry Officer found him guilty with no direct witness. Only after the Tribunal held the inquiry perverse did the management ask to lead fresh evidence.",
+ held:"Where there was no inquiry, or the inquiry is said to be defective, its validity is decided first as a preliminary issue. An employer who wants to keep the right to lead fresh evidence before the Tribunal must say so in its written statement or before the preliminary issue closes, not after the award is reserved.",
+ after:"The refusal to reopen the proceedings was upheld and the workman stayed reinstated. The two-stage trial (fairness of inquiry first, then evidence on merits) became standard in Labour Courts.",
+ use:"Cite for procedure: challenge the inquiry first, and hold the employer to its deadline for asking to lead fresh evidence."},
+{n:145,grp:'ir',side:'for',name:"Workmen of M/s Firestone Tyre & Rubber Co. of India (P) Ltd. v. Management",cite:"(1973) 1 SCC 813",themes:["Dismissal","Sec. 11A"],sits:['dismissal'],
+ forum:"Industrial Tribunals (Maharashtra and Delhi), then the Supreme Court (batch civil appeals under Art. 136).",
+ dispute:"Workmen were dismissed for theft and strike-related misconduct after defective or missing inquiries. While the references were pending, Parliament inserted Sec. 11A, empowering Labour Courts and Tribunals to re-weigh the evidence and substitute a lesser punishment.",
+ held:"Sec. 11A makes the Labour Court or Tribunal a full appellate authority in discharge and dismissal disputes. It can re-weigh the evidence, decide for itself whether the misconduct is proved, and reduce a shockingly disproportionate punishment even when the inquiry was fair. The employer can still lead fresh evidence where there was no inquiry or it is set aside. Sec. 11A applies to references made on or after 15 December 1971.",
+ after:"It became the operating manual for Sec. 11A discharge and dismissal trials in Labour Courts and Tribunals across India.",
+ use:"Cite when the punishment of dismissal is out of proportion to the misconduct, even if the inquiry was proper."},
+{n:146,grp:'ir',side:'for',name:"Jaipur Zila Sahakari Bhoomi Vikas Bank Ltd. v. Ram Gopal Sharma",cite:"(2002) 2 SCC 244",themes:["Dismissal","Pending dispute"],sits:['pending33'],
+ forum:"Industrial Tribunal and the High Court of Rajasthan, then a 5-judge Supreme Court Constitution Bench.",
+ dispute:"Two 3-judge decisions (Strawboard and Punjab Beverages) conflicted on what happens when an employer discharges or dismisses a workman for unconnected misconduct while an industrial dispute is pending, without applying for approval under the Sec. 33(2)(b) proviso, or when approval is refused.",
+ held:"Punjab Beverages was overruled. The three requirements of the Sec. 33(2)(b) proviso (dismissal or discharge, one month's wages, and an application for approval) are mandatory parts of one transaction. If the employer does not apply, or approval is refused, the dismissal is void and inoperative from the start, the workman is treated as never terminated and is entitled to full wages without filing a separate reference.",
+ after:"Strict compliance with Sec. 33(2)(b) is enforced during pending references, and workmen denied it can directly recover full wages.",
+ use:"Cite when you were dismissed while another dispute was pending and the employer did not pay one month's wages and apply for approval."}
+];
+var CL_SIT=[
+ ['below','I am paid below the minimum wage',[1,3,5,9,10,45]],
+ ['afford','Employer says it cannot afford the wage',[1,2,3,5,4]],
+ ['da','DA / VDA is cut, flat or not paid',[7,8,11,12]],
+ ['parity','Paid less than regular staff for the same work',[13,15,16,17,18,21,22]],
+ ['gender','Paid less than a colleague of another gender',[14]],
+ ['contract','Contract worker paid less than the principal employer’s staff',[20,9,43,48]],
+ ['casual','Daily wager or casual worker asking for regular pay',[15,16,21,22,19,46]],
+ ['bonus','Bonus refused or reduced',[23,34,42]],
+ ['pfbase','PF taken only on part of my pay',[24,25,29,30]],
+ ['piece','Piece-rate wage or wage notification dispute',[6,5,33]],
+ ['esibase','ESI on allowances',[26,27,28]],
+ ['deduct','Deduction or no work no pay',[32,37,38,45]],
+ ['strike','Strike or lockout wages',[38,39,40]],
+ ['suspend','Suspension subsistence',[35]],
+ ['forum','Which forum',[31,36,41,46,39,33,34]],
+ ['backwages','Back wages',[44,49,47]],
+ ['lockdown','Lockdown wages',[50]],
+ ['bonded','Bonded labour',[45,9,10]],
+ ['retnotice','Retrenched without notice',[44,49]],
+ ['dismissal','Dismissal',[49]],
+ ['strikejob','Strike dismissal',[40]],
+ ['closure','Closure or transfer',[36]]
+];
+function clSide(x,bad){if(bad)return '<span class="pill no">Overruled, no longer good law</span>';return x==='for'?'<span class="pill ok">Supports workers</span>':x==='limits'?'<span class="pill no">Employer-side or limits claims</span>':'<span class="pill">Mixed outcome</span>';}
+/* Reference block: shows the relevant wage judgments inside a solution. nums = case numbers from CASELAW. */
+function clBlock(nums,intro){
+  var rs=nums.map(function(n){return CASELAW.filter(function(c){return c.n===n;})[0];}).filter(Boolean);
+  if(!rs.length)return '';
+  var h='<h4>Case law you can rely on</h4><p class="fine">'+(intro||'Cite these judgments in your letter, demand notice or claim. Tap a case to see where it was filed, what was decided and what followed.')+'</p><div class="clx-list">';
+  rs.forEach(function(c){
+    h+='<details class="clx"><summary><span class="clx-t">'+esc(c.name)+'</span><span class="clx-c">'+esc(c.cite)+'</span> '+clSide(c.side,c.bad)+'</summary>'+
+      '<div class="facts"><div><b>Where it was filed</b><p>'+esc(c.forum)+'</p></div><div><b>What the case was about</b><p>'+esc(c.dispute)+'</p></div><div><b>What the court decided</b><p>'+esc(c.held)+'</p></div><div><b>What happened after</b><p>'+esc(c.after)+'</p></div></div>'+
+      '<div class="casebox"><strong>Use it when:</strong> '+esc(c.use)+'</div></details>';
+  });
+  h+='</div><p class="fine">Summaries are shortened from the judgments. Read the full judgment and check it is still good law before you cite it. Several rulings have since been narrowed or built on, and the Labour Codes have replaced some of the Acts mentioned.</p>';
+  return h;
+}
+
+/* =====================================================================
+   WHAT IS YOUR PROBLEM? Case-benchmarked solutions (wage problems)
+   HOW TO EXTEND:
+   - Add more judgments: ESCaseLaw.add([{n:25,p:3,side:'for',name:'...',cite:'...',themes:['...'],
+       forum:'...',dispute:'...',held:'...',after:'...',use:'...',sits:['below','pfbase']}]);
+     (sits = the problem keys below the case is a benchmark for; side = for | limits | mixed)
+   - Add a new problem: add an entry to CL_PLAY with a new key.
+   ===================================================================== */
+var CL_PLAY={
+below:{t:'Paid below the minimum wage',law:'Minimum Wages Act, 1948 / Code on Wages, 2019',
+ kw:['below minimum wage','minimum wage','underpaid','low salary','paid less','notified rate','wage shortfall'],
+ sum:'The notified minimum wage is a floor. An agreement to accept less is void, and an employer cannot excuse it by saying it cannot afford it. Paying less than the minimum is treated as forced labour.',
+ steps:[['Find your notified rate.','Look up the minimum wage for your state, category of work and zone, including variable dearness allowance, on the state labour department site.'],
+  ['Work out the shortfall.','Compare each month on your payslips or bank entries with the notified rate and total the difference with dates.'],
+  ['Write to the employer.','Send a dated demand for the shortfall, citing the judgments below, and give 15 days.'],
+  ['Complain to the Labour Inspector.','Attach your shortfall sheet. The Inspector can inspect records and direct payment.'],
+  ['File a wage claim.','Apply to the Authority under the minimum wage law with the sheet, payslips and demand notice. File early: time limits differ between the old Act and the Code.'],
+  ['If a contractor or agent is involved.','Name the principal employer too and ask it to pay directly.']],
+ forums:['Labour Inspector (Inspector-cum-Facilitator) of your area','Authority for wage claims, usually a Labour Commissioner or Labour Court judge','High Court writ (Art. 226) or Supreme Court (Art. 32) where a government body or scheme is the employer, or many workers are affected'],
+ evidence:['Payslips and bank statements','Appointment or engagement letter','Copy of the notified minimum wage for your category','Attendance record','Names of co-workers paid the same'],
+ ask:'Pay me the difference between my wages and the notified minimum wage from [date], with compensation and interest as the law allows.'},
+afford:{t:'Employer says it cannot afford the wage',law:'Minimum Wages Act, 1948 / Code on Wages, 2019; Industrial Disputes Act, 1947',
+ kw:['cannot afford','losses','company in loss','no money','wage cut','allowance cut','financial difficulty','reduced salary'],
+ sum:'Inability to pay is no defence to the minimum wage. Only pay above the minimum (a fair or living wage) depends on what the industry can bear, and then the employer has to prove its financial position.',
+ steps:[['Check where your pay stands.','Compare it with the notified minimum wage. If you are at or below it, the "no money" argument fails.'],
+  ['Ask for the reason in writing.','Ask the employer to state what it is cutting or withholding, from which date and why.'],
+  ['Do not sign a waiver.','An agreement to take less than the minimum is void, but a signed paper can still be used against you.'],
+  ['Raise a dispute if allowances were cut.','Cutting allowances so that pay falls below the minimum can be challenged. Apply for conciliation.'],
+  ['Ask the tribunal to test the claim of loss.','For pay above the minimum, the employer must prove its finances with accounts.']],
+ forums:['Conciliation Officer (Labour Commissioner office), then Labour Court or Industrial Tribunal','Authority for wage claims','Labour Inspector for non-payment of the minimum wage'],
+ evidence:['Payslips before and after the cut','Notice or circular announcing the cut','Appointment letter showing the allowances','Notified minimum wage for your category'],
+ ask:'Restore the pay and allowances that were reduced, and pay arrears from the date of the reduction.'},
+da:{t:'DA or VDA cut, made flat, or not paid',law:'Minimum Wages Act, 1948 / Code on Wages, 2019; Industrial Disputes Act, 1947',
+ kw:['dearness allowance','da cut','vda','da not paid','flat da','da removed','cost of living','allowance not increased'],
+ sum:'Dearness allowance keeps pay in step with prices and is linked to a cost-of-living index. A long-standing DA structure cannot simply be replaced with a lower flat amount. One exception: if your consolidated wage already equals or exceeds the notified basic plus VDA, a separate VDA need not be shown.',
+ steps:[['Compare your payslip with the notified rate.','Check the basic and VDA notified for your category against what you are paid.'],
+  ['Ask HR what changed.','Ask in writing for the DA formula, the date it changed and the reason.'],
+  ['Check the consolidated-wage exception.','If your total already meets basic plus VDA, a claim for separate VDA will not succeed. If it falls short, claim the difference.'],
+  ['Raise a dispute if a slab was cut.','Apply for conciliation, citing the DA rulings below.'],
+  ['If pay has been frozen for years.','Ask for revision linked to the consumer price index and to comparable units in your region.']],
+ forums:['Labour Inspector for VDA arrears','Conciliation Officer, then Labour Court or Industrial Tribunal for a cut or freeze','Authority for wage claims'],
+ evidence:['Payslips showing the old and new DA','Notified basic and VDA for your category','Settlement or circular that fixed the DA structure','Pay of comparable units in your region, if known'],
+ ask:'Restore the DA structure and pay arrears linked to the cost-of-living index from [date].'},
+parity:{t:'Paid less than regular staff for the same work',law:'Articles 14, 16 and 39(d) of the Constitution; Industrial Disputes Act, 1947',
+ kw:['same work','regular staff','equal pay for equal work','pay scale','pay parity','less than permanent','permanent employee same job'],
+ sum:'Equal pay for equal work is enforceable, most strongly in government and public bodies. You must show identical duties and responsibilities, not just the same job title. Differences in qualification, responsibility or recruitment can be used against you.',
+ steps:[['List the duties side by side.','Write your duties and responsibilities next to those of a regular employee in the post you compare yourself with.'],
+  ['Collect proof.','Orders, duty rosters, emails and appraisals that show you do the same work.'],
+  ['Make a written representation.','Ask the employer or department for the pay of the regular post, citing the judgments below.'],
+  ['Prepare for the employer reply.','Expect arguments on qualification, mode of recruitment and level of responsibility, and have your answers ready.'],
+  ['Go to the right forum.','In government service, a writ petition in the High Court. In a private establishment, an industrial dispute through conciliation.']],
+ forums:['Representation to the department or management first','High Court writ petition (Art. 226) for government and public bodies','Conciliation, then Labour Court or Industrial Tribunal for private employers'],
+ evidence:['Your engagement or appointment orders','Job descriptions or duty lists for both posts','Payslips of both posts, if lawfully available','Appraisals or work records','Recruitment rules for the regular post, if known'],
+ ask:'Pay me at least the minimum of the pay scale of the regular post, with arrears from [date].'},
+gender:{t:'Paid less than a colleague of another gender',law:'Code on Wages, 2019, Section 3 (earlier Equal Remuneration Act, 1976)',
+ kw:['gender pay gap','women paid less','male colleague','equal remuneration','pay discrimination','woman paid less'],
+ sum:'The law bars paying less on the ground of gender for the same work or work of a similar nature. A union settlement or the employer\u2019s finances is not an excuse.',
+ steps:[['Build the comparison.','Note the colleague\u2019s role, duties and experience, and the pay difference if you can lawfully establish it.'],
+  ['Ask HR for the pay band and reason.','Do it in writing and ask for a reply in 15 days.'],
+  ['Send a demand.','If the reason is not skill, experience or performance, demand equal pay and arrears, citing the judgments below.'],
+  ['Complain to the Inspector.','Attach the comparison and the correspondence.'],
+  ['File before the Authority.','Claim the arrears and a direction to pay equally in future.']],
+ forums:['Inspector-cum-Facilitator of your area','Authority under the Code on Wages, 2019','High Court writ petition for government employees'],
+ evidence:['Appointment letter and payslips','Job descriptions and organisation charts','Evidence of the colleague\u2019s pay, gathered lawfully','Your written request to HR and the reply','Appraisals'],
+ ask:'Pay me equal remuneration for work of the same or similar nature and the arrears from [date].'},
+contract:{t:'Contract worker paid less than the principal employer\u2019s staff',law:'Contract Labour (Regulation and Abolition) Act, 1970 / OSH Code, 2020',
+ kw:['contract worker','contractor','principal employer','agency','outsourced','third party payroll','jamadar','labour contractor'],
+ sum:'A contractor\u2019s licence carries conditions about wages. The principal employer is responsible if the contractor fails to pay. A cut taken by a jamadar or agent that leaves you below the minimum wage is unlawful. Ending a contract-labour arrangement does not by itself make you a regular employee, unless a Tribunal finds the contract a sham.',
+ steps:[['Ask for the licences.','Ask the principal employer for the contractor\u2019s licence and the establishment\u2019s registration.'],
+  ['Record who does the same work.','Note regular employees doing identical work and the pay difference.'],
+  ['Write to both.','Send a demand to the contractor and the principal employer, citing the judgments below.'],
+  ['Complain about the licence.','Write to the Licensing Officer or Labour Commissioner. A licence condition on parity wages gives them power to act.'],
+  ['Claim from the principal employer.','If the contractor does not pay, file a wage claim naming both.']],
+ forums:['Licensing Officer or Labour Commissioner','Authority for wage claims','High Court writ petition where many workers are affected or a public body is the principal employer'],
+ evidence:['Your engagement letter or ID card','Payslips or contractor payment records','Names and pay of regular workers doing the same work','Contractor\u2019s licence number, if known','Details of any deduction taken by an agent'],
+ ask:'Direct the contractor and principal employer to pay the same wages as regular workmen doing identical work, with arrears, and refund every unlawful deduction.'},
+casual:{t:'Daily wager or casual worker asking for regular pay',law:'Articles 14, 16 and 39(d); Industrial Disputes Act, 1947',
+ kw:['daily wage','daily wager','casual','temporary','ad hoc','work charged','regularisation','regular scale'],
+ sum:'Temporary and daily-wage workers doing the same duties and carrying the same responsibilities as regular staff can claim at least the minimum of the regular pay scale. The State is expected to be a model employer. If you were recruited outside the rules, expect more resistance, so proof of identical work matters.',
+ steps:[['Collect your engagement history.','Orders, muster rolls and proof of how long you have worked.'],
+  ['Compare duties.','Match your work with a regular post, in writing.'],
+  ['Send a representation.','Ask for the minimum of the regular scale and for regularisation under any scheme, citing the judgments below.'],
+  ['Check for a scheme.','Departments sometimes have a regularisation or temporary-status scheme. Ask for it in writing.'],
+  ['Go to court if needed.','A writ petition in the High Court for government service, or an industrial dispute for a private employer.']],
+ forums:['Representation to the department or employer','High Court writ petition (Art. 226) for government service','Conciliation, then Labour Court for private employers'],
+ evidence:['Engagement or appointment orders','Muster rolls, attendance and wage registers','Duty lists of the regular post','Payslips or payment records','Any regularisation scheme or circular'],
+ ask:'Pay me at least the minimum of the regular pay scale for the post from [date], and consider me for regularisation under the applicable scheme.'},
+bonus:{t:'Bonus refused or reduced',law:'Payment of Bonus Act, 1965 / Code on Wages, 2019',
+ kw:['bonus','bonus not paid','diwali bonus','statutory bonus','bonus withheld'],
+ sum:'Today bonus is a statutory right for eligible employees: a minimum of 8.33% and up to 20% of wages. The old test, which tied bonus to a living wage shortfall and available surplus, led to the Act and is mostly historical.',
+ steps:[['Check eligibility.','Use the ESI and bonus tab. You need an establishment of 20 or more employees, pay within the ceiling and at least 30 days worked.'],
+  ['Ask HR for the computation.','Request the bonus calculation in writing.'],
+  ['Check the deadline.','Bonus is generally payable within 8 months of the close of the accounting year.'],
+  ['Complain to the Inspector.','If it is withheld, write to the Labour Inspector with your payslips.'],
+  ['Claim it as a wage due.','File before the Authority if it still is not paid.']],
+ forums:['Labour Inspector','Authority for wage claims','Conciliation Officer where bonus is part of a wider dispute'],
+ evidence:['Payslips showing wages','Appointment letter','Company size evidence','Bonus policy or past bonus records'],
+ ask:'Pay my statutory bonus for [year] at not less than the minimum rate, with interest as allowed.'},
+pfbase:{t:'PF taken only on part of my pay',law:'EPF and Miscellaneous Provisions Act, 1952 / Code on Social Security, 2020',
+ kw:['pf on basic','pf base','special allowance pf','pf low wage','allowances excluded','pf calculated'],
+ sum:'Under the 1952 Act, only pay earned universally, ordinarily and necessarily by all employees counts as basic wages, so variable incentives can be left out. Under the Codes, allowances above 50% of total pay are added back into wages.',
+ steps:[['Run the Wage audit.','The Wage audit tab shows whether your basic, DA and retaining allowance reach 50% of gross.'],
+  ['Ask HR how the PF wage is set.','Ask in writing which components are in and out of the PF wage.'],
+  ['Separate variable from fixed.','Genuinely variable incentives can be excluded. Fixed allowances paid to everyone are harder to exclude.'],
+  ['Raise it on EPF iGMS.','Attach payslips and the passbook.'],
+  ['Let the PF office inquire.','It can examine the pay structure and fix dues with interest and damages.']],
+ forums:['EPF iGMS grievance','Regional PF Commissioner (inquiry under Sec. 7A)','High Court writ petition as a last step'],
+ evidence:['Payslips showing every component','Appointment letter and salary structure','EPFO passbook','Your Wage audit result'],
+ ask:'Direct the establishment to compute provident fund contributions on the correct wage and deposit the shortfall with interest and damages.'},
+piece:{t:'Piece-rate wage or wage notification dispute',law:'Minimum Wages Act, 1948 / Code on Wages, 2019',
+ kw:['piece rate','piece-rate','bidi','rejection','chhat','wage notification','per piece'],
+ sum:'A government can fix minimum piece rates and the rate is enforceable. A wage notification, however, cannot rewrite other terms of service such as rejection rules, and those disputes follow the normal dispute route.',
+ steps:[['Get the notification.','Find the notified minimum piece rate for your work.'],
+  ['Compare actual earnings.','Convert your output and pay into the rate per piece and total any shortfall.'],
+  ['Separate the issues.','Keep the rate claim separate from disputes about rejection or deductions.'],
+  ['Demand the difference.','Write to the employer citing the judgments below.'],
+  ['Escalate by issue.','A rate shortfall goes to the Inspector or wage Authority. A rejection dispute goes to conciliation.']],
+ forums:['Labour Inspector or wage Authority for the rate','Conciliation Officer, then Labour Court for other terms','High Court writ for challenges to a notification'],
+ evidence:['Production and payment records','Notified piece-rate','Rejection records','Payslips or payment receipts'],
+ ask:'Pay me the difference between my piece-rate earnings and the notified minimum piece rate, with arrears.'},
+esibase:{t:'ESI deducted, or not deducted, on allowances',law:'ESI Act, 1948, Sec. 2(22) / Code on Social Security, 2020',
+ kw:['esi','esic','esi on allowance','hra esi','esi wage','esi not deducted','esi contribution','attendance bonus esi'],
+ sum:'ESI wages include contractual pay and other additional pay paid at intervals of up to two months, so regular allowances such as HRA, night-shift and incentive allowances count. A genuine one-off goodwill payment does not, but a bonus payable as a legal right under a binding settlement does.',
+ steps:[['Check your coverage.','Use the ESI and bonus tab. Coverage depends on wages being within the ceiling and the establishment having 10 or more employees.'],
+  ['List your pay components.','Mark which are paid every month or at intervals of up to two months, and which are truly one-off.'],
+  ['Ask HR what is in the ESI wage.','Ask in writing which components are counted and why.'],
+  ['Compare with your ESIC history.','Check the contribution history on the ESIC portal month by month against your payslips.'],
+  ['Complain to the ESIC branch office.','Attach payslips and the contribution history.'],
+  ['Take a dispute to the Employees’ Insurance Court.','If the branch office does not resolve it, apply to the Court.']],
+ forums:['ESIC branch office','Employees’ Insurance Court (Sec. 75 application)','High Court only on a question of law'],
+ evidence:['Payslips showing every allowance','ESIC contribution history and IP number','Settlement or bonus policy, if any','Appointment letter'],
+ ask:'Direct the establishment to compute ESI contributions on all wages including regular allowances, and pay the shortfall with interest.'},
+deduct:{t:'Deduction from salary, withheld allowance or "no work, no pay"',law:'Payment of Wages Act, 1936 / Code on Wages, 2019',
+ kw:['deduction','salary deducted','no work no pay','allowance stopped','hra stopped','strike deduction','wages cut','explosives','tools deducted'],
+ sum:'Only the deductions the law lists are allowed. A conditional allowance can stop when its condition ends, travel-type allowances earned only on actual duty may not count as wages, and wages for time not worked can be withheld. Charging a piece-rate worker for materials such as explosives is unlawful.',
+ steps:[['Ask for the head of deduction.','Request in writing the reason and the rule or settlement it rests on.'],
+  ['Check it against the lawful list.','Compare it with the permitted deductions under the wage law.'],
+  ['Separate wages from allowances.','Conditional and travel-type allowances may fall outside wages, which weakens a claim for them.'],
+  ['If you did not work.','An employer can deduct for work not done, and staying away for even part of a day can cost the whole day.'],
+  ['Demand a refund.','Send a dated demand for any unlawful deduction.'],
+  ['Claim before the Authority.','File for the unlawfully deducted amount, with compensation as the law allows.']],
+ forums:['Labour Inspector','Authority for wage claims','Conciliation Officer where the deduction raises a wider dispute'],
+ evidence:['Payslips showing the deduction','Written reason or circular for it','Appointment letter and allowance terms','Attendance record'],
+ ask:'Refund the unlawful deductions of [amount] from [date], with compensation as the law allows.'},
+strike:{t:'Wages for strike or lockout days',law:'Industrial Disputes Act, 1947 / Industrial Relations Code, 2020',
+ kw:['strike wages','lockout wages','wages for strike days','token strike','strike period','illegal strike','lockout'],
+ sum:'Wages for a strike period are due only if the strike was both legal and justified, and a Tribunal, not a writ court, decides that. A summary recovery order is not available when liability is genuinely disputed. Staying away for part of a day can cost that whole day’s wages.',
+ steps:[['Record the strike dates.','Note when it began and ended, the notice given, and whether conciliation was pending.'],
+  ['Check legality.','A strike during conciliation or without the required notice may be illegal.'],
+  ['Note why it was called.','Justification depends on the reason, such as an unresolved demand or the employer’s own conduct.'],
+  ['Write to the employer.','Claim the wages in writing with your reasons.'],
+  ['Raise an industrial dispute.','Ask for reference to the Industrial Tribunal to decide legality and justification.'],
+  ['Do not rely on summary recovery.','Wage authorities send disputed strike-wage claims to the Tribunal.']],
+ forums:['Conciliation Officer, then Industrial Tribunal','Labour Commissioner for undisputed wages only'],
+ evidence:['Strike notice and dates','Conciliation records','Employer’s deduction circular','Payslips for the period'],
+ ask:'Refer the dispute to the Industrial Tribunal, declare the strike legal and justified, and direct payment of wages for the strike period.'},
+suspend:{t:'Suspended pending inquiry: subsistence allowance',law:'Industrial Employment (Standing Orders) Act, 1946, Sec. 10A / Industrial Relations Code, 2020',
+ kw:['suspended','suspension','subsistence allowance','pending inquiry','domestic inquiry','suspended without pay'],
+ sum:'An employer cannot suspend you without pay unless a statute or standing orders allow it. Where it can suspend, you are owed subsistence allowance, set by the 1946 Act at 50% of wages for the first 90 days and 75% after.',
+ steps:[['Get the suspension order.','Check the date, the reason and whether it cites standing orders.'],
+  ['Check your standing orders.','They may set the allowance and the process.'],
+  ['Claim subsistence allowance in writing.','Ask for 50% for the first 90 days and 75% after, or the rate in your standing orders.'],
+  ['Track the inquiry timeline.','Note any delay caused by the employer.'],
+  ['Raise a dispute.','If it is not paid, apply for conciliation and ask the Tribunal for interim relief.']],
+ forums:['Conciliation Officer, then Industrial Tribunal','Labour Inspector for non-payment of subsistence allowance'],
+ evidence:['Suspension letter','Charge sheet or notice','Standing orders','Last three payslips'],
+ ask:'Pay subsistence allowance from the date of suspension at the rate the law allows, with arrears.'},
+forum:{t:'Which forum: wage Authority or Labour Court?',law:'Payment of Wages Act, 1936 / Industrial Disputes Act, 1947 / Code on Wages, 2019',
+ kw:['which forum','where to file','wage authority','labour court','tribunal','jurisdiction','section 33c','execution of award','who is a workman'],
+ sum:'The wage Authority is a quick forum for plain, undisputed wages. It cannot decide a claim to a higher grade, who is liable after a business transfer, or equal pay. Those go to the Industrial Tribunal. The Labour Court can then compute and recover money due under an existing award or settlement.',
+ steps:[['Ask what kind of claim it is.','Unpaid, admitted wages go to the wage Authority. A right that is disputed or never accepted is an industrial dispute.'],
+  ['For a disputed right.','Apply for conciliation and ask for reference to the Tribunal.'],
+  ['For money under an award or settlement.','Apply to the Labour Court to compute and recover it, even where the employer disputes whether you are covered.'],
+  ['Check you count as a workman.','Control and supervision over how you work, not the way you are paid, usually decides it.'],
+  ['Keep the claims separate.','File each claim in the forum that can decide it, so it is not dismissed on jurisdiction.']],
+ forums:['Wage Authority for admitted wages','Conciliation Officer, then Industrial Tribunal for disputed rights','Labour Court for computing and recovering money under an award or settlement'],
+ evidence:['Award, settlement or contract the claim rests on','Payslips and appointment letter','Proof that you work under the employer’s control','Written demand and reply'],
+ ask:'Admit and decide the claim in the correct forum and direct payment with interest.'},
+backwages:{t:'Illegally terminated: back wages and wages during appeal',law:'Industrial Disputes Act, 1947, Secs. 17B and 33C(2) / Industrial Relations Code, 2020',
+ kw:['back wages','reinstatement','illegally terminated','wrongful termination','wages during appeal','17b','continuity of service','full back wages'],
+ sum:'When a termination is found illegal, reinstatement with continuity of service and full back wages is the normal rule. You only need to state that you were not gainfully employed, and the employer must prove otherwise. Back wages can be reduced for a proven financial crisis. If the employer appeals a reinstatement award, it must pay the wages last drawn while the appeal is pending.',
+ steps:[['Challenge the termination.','Use the retrenchment guide to raise the dispute through conciliation.'],
+  ['Plead that you were not gainfully employed.','State it in an affidavit for the whole period.'],
+  ['Ask for full back wages and continuity of service.','Cite the judgments below.'],
+  ['If the employer appeals.','Apply under Sec. 17B for the wages last drawn for the period of the appeal.'],
+  ['Execute the award.','Apply under Sec. 33C(2) to compute and recover what is due.'],
+  ['Ask for interest and a time limit.','Courts have ordered payment within a fixed period with interest.']],
+ forums:['Conciliation Officer, then Labour Court or Industrial Tribunal','High Court for interim wages under Sec. 17B','Labour Court for recovery under Sec. 33C(2)'],
+ evidence:['Termination letter','Award or order of reinstatement','Affidavit that you were not gainfully employed','Last drawn wage slips'],
+ ask:'Reinstate me with continuity of service and full back wages from the date of termination, with interest, and pay wages last drawn during any appeal.'},
+lockdown:{t:'Wages during closure or lockdown',law:'Disaster Management Act, 2005 (order of 29 March 2020) / Industrial Disputes Act, 1947',
+ kw:['lockdown wages','covid wages','closure wages','wages during lockdown','factory closed','pandemic salary'],
+ sum:'In the 2020 lockdown the Supreme Court did not enforce a blanket order to pay 100% wages and barred coercive action against employers. It told employers and workers to settle wages by negotiation or before the Labour Authorities.',
+ steps:[['List the closure period.','Note the dates and what you were paid.'],
+  ['Ask for a written settlement offer.','Request the employer’s position in writing.'],
+  ['Apply for conciliation.','File before the Assistant Labour Commissioner.'],
+  ['Record any settlement formally.','A settlement before the Labour Authority binds both sides.'],
+  ['Keep other claims separate.','Layoff or retrenchment compensation is a separate claim.']],
+ forums:['Assistant Labour Commissioner (conciliation)','Industrial Tribunal if conciliation fails'],
+ evidence:['Payslips before and after the closure','Notices of closure or layoff','Government orders relied on','Any settlement offer'],
+ ask:'Settle the wages for the closure period through conciliation and record the settlement before the Labour Authority.'},
+bonded:{t:'Bonded or forced labour, middleman deductions',law:'Article 23 of the Constitution / Bonded Labour System (Abolition) Act, 1976 / Minimum Wages Act',
+ kw:['bonded labour','forced labour','debt bondage','jamadar','middleman','quarry','brick kiln','advance debt'],
+ sum:'Where a worker is shown to be working below the minimum wage, the law presumes forced or bonded labour unless the employer proves otherwise. Deductions for materials, tools or a middleman’s commission are unlawful, and wages should be paid directly in the presence of officials.',
+ steps:[['Record the facts safely.','Note the debt, the deductions, who pays and who controls your movement.'],
+  ['Contact the District Magistrate or Labour Officer.','They can order release and rehabilitation.'],
+  ['Contact legal aid or a workers’ organisation.','They can bring a petition on your behalf.'],
+  ['Claim the minimum wage difference.','Follow the steps for pay below the minimum wage.'],
+  ['Ask for a release certificate and rehabilitation.','The authorities must provide both.']],
+ forums:['District Magistrate or Sub-Divisional Magistrate','Labour Officer','High Court or Supreme Court public interest petition'],
+ evidence:['Details of the advance or debt','Names of the contractor or middleman','Payment records and deductions','Place and period of work'],
+ ask:'Release me from bondage, pay the minimum wages due with refund of unlawful deductions, and rehabilitate me as the law provides.'}
+,
+retnotice:{group:'ir',t:'Retrenched without notice or compensation',law:'Industrial Disputes Act, 1947, Secs. 25F and 25B / Industrial Relations Code, 2020',
+ kw:['retrenched','retrenchment','terminated without notice','no notice pay','no compensation','terminated after 240 days','probation terminated','failed confirmation test','removed from service','job terminated','let go','laid off permanently'],
+ sum:'Almost every termination of a workman in a running establishment, other than punishment, retirement or ill-health, is retrenchment. Before it takes effect the employer must give one month\u2019s written notice or pay in its place, pay 15 days\u2019 average pay for each completed year of service, and notify Government. You qualify once you have worked 240 days in the 12 months before the termination, and paid Sundays and holidays count. If a step is skipped the termination is void, and the usual remedy is reinstatement with back wages.',
+ code:'Under the Industrial Relations Code, 2020 (Sec. 2(zh)), the end of a fixed-term contract is not retrenchment, and every retrenched worker\u2019s Re-skilling Fund account is credited 15 days\u2019 last drawn wages within 45 days (Sec. 83).',
+ steps:[['Count your days.','Count back 12 calendar months from the date of termination. Days actually worked, paid Sundays and holidays all count. You need 240 days (190 days below ground).'],
+  ['Find the employer\u2019s reason.','Disciplinary punishment, retirement, a genuine fixed-term contract that expired, and continued ill-health are the only exceptions. Failing probation, \u201Clack of confidence\u201D or failing a test are not.'],
+  ['Check the three conditions.','One month\u2019s written notice or pay in lieu, retrenchment compensation tendered with it, and notice to the appropriate Government.'],
+  ['Write to the employer.','Demand reinstatement with continuity of service and back wages, or at least notice pay and compensation, citing the judgments below.'],
+  ['Raise the dispute.','An individual worker can raise a dismissal or retrenchment dispute without a union (Sec. 2A). Apply to the Conciliation Officer, and then to the Labour Court. Do not wait: delay can be used against you.'],
+  ['Claim back wages properly.','File an affidavit that you have not been gainfully employed. The burden then moves to the employer.']],
+ forums:['Conciliation Officer (Labour Commissioner\u2019s office)','Labour Court or Industrial Tribunal on reference, or directly under Sec. 2A within the time the Act allows','High Court writ (Art. 226) where the employer is a public body'],
+ evidence:['Appointment or engagement orders','Termination letter or order','Payslips or wage records for the last 12 months','Attendance or muster roll','Proof that no notice or compensation was paid','Affidavit that you were not gainfully employed'],
+ ask:'Declare my termination illegal for breach of Sec. 25F, reinstate me with continuity of service and full back wages, with interest.'},
+fixedterm:{group:'ir',t:'Contract ended, or told my service ended automatically',law:'Industrial Disputes Act, 1947, Sec. 2(oo)(bb) / Standing Orders / Industrial Relations Code, 2020',
+ kw:['contract ended','contract expired','not renewed','automatic termination','automatically terminated','overstayed leave','absent from duty','abandonment','temporary appointment','fixed term','struck off'],
+ sum:'Writing the end date into your appointment order does not stop it being retrenchment, unless it is a genuine fixed-term or project contract that simply expired. A standing-order clause saying a permanent worker\u2019s service \u201Cautomatically ends\u201D for overstaying leave cannot be used to end the job without a show-cause notice and a domestic inquiry.',
+ code:'Under the Industrial Relations Code, 2020, the end of a Fixed Term Employment is not retrenchment, but fixed-term workers get the same statutory benefits as permanent workers, and pro-rata gratuity.',
+ steps:[['Read your appointment order.','Is it a genuine fixed term with a real end date, or a series of short orders with breaks in between?'],
+  ['Look for a pattern.','Repeated broken-service orders that keep you just under 240 days can be challenged. Note the dates of every break.'],
+  ['Check the Standing Orders.','Ask for a copy. Any clause that ends service automatically, with no inquiry, is open to challenge.'],
+  ['If it is about leave.','Give a written explanation with medical or other proof, and ask in writing for a show-cause notice and an inquiry.'],
+  ['Write a demand.','Ask for the termination to be set aside, citing the judgments below.'],
+  ['Raise the dispute.','Apply for conciliation, then the Labour Court.']],
+ forums:['Conciliation Officer','Labour Court or Industrial Tribunal','High Court writ (Art. 226) for public employers'],
+ evidence:['All appointment or extension orders','Termination or striking-off letter','Certified Standing Orders','Leave applications and medical papers','Payslips'],
+ ask:'Set aside the automatic termination, reinstate me with continuity of service and back wages, or at least pay notice pay and retrenchment compensation.'},
+count240:{group:'ir',t:'Told I have not completed a year or 240 days',law:'Industrial Disputes Act, 1947, Sec. 25B',
+ kw:['240 days','one year of service','not completed a year','continuous service','days worked','broken service','paid sundays'],
+ sum:'You do not need 12 full months in service. Count back 12 calendar months from the termination date. If you actually worked 240 days in that window (190 below ground), you have completed a year of continuous service. Paid Sundays and holidays count as days worked.',
+ steps:[['Fix the termination date.','Use the date on the termination letter or the last day you worked.'],
+  ['Count back 12 calendar months.','Do not count the months of service. Count the 12 months before the date of termination.'],
+  ['Add the days.','Days worked, paid Sundays, paid holidays and other days for which you were paid.'],
+  ['Collect the records.','Attendance sheets, muster rolls, payslips and bank entries.'],
+  ['Note any artificial breaks.','Breaks inserted to keep you under 240 days can be challenged.'],
+  ['Make the demand and raise the dispute.','Use the retrenchment plan above.']],
+ forums:['Conciliation Officer','Labour Court or Industrial Tribunal'],
+ evidence:['Attendance or muster roll','Payslips and bank statements','Appointment and termination orders','Your own day-by-day count'],
+ ask:'Declare that I completed 240 days in the 12 months before termination, that my termination without Sec. 25F steps is void, and reinstate me with continuity of service and full back wages.'},
+closure:{group:'ir',t:'Business closed or transferred to a new owner',law:'Industrial Disputes Act, 1947, Secs. 25FF, 25FFF and 25-O / Industrial Relations Code, 2020',
+ kw:['closure','closed down','factory closed','business closed','transfer of undertaking','new owner','takeover','shut down','closure compensation','sold the business'],
+ sum:'A genuine closure of the whole business, or its transfer to a new owner, is not retrenchment in the narrow sense, but Secs. 25FF (transfer) and 25FFF (closure) generally give workmen notice and compensation as if they had been retrenched, subject to the conditions in those sections. In a large Chapter V-B establishment a closure needs Government permission after a hearing and a reasoned order, and permission is deemed granted if no order comes within 60 days.',
+ code:'The Industrial Relations Code, 2020 keeps the closure permission rules for establishments with 300 or more workers (Secs. 78 to 80).',
+ steps:[['Find out what happened.','Is the whole business closed, or only a unit? Was it transferred, and does the new owner take you over with your service continuing on terms no worse than before?'],
+  ['Check the size.','If the establishment had 100 or more workers (300 or more under the Code), closure needs prior Government permission.'],
+  ['Ask for the notice and compensation.','Request in writing the notice, the compensation computation and your final dues.'],
+  ['Check the closure is genuine.','A closure used to avoid dues, or a lockout in disguise, can be challenged.'],
+  ['Complain about missing permission.','Write to the Labour Commissioner or the appropriate Government, ideally with the other workers.'],
+  ['Raise the dispute.','Apply for conciliation, and claim wages, gratuity and PF dues separately.']],
+ forums:['Labour Commissioner or appropriate Government (permission)','Conciliation Officer, then Industrial Tribunal','Labour Court (Sec. 33C(2)) to compute the compensation due'],
+ evidence:['Closure or transfer notice','Appointment letter and service record','Payslips','Number of workers employed in the last 12 months','Permission order or application, if any'],
+ ask:'Pay notice pay and compensation due on closure or transfer under Secs. 25FF and 25FFF with all other dues, or set aside the closure made without the required permission.'},
+permission:{group:'ir',t:'Large establishment retrenched, laid off or closed without Government permission',law:'Industrial Disputes Act, 1947, Chapter V-B (Secs. 25K to 25-O) / Industrial Relations Code, 2020',
+ kw:['government permission','prior permission','chapter vb','100 workers','300 workers','three months notice','large factory','permission not taken'],
+ sum:'In industrial establishments above the threshold, 100 workers under the 1947 Act and 300 under the Code, lay-off, retrenchment and closure need prior Government permission. The authority acts quasi-judicially: it must hear both sides and pass a reasoned order, and in a closure case permission is deemed granted after 60 days. Without the permission or the three months\u2019 notice, the retrenchment is illegal.',
+ code:'The Industrial Relations Code, 2020 (Sec. 77) raises the threshold to 300 workers and adds the Re-skilling Fund (Sec. 83).',
+ steps:[['Confirm the size.','Establish the average number of workers over the last 12 months and that it is a factory, mine or plantation.'],
+  ['Ask for the permission order.','Request a copy of the application and the permission order, or confirm there is none.'],
+  ['Check the notice.','Three months\u2019 notice or pay in lieu is required with the permission.'],
+  ['Act together.','Write to the Labour Commissioner with the other affected workers or your union.'],
+  ['Raise the dispute.','A retrenchment without required permission is illegal. Ask for reinstatement with back wages.'],
+  ['Ask for compensation in the alternative.','If reinstatement is not possible, ask for higher compensation.']],
+ forums:['Labour Commissioner or appropriate Government','Conciliation Officer, then Industrial Tribunal','High Court writ (Art. 226) against an arbitrary permission order'],
+ evidence:['Number of workers employed','Retrenchment or lay-off notice','Permission order or proof that none exists','Seniority list'],
+ ask:'Declare that the retrenchment without prior Government permission is illegal and reinstate me and the other workers with back wages.'},
+layoff:{group:'ir',t:'Laid off or locked out',law:'Industrial Disputes Act, 1947, Secs. 2(kkk), 2(l), 25C and 25M / Industrial Relations Code, 2020',
+ kw:['layoff','lay off','laid off','lockout','locked out','no work given','power cut','shortage of raw material','machinery breakdown','gate closed','closed for a month'],
+ sum:'A lay-off is a temporary stop for trade reasons beyond the employer\u2019s control, such as a shortage of power, coal or raw material, or a breakdown, while the business goes on. It carries lay-off compensation. A lockout is a closure during an industrial dispute, used as pressure or as a security measure. Lay-off compensation is not automatic for a lockout, and wages for it depend on whether the lockout was legal and justified. In large establishments a lay-off needs prior Government permission, except for natural calamity.',
+ steps:[['Find the reason given.','Shortage or breakdown points to a lay-off. A dispute, violence or a demand points to a lockout.'],
+  ['Ask for it in writing.','Request the notice, the reason and the expected date you can return.'],
+  ['If it is a lay-off.','Claim lay-off compensation and see the calculator above. In a large establishment, check that permission was taken.'],
+  ['If it is a lockout.','Record the dates, whether a dispute was pending and whether notice was given.'],
+  ['Raise a dispute.','Lockout wages are claimed through a reference to the Tribunal, which decides whether the lockout was legal and justified.'],
+  ['Ask what happens next.','If the lay-off drags on, ask in writing whether it will end in retrenchment.']],
+ forums:['Labour Commissioner or Inspector','Conciliation Officer, then Industrial Tribunal','Labour Court (Sec. 33C(2)) for lay-off compensation that is admitted but unpaid'],
+ evidence:['Notice or notice board copy of the lay-off or lockout','Payslips before and after','Record of power cuts or shortages, if given as the reason','Dates and any pending dispute'],
+ ask:'Pay lay-off compensation for the period, or declare the lockout illegal and unjustified and pay full wages for it.'},
+dismissal:{group:'ir',t:'Dismissed after an inquiry, or the punishment is too severe',law:'Industrial Disputes Act, 1947, Sec. 11A / Industrial Employment (Standing Orders) Act, 1946 / Industrial Relations Code, 2020',
+ kw:['dismissed','dismissal','terminated for misconduct','domestic inquiry','charge sheet','punishment too harsh','disproportionate','removed from service for misconduct','show cause','inquiry unfair','demotion','stopped increment'],
+ sum:'A Labour Court or Tribunal can re-weigh the evidence in a dismissal or discharge case and reduce a punishment that is out of proportion, even when the inquiry was fair. If there was no inquiry, or it was unfair, the employer must prove the misconduct before the Tribunal, but only if it asked to do so on time. Lesser punishments such as a warning, a stopped increment or a demotion are judged on the narrower old test: bad faith, victimisation, a breach of natural justice or a perverse finding.',
+ steps:[['Collect the papers.','The charge sheet, your reply, the inquiry report, the findings and the punishment order.'],
+  ['Test the inquiry.','Was there reasonable notice, copies of the documents, a chance to cross-examine, an unbiased officer, and findings based on evidence?'],
+  ['Test the punishment.','Compare it with the gravity of the charge and what others got for similar acts.'],
+  ['Raise the dispute.','Apply for conciliation, and then the Labour Court. Ask it to decide the fairness of the inquiry first, as a preliminary issue.'],
+  ['Hold the employer to its deadline.','If it wants to lead fresh evidence, it must say so in its written statement, not later.'],
+  ['Ask for the right relief.','Reinstatement with back wages, or a lesser punishment. File an affidavit that you were not gainfully employed.']],
+ forums:['Conciliation Officer','Labour Court or Industrial Tribunal (Sec. 11A)','High Court writ (Art. 226) for public employers'],
+ evidence:['Charge sheet, reply and inquiry papers','Findings and dismissal order','Standing Orders or service rules','Records of punishments given to others','Affidavit that you were not gainfully employed'],
+ ask:'Set aside the dismissal as illegal and disproportionate and reinstate me with continuity of service and full back wages, or substitute a lesser punishment.'},
+pending33:{group:'ir',t:'Dismissed while another dispute was pending',law:'Industrial Disputes Act, 1947, Secs. 33(2)(b) and 33A',
+ kw:['dismissed during dispute','dispute pending','section 33','33(2)(b)','approval of tribunal','victimised','dismissed during conciliation','pending reference'],
+ sum:'While an industrial dispute is pending, an employer that dismisses or discharges you for misconduct unconnected with it must pay one month\u2019s wages and apply to the Tribunal for approval. If it does not, or approval is refused, the dismissal is void from the start. You are treated as never terminated and are entitled to full wages without a separate reference.',
+ steps:[['Check for a pending dispute.','Is there a conciliation or Tribunal proceeding pending for your establishment or workmen?'],
+  ['Check the three requirements.','The dismissal, one month\u2019s wages paid, and an application for approval made.'],
+  ['Ask for the application.','Write to the employer for a copy of the application for approval and the order on it.'],
+  ['If it is missing.','Treat the dismissal as void and demand wages from the date of dismissal.'],
+  ['Complain.','Make a complaint under Sec. 33A to the Tribunal where the dispute is pending, or raise a fresh dispute.']],
+ forums:['The Tribunal or Labour Court where the dispute is pending (Sec. 33A complaint)','Labour Court (Sec. 33C(2)) to compute and recover the wages'],
+ evidence:['Dismissal order','Proof that a dispute was pending on that date','Proof of whether one month\u2019s wages was paid','Last drawn payslips'],
+ ask:'Declare the dismissal void for breach of Sec. 33(2)(b), treat me as in continuous service and pay full wages from the date of dismissal.'},
+strikejob:{group:'ir',t:'Dismissed or punished for taking part in a strike',law:'Industrial Disputes Act, 1947, Secs. 2(q), 22 to 24 / Industrial Relations Code, 2020',
+ kw:['strike','joining strike','joined strike','dismissed for strike','strike dismissal','fired for striking','terminated strikers','illegal strike','joined strike','go slow','mass dismissal','sacked for strike','strike notice'],
+ sum:'A strike is a concerted stoppage of work, even for a few hours. An illegal strike, for example without notice in a public utility or during conciliation, can lead to action. But passive participation does not justify dismissing hundreds together with no individual inquiry that proves specific violence or sabotage. There is no fundamental right to strike, only the conditional statutory one, and wages for strike days depend on the strike being legal and justified.',
+ code:'Under the Industrial Relations Code, 2020 the definition of strike includes mass casual leave by 50% or more of workers on a day, and the 14-day strike notice applies to all industrial establishments (Sec. 62), not only public utilities.',
+ steps:[['Record the strike.','Note the dates, the notice given and whether conciliation was pending.'],
+  ['Get the dismissal papers.','Check whether they name you individually and what act is alleged.'],
+  ['Ask for an individual inquiry.','State that you took part only passively, if that is so, and ask for the specific allegation against you.'],
+  ['Raise the dispute.','Apply for conciliation and the Labour Court, and ask for relief under Sec. 11A.'],
+  ['Claim wages separately.','For the strike days themselves, see the plan on wages for strike or lockout days.']],
+ forums:['Conciliation Officer','Labour Court or Industrial Tribunal','Voluntary arbitration under Sec. 10A, if both sides agree'],
+ evidence:['Strike notice and conciliation records','Dismissal or termination letter','Any charge sheet or inquiry papers','Payslips'],
+ ask:'Set aside the mass termination for want of individual inquiry and proof of violence, and reinstate me with continuity of service and graded back wages.'},
+notindustry:{group:'ir',t:'Employer says it is not an \u201Cindustry\u201D',law:'Industrial Disputes Act, 1947, Sec. 2(j) / Industrial Relations Code, 2020, Sec. 2(p)',
+ kw:['not an industry','hospital employee','municipality','government department','university staff','school staff','charitable','club employee','ngo','institution not industry','research institute'],
+ sum:'Almost every organised activity that serves the community with the help of employees is an industry, including hospitals, municipalities, universities, clubs and charities, whether or not it makes a profit. Only strictly sovereign functions such as defence, currency, justice and policing are outside. Teachers are not \u201Cworkmen\u201D, but an educational institution is an industry, so its clerks, peons and drivers are covered.',
+ code:'The Industrial Relations Code, 2020 writes the triple test into the statute and keeps sovereign functions outside, with some exclusion for charitable and philanthropic bodies. It drops the old unnotified 1982 exclusions for hospitals and educational institutions. Check the current text of Sec. 2(p).',
+ steps:[['Describe the activity.','What service does it provide, to whom, and with how many employees?'],
+  ['Apply the triple test.','Is the activity systematic, organised by cooperation between employer and employee, and for goods or services that satisfy human wants?'],
+  ['Check for a sovereign function.','Only defence, currency, justice and policing clearly fall outside. A department that also does welfare or service work is judged by its dominant nature.'],
+  ['Answer the objection in writing.','Cite the judgments below in your reply and in the dispute.'],
+  ['Raise the dispute.','The Labour Court decides this as a preliminary question.'],
+  ['If you are a teacher.','You are not a workman. Use the State School Tribunal or service law.']],
+ forums:['Conciliation Officer','Labour Court or Industrial Tribunal (preliminary issue)','High Court writ for government bodies'],
+ evidence:['Employer\u2019s constitution or notification','Description of services provided','Staff numbers and categories','Your appointment letter and duties'],
+ ask:'Declare that the employer is an industry under Sec. 2(j) and that the Industrial Disputes Act applies to my employment.'},
+notworkman:{group:'ir',t:'Told I am not a \u201Cworkman\u201D (manager, sales, supervisor, teacher or contractor\u2019s worker)',law:'Industrial Disputes Act, 1947, Sec. 2(s) / Industrial Relations Code, 2020, Sec. 2(zr)',
+ kw:['not a workman','manager','supervisor','sales promotion','medical representative','teacher','independent contractor','not an employee','canvassing','designation','junior management'],
+ sum:'You are a workman only if you are employed to do manual, unskilled, skilled, technical, operational, clerical or supervisory work, and you are not within the managerial, administrative or higher supervisory exceptions. Title and pay do not decide it. Your main duties do. Being paid per piece or being placed by a contractor does not make you an independent contractor if the employer controls how you work.',
+ code:'The Industrial Relations Code, 2020 raises the supervisory wage ceiling from Rs 10,000 to Rs 18,000 a month (or as notified), and expressly covers working journalists and sales promotion employees.',
+ steps:[['List your duties.','Write them in order of time spent and importance.'],
+  ['Match your main duty.','Is it manual, unskilled, skilled, technical, operational, clerical or supervisory? Incidental tasks do not change this.'],
+  ['Check the exceptions.','Managerial or administrative work, supervision above the wage ceiling, and armed forces service are excluded.'],
+  ['Show control.','Who decides how, when and where you work? Control and supervision point to employment.'],
+  ['Check the special laws.','Sales promotion staff may be covered by the Sales Promotion Employees Act, 1976. Teachers go to the School Tribunal.'],
+  ['Gather proof and raise the dispute.','Orders, rosters, ID card and payslips.']],
+ forums:['Conciliation Officer','Labour Court or Industrial Tribunal','School Tribunal for teachers'],
+ evidence:['Appointment letter and job description','Duty roster or work orders','ID card and payslips','Proof of who supervises your work'],
+ ask:'Declare that I am a workman under Sec. 2(s) and that the Industrial Disputes Act applies to my employment.'},
+refuse:{group:'ir',t:'Government refused to refer my dispute, or the dispute is not accepted as an industrial dispute',law:'Industrial Disputes Act, 1947, Secs. 2A, 2(k), 10 and 12(5) / Industrial Relations Code, 2020',
+ kw:['refused to refer','refusal to refer','conciliation failed','failure report','reference rejected','government refused','not an industrial dispute','union support','espouse'],
+ sum:'After conciliation fails, Government decides whether to refer the dispute. It can refuse, but not for irrelevant or punitive reasons, and it cannot decide the merits itself, such as whether you are an employee. An earlier refusal does not stop it referring later. An individual worker can raise a dismissal or retrenchment dispute under Sec. 2A without union support. A union can take up a dispute only where workmen as a class have a direct and substantial interest.',
+ steps:[['Get the failure report and the refusal.','Read the reason given.'],
+  ['Test the reason.','Is it unrelated to the merits, such as punishing a past go-slow, or does it decide a question reserved for the Tribunal?'],
+  ['Write a representation.','Ask Government to reconsider, pointing to the judgments below.'],
+  ['Use Sec. 2A if it is a dismissal or retrenchment.','You can apply to the Labour Court directly in such cases, within the time the Act allows.'],
+  ['Consider a writ.','If the refusal rests on irrelevant grounds, a High Court writ of mandamus can direct reconsideration.'],
+  ['Line up support.','For a collective demand, get the union of your own establishment, or an appreciable number of your fellow workmen, to take it up.']],
+ forums:['Appropriate Government (representation)','Labour Court directly under Sec. 2A for dismissal or retrenchment','High Court writ (Art. 226) for mandamus'],
+ evidence:['Failure report of the Conciliation Officer','Refusal order','Record of the demand and conciliation','Support letters from fellow workmen or union'],
+ ask:'Refer the dispute to the Industrial Tribunal or Labour Court for adjudication.'},
+settle:{group:'ir',t:'A settlement or award: who is bound, and can it be changed',law:'Industrial Disputes Act, 1947, Secs. 17, 18 and 19 / Industrial Relations Code, 2020',
+ kw:['settlement','union settlement','binding on all workmen','minority union','conciliation settlement','award published','bipartite settlement','wage settlement','memorandum of settlement'],
+ sum:'A settlement made in conciliation before the Conciliation Officer binds all workmen of the establishment, present and future, including a dissenting union, and bars new demands that add a financial burden while it runs. A private bipartite settlement binds only its signatories. A settlement by a recognised majority union is presumed fair and is judged as a package of give and take. A full settlement signed before an award is published can replace the award.',
+ steps:[['Find out what kind of settlement it is.','Was it signed in conciliation before the Officer, or privately between the employer and a union?'],
+  ['Find who signed.','A recognised majority union carries a strong presumption of fairness.'],
+  ['Check its period.','Note how long it runs and what it says about new demands.'],
+  ['If you want to challenge it.','You need fraud, coercion or corruption, or a clearly unfair package, not one weak clause.'],
+  ['If you want to rely on it.','Ask for implementation in writing. Money due under it can be recovered in the Labour Court.']],
+ forums:['Conciliation Officer','Labour Court (Sec. 33C(2)) to recover amounts due under a settlement','Industrial Tribunal to decide what a settlement means'],
+ evidence:['Copy of the settlement with signatures','Recognition status of the union','Period and terms of the settlement','Your payslips showing the benefit due'],
+ ask:'Implement the settlement in full and pay all amounts due under it from the date it took effect.'},
+change:{group:'ir',t:'Employer changed my hours, shift, rest day or benefit without notice',law:'Industrial Disputes Act, 1947, Sec. 9A and Fourth Schedule / Industrial Relations Code, 2020',
+ kw:['change of shift','rest day changed','working hours changed','withdrawal of benefit','21 days notice','section 9a','change in service conditions','grade changed','customary benefit','weekly off changed','form e'],
+ sum:'For the matters listed in the Fourth Schedule, including wages, hours of work and rest intervals, shift working and the withdrawal of any customary concession or privilege, the employer must give 21 days\u2019 notice before changing them. A change made without it is illegal and ineffective, and you can claim extra pay for work done on the changed day.',
+ steps:[['Record the change.','Note what changed, from when, and whether any notice was given.'],
+  ['Match it to the Fourth Schedule.','Hours, rest day, shift, wages, grade and customary benefits are all covered.'],
+  ['Ask for the notice.','Request a copy of the 21-day notice and the agreement, if any.'],
+  ['Object in writing.','Record that you are working under protest.'],
+  ['Raise a dispute.','Apply for conciliation and ask for extra pay for work done under the unlawful change.']],
+ forums:['Conciliation Officer','Industrial Tribunal on reference','Labour Court (Sec. 33C(2)) for money due once the right is decided'],
+ evidence:['Circular or order making the change','Earlier schedule or practice','Standing Orders','Attendance and duty rosters'],
+ ask:'Declare the change illegal for want of notice under Sec. 9A and pay me the extra allowance due for work done under it.'}
+
+};
+var BM={q:'',sit:''};
+function clFor(key){
+  var m=CL_SIT.filter(function(x){return x[0]===key;})[0];
+  var direct=function(c){return c.sits&&c.sits.indexOf(key)>-1?0:1;};
+  return CASELAW.filter(function(c){return (c.sits&&c.sits.indexOf(key)>-1)||(m&&m[2].indexOf(c.n)>-1);}).sort(function(a,b){return direct(a)-direct(b);});
+}
+function fs1(t){t=String(t);var parts=t.split(/([.!?])\s+(?=[A-Z])/),out='',i=0;while(i<parts.length){out+=parts[i]+(parts[i+1]||'');i+=2;if(out.length>=90)break;}return out.trim();}
+/* The engine: builds a case-benchmarked solution for a problem key. */
+function benchmarkSolution(key,ctx){
+  var pl=CL_PLAY[key];if(!pl)return {html:'',letter:''};
+  var cs=clFor(key),live=cs.filter(function(c){return !c.bad;}),good=live.filter(function(c){return c.side==='for';}),mixed=live.filter(function(c){return c.side==='mixed';}),other=live.filter(function(c){return c.side==='limits';}),dead=cs.filter(function(c){return c.bad;});
+  var li=function(c){return '<li>'+esc(fs1(c.held))+' <em class="fine">('+esc(c.name)+', '+esc(c.cite)+')</em></li>';};
+  var h='<h3>'+pl.t+'</h3><span class="lawtag">'+pl.law+'</span><p>'+pl.sum+'</p>';
+  if(pl.code)h+='<p class="fine"><strong>Under the new Code:</strong> '+pl.code+'</p>';
+  h+='<h4>1. What the courts have held</h4>';
+  h+=good.length?'<ul class="plain">'+good.map(li).join('')+'</ul>':'<p class="fine">No judgment in favour of workers is loaded for this yet. More cases can be added.</p>';
+  if(mixed.length)h+='<h4>What the courts have also said</h4><ul class="plain">'+mixed.map(li).join('')+'</ul>';
+  if(other.length)h+='<h4>What the other side may argue</h4><ul class="plain">'+other.map(li).join('')+'</ul>';
+  if(dead.length)h+='<p class="fine">Overruled, so do not rely on: '+dead.map(function(c){return esc(c.name);}).join('; ')+'.</p>';
+  h+='<h4>2. What to do, step by step</h4>'+steps(pl.steps);
+  h+='<h4>3. How to get justice: where to go</h4><ul class="plain">'+pl.forums.map(function(f){return '<li>'+esc(f)+'</li>';}).join('')+'</ul>';
+  var routes=[];live.forEach(function(c){var r=c.forum.split('.')[0];if(routes.indexOf(r)<0)routes.push(r);});
+  if(routes.length)h+='<p class="fine" style="margin-top:10px"><strong>Routes the benchmark cases took:</strong> '+routes.slice(0,5).map(esc).join('; ')+'.</p>';
+  h+='<h4>What to ask for</h4><div class="casebox">'+esc(pl.ask)+'</div>';
+  var exp=good.length?good:mixed;if(exp.length)h+='<h4>What to expect, going by the benchmark cases</h4><ul class="plain">'+exp.slice(0,4).map(function(c){return '<li>'+esc(fs1(c.after))+'</li>';}).join('')+'</ul>';
+  h+='<h4>Keep ready</h4>'+checks(pl.evidence);
+  h+='<div class="tool"><h4>Draft your demand letter</h4><div class="fg">'+fld('bm_emp','Employer name','text',ctx.s.company)+fld('bm_role','Your designation','text','')+fld('bm_amt','Amount claimed <em>in rupees, if known</em>','number','','min="0"')+'</div>'+draft('bm_draft','Demand letter citing the benchmark cases')+'</div>';
+  h+=clBlock(cs.map(function(c){return c.n;}),'Tap a case to see where it was filed, what was decided and what followed.');
+  var letterFn=function(){
+    var emp=ph($('#bm_emp').value,'employer name'),me=ph(ctx.s.name,'your name'),role=ph($('#bm_role').value,'designation'),amt=nv('bm_amt');
+    var cite=good.slice(0,5).map(function(c,i){return (i+1)+'. '+c.name+', '+c.cite+': '+fs1(c.held);}).join('\n');
+    var ir=(pl.group==='ir');
+    return 'To,\nThe HR Head / Employer\n'+emp+'\n\nSubject: '+(ir?'Notice and demand: ':'Demand for payment: ')+pl.t.toLowerCase()+'\n\nDear Sir/Madam,\n\nI, '+me+', '+(ir?'was employed as ':'am working as ')+role+' with '+emp+'.\n\nWhat happened: [describe it in two or three lines, with dates]\n\nThe legal position: '+fs1(pl.sum)+'\n\nMy claim: '+pl.ask+(amt?'\nAmount claimed: '+inr(amt)+'.':'')+'\n\nThe courts have held:\n'+(cite||'[add judgments]')+'\n\nPlease comply within 15 days of receiving this letter. If you do not, I will approach the '+pl.forums[0].split(' (')[0]+' and the other forums the law provides, and claim all dues, interest and compensation the law allows.\n\nYours faithfully,\n'+me+'\n[Address, phone, email]\nEnclosures: '+pl.evidence.slice(0,3).join(', ').toLowerCase();
+  };
+  return {html:h,letter:letterFn};
+}
+function bmRank(q,group){
+  var qt=q.toLowerCase().split(/[^a-z0-9]+/).filter(function(w){return w.length>2;});
+  return Object.keys(CL_PLAY).filter(function(k){return (CL_PLAY[k].group||'wage')===group;}).map(function(k){
+    var pl=CL_PLAY[k],sc=0,txt=(pl.t+' '+pl.kw.join(' ')).toLowerCase();
+    pl.kw.forEach(function(w){if(q.toLowerCase().indexOf(w)>-1)sc+=6;});
+    qt.forEach(function(w){if(txt.indexOf(w)>-1)sc+=2;});
+    return {k:k,s:sc};
+  }).filter(function(x){return x.s>0;}).sort(function(a,b){return b.s-a.s;});
+}
+/* Generic picker: group 'wage' (What is your problem?) or 'ir' (inside Retrenchment and layoff). */
+function makePicker(P,group,st,o){
+  var keysAll=Object.keys(CL_PLAY).filter(function(k){return (CL_PLAY[k].group||'wage')===group;});
+  var html='<h3>'+o.title+'</h3><p class="lede">'+o.lede+'</p>'+
+   '<div class="tool"><div class="fg">'+fld('bm_q','Describe it in your own words','text',st.q,'placeholder="'+o.ph+'"')+'</div><div class="subseg" id="bm_chips" role="group" aria-label="Pick your problem"></div></div>'+
+   '<div id="bm_out" class="out"></div>';
+  function chips(){
+    var keys=keysAll,rk=st.q?bmRank(st.q,group):null;
+    if(rk&&rk.length)keys=rk.map(function(x){return x.k;});
+    var c=$('#bm_chips');
+    c.innerHTML=keys.map(function(k){return '<button type="button" data-k="'+k+'" aria-pressed="'+(st.sit===k)+'">'+esc(CL_PLAY[k].t)+'</button>';}).join('');
+    if(st.q&&rk&&!rk.length)c.innerHTML='<div class="pempty">No close match. Pick from the problems below.</div>'+c.innerHTML;
+  }
+  function show(){
+    var out=$('#bm_out');
+    if(!st.sit||!CL_PLAY[st.sit]){out.innerHTML='<div class="empty">Pick your problem above to see the case-backed solution.</div>';return;}
+    var r=benchmarkSolution(st.sit,{s:P.s,sc:P.sc});
+    out.innerHTML=r.html;
+    var mk=function(){$('#bm_draft').value=r.letter();};
+    listen(['bm_emp','bm_role','bm_amt'],mk);mk();
+  }
+  function bind(){
+    chips();show();
+    $('#bm_q').addEventListener('input',function(){st.q=this.value.trim();var rk=st.q?bmRank(st.q,group):[];if(rk.length)st.sit=rk[0].k;chips();show();});
+    $('#bm_chips').addEventListener('click',function(e){var b=e.target.closest('[data-k]');if(!b)return;st.sit=b.dataset.k;chips();show();$('#bm_out').scrollIntoView({behavior:'smooth',block:'start'});});
+  }
+  return {html:html,bind:bind};
+}
+var IBM={q:'',sit:''};
+function tWhatProblem(P){
+  var pk=makePicker(P,'wage',BM,{title:'What is your problem?',lede:'Tell us the wage problem. You get what the courts have decided on it, what to do step by step, where to go for justice, and a demand letter that cites the cases.',ph:'e.g. I am paid less than the minimum wage'});
+  return {html:pk.html+DISCLAIM,bind:pk.bind};
+}
+window.ESCaseLaw={add:function(arr){(arr||[]).forEach(function(c){CASELAW.push(c);});if(topicId==='whatproblem'||topicId==='retrench')renderTopic(false);},play:CL_PLAY};
+
 var TOPICS=[
+  {id:'whatproblem',t:'What is your problem?',d:'Pick it, get a case-backed plan',fn:tWhatProblem},
   {id:'retrench',t:'Retrenchment and layoff',d:'Notice, compensation, LIFO',fn:tRetrench},
   {id:'pfesic',t:'PF and ESIC problems',d:'Missing deposits, e-Pehchan',fn:tPFESIC},
   {id:'gratuity',t:'Gratuity problems',d:'Delays, Form I, interest',fn:tGratuity},
@@ -1563,7 +2651,7 @@ var TOPICS=[
   {id:'leave',t:'Medical, maternity and leave',d:'Leave balance, 26 weeks',fn:tLeave},
   {id:'harass',t:'Harassment and pay inequality',d:'ICC complaint, equal pay',fn:tHarass}
 ];
-var topicId='retrench';
+var topicId='whatproblem';
 function renderTopics(){
   $('#topicList').innerHTML=TOPICS.map(function(x){return '<button type="button" class="topic" role="tab" data-topic="'+x.id+'" aria-selected="'+(x.id===topicId)+'">'+x.t+'<small>'+x.d+'</small></button>';}).join('');
 }
@@ -1896,6 +2984,72 @@ function renderRoute(){
 
 /* ---------- problem identifier (search engine) ---------- */
 var PROBLEMS=[
+{id:'minwage',title:'Paid less than the minimum wage',law:'Minimum Wages Act, 1948 / Code on Wages, 2019',
+ kw:['below minimum wage','minimum wage not paid','paid less than minimum wage','underpaid','low salary','wage below notified rate','not getting minimum wages'],
+ diagnosis:'Every employee must be paid at least the minimum wage notified for the work and area. An agreement to accept less is void, and the employer cannot excuse it by saying it cannot afford it. Check the notified rate for your state, category and zone, including variable dearness allowance.',
+ now:['Find the current notified minimum wage for your state and category, and compare it with your basic, DA and VDA.','Write to HR with the shortfall, month by month.','If it is not corrected, complain to the Labour Inspector or file a wage claim before the Authority.'],
+ path:'This is a wage claim. See "Unpaid dues and FnF" below for the procedure and the time limit.',caseLink:'fnf',sit:'below'},
+
+{id:'dacut',title:'Dearness allowance (DA/VDA) cut, made flat, or not paid',law:'Minimum Wages Act, 1948 / Code on Wages, 2019; Industrial Disputes Act, 1947',
+ kw:['da cut','dearness allowance','vda not paid','variable dearness allowance','da removed','flat da','allowance reduced','da not increased'],
+ diagnosis:'Dearness allowance protects pay against rising prices and is linked to the cost-of-living index. An employer cannot cut a long-standing DA structure or replace it with a lower flat amount without a lawful process. One exception: if your consolidated wage already equals or exceeds the notified basic minimum plus VDA, a separate VDA need not be shown.',
+ now:['Compare your payslip with the notified basic and VDA for your category.','Ask HR in writing what changed in the DA formula and when.','Raise it with the Labour Inspector or as an industrial dispute if the structure was cut.'],
+ path:'A cut to an existing DA structure is raised as an industrial dispute. See "Retrenchment and layoff" and "Unpaid dues and FnF" below.',caseLink:'fnf',sit:'da'},
+
+{id:'dailywager',title:'Daily wager, casual or temporary worker doing the same work as regular staff',law:'Articles 14, 16 and 39(d) of the Constitution; Industrial Disputes Act, 1947',
+ kw:['daily wage','daily wager','casual worker','temporary worker','regular pay scale','same work as permanent','regularisation','ad hoc employee','work charged'],
+ diagnosis:'Temporary, casual and daily-wage workers who do the same duties and carry the same responsibilities as regular staff can claim at least the minimum of the regular pay scale. The claim is strongest in government service. Where recruitment rules were bypassed, courts are more cautious, so proof of identical duties matters.',
+ now:['List your duties and compare them with a regular employee in the same post, in writing.','Collect appointment or engagement orders and proof of how long you have worked.','Send a representation to the department, then approach the Labour Court or the High Court.'],
+ path:'In government service this is usually a writ petition. In private establishments it is raised as an industrial dispute.',caseLink:'fnf',sit:'casual'},
+
+{id:'pfbase',title:'PF is deducted only on a small part of my pay',law:'EPF and Miscellaneous Provisions Act, 1952 / Code on Social Security, 2020',
+ kw:['pf only on basic','pf on basic salary','pf base','special allowance pf','pf calculated on low wage','allowances excluded from pf'],
+ diagnosis:'Only pay that every employee earns universally, ordinarily and necessarily counts as basic wages under the 1952 Act, and variable incentives can be left out. Under the Codes, allowances above 50% of total remuneration are added back into wages. The Wage audit tab shows what this means for your numbers.',
+ now:['Open the Wage audit tab and see if your basic, DA and retaining allowance are at least half of gross.','Ask HR how the PF wage is defined in your payslip.','If it looks understated, raise it on the EPF iGMS portal.'],
+ path:'See "PF and ESIC problems" below for the grievance and inquiry route.',caseLink:'pfesic',sit:'pfbase'},
+
+{id:'strikeissue',title:'Wages deducted for strike days, or a lockout',law:'Industrial Disputes Act, 1947',
+ kw:['strike deduction','wages for strike','lockout','token strike','no work no pay','salary cut strike'],
+ diagnosis:'Wages for strike days are due only where the strike was legal and justified, and a Tribunal decides that. Staying away for part of a day can cost the whole day\u2019s wages.',
+ now:['Record the dates and the reason for the strike.','Write to the employer claiming the wages.','Raise an industrial dispute if it refuses.'],
+ path:'This is an industrial dispute decided by the Tribunal.',caseLink:'retrench',sit:'strike'},
+
+{id:'suspendissue',title:'Suspended and paid nothing while an inquiry is pending',law:'Industrial Employment (Standing Orders) Act, 1946, Sec. 10A',
+ kw:['suspended without pay','suspension no salary','subsistence allowance','suspended pending inquiry','suspended'],
+ diagnosis:'Unless a statute or standing orders allow unpaid suspension, you are owed subsistence allowance: 50% of wages for the first 90 days and 75% after.',
+ now:['Get the suspension order in writing.','Claim subsistence allowance in writing.','Raise a dispute if it is refused.'],
+ path:'Apply for conciliation and ask the Tribunal for interim relief.',caseLink:'retrench',sit:'suspend'},
+
+{id:'backwagesissue',title:'Terminated illegally: back wages and wages during the appeal',law:'Industrial Disputes Act, 1947',
+ kw:['back wages','reinstatement','illegally terminated','wages during appeal','full back wages','wrongful termination wages'],
+ diagnosis:'After an illegal termination, reinstatement with continuity of service and full back wages is the normal rule, and the employer must prove that you were gainfully employed elsewhere.',
+ now:['Keep the termination letter and any award.','Prepare an affidavit that you were not gainfully employed.','If the employer appeals, ask for wages last drawn.'],
+ path:'Raise the dispute through conciliation and the Labour Court.',caseLink:'retrench',sit:'backwages'},
+
+{id:'esiissue',title:'ESI not deducted on allowances, or the wage base looks wrong',law:'ESI Act, 1948, Sec. 2(22)',
+ kw:['esi on allowance','esi wage base','esi hra','esi not deducted','esic wage'],
+ diagnosis:'Regular allowances paid monthly, or at intervals up to two months, count as ESI wages. A genuine one-off goodwill payment does not.',
+ now:['List your pay components.','Compare your payslip with the ESIC contribution history.','Ask HR in writing which components are in the ESI wage.'],
+ path:'Complain to the ESIC branch office, then the Employees\u2019 Insurance Court.',caseLink:'pfesic',sit:'esibase'},
+
+{id:'dismississue',title:'Dismissed after an inquiry, or the punishment is too severe',law:'Industrial Disputes Act, 1947, Sec. 11A',
+ kw:['dismissed','dismissal','domestic inquiry','charge sheet','punishment too harsh','terminated for misconduct','show cause notice'],
+ diagnosis:'A Labour Court can re-weigh the evidence and reduce a punishment that is out of proportion, even when the inquiry was fair. If there was no fair inquiry, the employer must prove the misconduct before the Tribunal.',
+ now:['Collect the charge sheet, inquiry report and dismissal order.','Check the inquiry for notice, documents and a chance to cross-examine.','Raise a dispute through conciliation.'],
+ path:'Conciliation, then the Labour Court.',caseLink:'retrench',sit:'dismissal'},
+
+{id:'fixedissue',title:'Contract ended, or told my service ended automatically',law:'Industrial Disputes Act, 1947, Secs. 2(oo) and 25F',
+ kw:['contract ended','automatic termination','overstayed leave','not renewed','struck off','temporary appointment ended'],
+ diagnosis:'An end date written into your appointment order does not stop it being retrenchment unless it is a genuine fixed-term contract. A clause that ends a permanent worker\u2019s service automatically, with no inquiry, is open to challenge.',
+ now:['Read your appointment order and the Standing Orders.','Count your days in the last 12 months.','Write to the employer asking for notice pay, compensation or reinstatement.'],
+ path:'Conciliation, then the Labour Court.',caseLink:'retrench',sit:'fixedterm'},
+
+{id:'workmanissue',title:'Told I am not a workman, or my employer is not an industry',law:'Industrial Disputes Act, 1947, Secs. 2(j) and 2(s)',
+ kw:['not a workman','not an industry','manager','supervisor','teacher','hospital','independent contractor'],
+ diagnosis:'Your main duties decide whether you are a workman, not your title. Almost every organised service run with employees is an industry, except strictly sovereign functions.',
+ now:['List your duties in order of importance.','Check them against the listed kinds of work.','Answer the objection in writing, then raise the dispute.'],
+ path:'The Labour Court decides this as a preliminary question.',caseLink:'retrench',sit:'notworkman'},
+
 {id:'ot',title:'Not paid overtime, or forced to work beyond 9 hours a day',law:'Factories Act, 1948, Sections 51, 54, 55, 59(1)',
  kw:['overtime','not paid overtime','no overtime pay','working more than 9 hours','forced to work late','extra hours no pay','12 hour shift','working 10 hours a day','unpaid overtime','made to work extra hours'],
  diagnosis:'A worker cannot be employed for more than 48 hours a week or more than 9 hours a day, with at least half an hour\u2019s rest after 5 hours. Beyond that, overtime is payable at double the ordinary rate. Total hours including overtime cannot exceed 60 a week, and overtime cannot exceed 50 hours in a quarter.',
@@ -1918,7 +3072,7 @@ var PROBLEMS=[
  kw:['salary deducted','illegal deduction','fine deducted','deduction from my salary','company fined me','pay cut without reason','unauthorised deduction','wrongly deducted'],
  diagnosis:'Only specific deductions are lawful: fines up to 3% of that wage period\u2019s pay, absence, damage to entrusted property, house rent, authorised amenities, advances, income tax, court orders and provident fund subscriptions among a short list of others. A fine cannot exceed 90 days to recover and cannot be taken from anyone under 15.',
  now:['Ask HR in writing for the exact head of deduction and the rule it was made under.','Check it against the permitted list above; anything else is unlawful.','If it is unexplained or beyond the limit, demand a refund in writing.'],
- path:'If unresolved, file it as a wage claim before the Authority under the Payment of Wages Act or the Code on Wages, for the amount deducted plus compensation.',caseLink:'fnf'},
+ path:'If unresolved, file it as a wage claim before the Authority under the Payment of Wages Act or the Code on Wages, for the amount deducted plus compensation.',caseLink:'fnf',sit:'below'},
 
 {id:'noslip',title:'Employer refuses to give a payslip or appointment letter',law:'Payment of Wages Act, 1936 / state Shops and Establishment Act',
  kw:['no payslip','not giving payslip','no appointment letter','no offer letter','wage slip not given','no employment proof','no proof of employment'],
@@ -1942,7 +3096,7 @@ var PROBLEMS=[
  kw:['contractor not paying','contract labour unpaid','principal employer','labour contractor issue','outsourced staff not paid','agency not paying salary','third party payroll not paying'],
  diagnosis:'An establishment using 20 or more contract workers must register, and can engage them only through a licensed contractor. If the contractor fails to pay wages, the principal employer is responsible for paying them.',
  now:['Ask the principal employer, the company you actually work at, for proof of the contractor\u2019s licence and its own registration.','If wages are unpaid, write to the principal employer directly citing its liability if the contractor defaults.','Complain to the Licensing Officer or the Labour Inspector for the area.'],
- path:'This is filed as a wage claim against the contractor and the principal employer. See "Unpaid dues and FnF" below.',caseLink:'fnf'},
+ path:'This is filed as a wage claim against the contractor and the principal employer. See "Unpaid dues and FnF" below.',caseLink:'fnf',sit:'contract'},
 
 {id:'childlabour',title:'A child or adolescent is being made to work unlawfully',law:'Factories Act, 1948, Sections 67 to 71',
  kw:['child labour','underage worker','minor working','child working night','adolescent working late','below 14 working','below 18 working night'],
@@ -1966,7 +3120,7 @@ var PROBLEMS=[
  kw:['bonus not paid','no bonus','diwali bonus not given','statutory bonus issue','bonus withheld'],
  diagnosis:'Employees earning up to the wage ceiling, in establishments with 20 or more employees, are entitled to a minimum bonus of 8.33% and up to 20% of wages, ordinarily payable within 8 months of the close of the accounting year.',
  now:['Use the ESI and bonus tab in the calculator above to check what you are owed.','Ask HR in writing for the bonus computation.','Complain to the Labour Inspector if it is withheld past the payment deadline.'],
- path:'Unpaid bonus is claimed as a wage due. See "Unpaid dues and FnF" below.',caseLink:'fnf'},
+ path:'Unpaid bonus is claimed as a wage due. See "Unpaid dues and FnF" below.',caseLink:'fnf',sit:'bonus'},
 
 {id:'apprentice',title:'Apprentice made to work overtime, or a stipend problem',law:'Apprentices Act, 1961',
  kw:['apprentice overtime','apprentice stipend','apprentice not paid','apprenticeship issue','trainee stipend not paid'],
@@ -2026,7 +3180,7 @@ var PROBLEMS=[
  kw:['paid less than colleague','gender pay gap','unequal pay','pay discrimination','same work different pay'],
  diagnosis:'Discrimination on the ground of gender in wages, for the same work or work of a similar nature, is barred. Differences must be justified by genuine factors such as skill or performance.',
  now:['Compare your role and pay with the colleague\u2019s, on paper.','Ask HR in writing for the pay band and the reason for the difference.'],
- path:'Full step-by-step filing procedure, forum and time limit are under "Harassment and pay inequality" below.',caseLink:'harass'}
+ path:'Full step-by-step filing procedure, forum and time limit are under "Harassment and pay inequality" below.',caseLink:'harass',sit:'gender'}
 ];
 var lastResults=[],lastQuery='';
 var PSTOP=['is','not','the','a','an','to','for','of','my','at','in','on','and','or','with','was','were','been','being','i','am','me','no','do','does','did','it','this','that','are','be','has','have','you','your'];
@@ -2053,6 +3207,7 @@ function renderProblemDetail(p){
   h+='<p>'+p.diagnosis+'</p>';
   h+='<h4>What you can do right now</h4>'+plist(p.now);
   h+='<h4>The path ahead</h4><p>'+p.path+'</p>';
+  if(p.sit)h+='<p><a href="#/advisor" data-topic="'+((CL_PLAY[p.sit]||{}).group==='ir'?'retrench':'whatproblem')+'" data-sit="'+p.sit+'">Get the case-backed solution for this problem \u2192</a></p>';
   if(p.caseLink)h+='<p><a href="#case" data-case="'+p.caseLink+'">Open the full filing procedure \u2192</a></p>';
   h+=DISCLAIM+'</div>';
   $('#presults').innerHTML=h;
@@ -2063,7 +3218,7 @@ function doSearch(){
   var q=$('#pq').value.trim().toLowerCase(),out=$('#presults');
   if(!q){out.innerHTML='';return;}
   var scored=PROBLEMS.map(function(p){return {p:p,s:scoreProblem(q,p)};}).filter(function(x){return x.s>0;}).sort(function(a,b){return b.s-a.s;});
-  if(!scored.length){out.innerHTML='<div class="pempty">No close match found. Try different words, or browse the <a href="#advisor">problem solver</a> or <a href="#case">file a case</a> sections directly.</div>';return;}
+  if(!scored.length){out.innerHTML='<div class="pempty">No close match found. Try different words, or browse the <a href="#advisor">Problem Solver</a> or <a href="#case">file a case</a> sections directly.</div>';return;}
   lastResults=scored;renderPList(scored);
 }
 var PEX=['my employer is not paying overtime','salary is deducted without explanation','pf is not being deposited','contractor is not paying my wages','sexual harassment at work','I was retrenched without notice','gratuity is delayed','maternity leave was refused'];
@@ -2323,7 +3478,7 @@ function pageFromHash(){
 function showPage(id){
   $$('.page').forEach(function(p){p.hidden=p.dataset.page!==id;});
   $$('.top nav a').forEach(function(a){a.setAttribute('aria-current',a.dataset.page===id?'page':'false');});
-  document.title=(id==='home'?'Employee Solutions: Your Rights, Your Compensation, Simplified':'Employee Solutions — '+($('.top nav a[data-page="'+id+'"]')||{}).textContent);
+  document.title=(id==='home'?'Employee Matters: Your Rights, Your Compensation, Simplified':'Employee Matters — '+($('.top nav a[data-page="'+id+'"]')||{}).textContent);
 }
 function route(){
   showPage(pageFromHash());
@@ -2334,7 +3489,7 @@ window.addEventListener('hashchange',route);
 /* ---------- events ---------- */
 document.addEventListener('click',function(e){
   var tl=e.target.closest('[data-topic]');
-  if(tl){topicId=tl.dataset.topic;renderTopic(true);}
+  if(tl){topicId=tl.dataset.topic;if(tl.dataset.sit){if((CL_PLAY[tl.dataset.sit]||{}).group==='ir')IBM.sit=tl.dataset.sit;else BM.sit=tl.dataset.sit;}renderTopic(true);}
 });
 document.addEventListener('click',function(e){
   var c=e.target.closest('[data-copy]');
@@ -2546,7 +3701,7 @@ star:'<path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.
 };
 function svg(k){return '<svg viewBox="0 0 24 24" aria-hidden="true">'+ic[k]+'</svg>';}
 var main=[['home','Home','home'],['pay','Pay','pay'],['search','Issue','search'],['case','Case','caseI']];
-var more=[['services','Services & PF','Tax, PF, gratuity, ESI breakdown','services'],['learn','Learn','Labour law, old Acts vs new Codes','learn'],['advisor','Problem Solver','Steps and ready letters','adv'],['premium','Premium ₹800','Reports, letters and expert help','star']];
+var more=[['services','Services & PF','Tax, PF, gratuity, ESI breakdown','services'],['learn','Learn','Labour law, old Acts vs new Codes','learn'],['advisor','Problem Solver','Steps, ready letters and wage case law','adv'],['premium','Premium ₹800','Reports, letters and expert help','star']];
 var bar=document.createElement('nav');bar.className='tabbar';bar.setAttribute('aria-label','Quick navigation');
 bar.innerHTML=main.map(function(m){return '<a href="#/'+m[0]+'" data-p="'+m[0]+'">'+svg(m[2])+'<span>'+m[1]+'</span></a>';}).join('')+
  '<button type="button" id="moreBtn" aria-haspopup="dialog" aria-expanded="false">'+svg('more')+'<span>More</span></button>';
